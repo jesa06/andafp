@@ -6,7 +6,7 @@
 
 https://jesa06.github.io/andafp/
 
-# My Blog
+# JESA's Blog
 
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_
