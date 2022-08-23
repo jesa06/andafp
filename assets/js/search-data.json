@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "First Markdown Post",
-            "content": "toc: true layout: post description: My markdown page displaying different formats with fastpages. categories: [markdown] title: Markdown Practice . . First Markdown Post! ;) . Largest Heading . Second Size of Heading . Third Size of Heading . More . Even More . Smallest Size of Heading . . Different Styles of Text . This is bold text . This text is italicized . This was mistaken text . This text is extremely important . All this text is important . This is a subscript text . This is a superscript text . You can create links . . List of some of my hobbiest: . Singing | Brazilian Jiu-Jitsu | . Names of my dogs: . Elly | Athyna |",
-            "url": "https://jesa06.github.io/andafp/2022/08/22/First-Markdown-Post.html",
-            "relUrl": "/2022/08/22/First-Markdown-Post.html",
+            "title": "Markdown Post",
+            "content": "First Markdown Post! ;) . Largest Heading . Second Size of Heading . Third Size of Heading . More . Even More . Smallest Size of Heading . . Different Styles of Text . This is bold text . This text is italicized . This was mistaken text . This text is extremely important . All this text is important . This is a subscript text . This is a superscript text . You can create links . . List of some of my hobbiest: . Singing | Brazilian Jiu-Jitsu | . Names of my dogs: . Elly | Athyna |",
+            "url": "https://jesa06.github.io/andafp/markdown/2022/08/22/First-Markdown-Post.html",
+            "relUrl": "/markdown/2022/08/22/First-Markdown-Post.html",
             "date": " • Aug 22, 2022"
         }
         
