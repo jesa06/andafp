@@ -1,11 +1,12 @@
-toc: true
-layout: post
-description: My markdown page displaying different formats with fastpages.
-categories: [markdown]
-title: Markdown Practice
-
 ---
 
+toc: true
+layout: post
+description: A minimal example of using markdown with fastpages.
+categories: [markdown]
+title: Markdown Post
+
+---
 # First Markdown Post! ;)
  
    
