@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "My First Jupyter Notebook with Python Examples",
-            "content": "msg = &quot;Hello people&quot; print(msg) . Hello people . print(1+1) . 2 . msg = &quot;yo mom&quot; print(msg) . yo mom . a=1 b=30 print(b-a) . 29 . .",
+            "content": "msg = &quot;Hello people&quot; print(msg) . Hello people . print(1+1) . 2 . msg = &quot;yo mom&quot; print(msg) . yo mom . a=1 b=30 print(b-a) . 29 . Python sample code (loop) . This is an example of using a loop in python, printing each step until the break. Then adding a message at the last iteration. . a=1 while (a &lt; 10): print(&#39;hey guys&#39;, a) if(a==9): print(&#39;BYE GUYS! :)&#39;) a=a+1 . hey guys 1 hey guys 2 hey guys 3 hey guys 4 hey guys 5 hey guys 6 hey guys 7 hey guys 8 hey guys 9 BYE GUYS! :) .",
             "url": "https://jesa06.github.io/andafp/2022/08/22/jesavscode.html",
             "relUrl": "/2022/08/22/jesavscode.html",
             "date": " • Aug 22, 2022"
