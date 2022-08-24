@@ -52,4 +52,3 @@ You can create [links](https://jesa06.github.io/andafp/)
 1. Elly
 1. Athyna
 
-
