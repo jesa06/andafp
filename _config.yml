@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Joselyn's fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+title: Joselyn Anda's fastpages
+description: Mi first blog with Fastpages & Jupyter Notebooks. I literally don't understand what I'm doing but socials down below lol
 github_username: jesa06
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "andafp"
@@ -41,6 +41,7 @@ minima:
   social_links:
     instagram: _joselyn_anda_
     github: jesa06
+    tiktok: _j_e_s_a_
 
 # Set this to true to get LaTeX math equation support
 use_math: 
