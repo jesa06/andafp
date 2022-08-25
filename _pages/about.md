@@ -12,8 +12,8 @@ My birthday is January 15, 2006
 
 My favorite color is red!
 
-![]({{site.baseurl}}/images//04F415CC-FD71-45FD-9609-FAC9267614FD.png
-"https://github.com/fastai/fastpages")
+
+![]({{site.baseurl}}/images/04F415CC-FD71-45FD-9609-FAC9267614FD.png "https://github.com/fastai/fastpages)
 This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
 
 
