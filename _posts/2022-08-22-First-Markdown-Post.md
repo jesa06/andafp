@@ -2,7 +2,7 @@
 
 toc: true
 layout: post
-description: A minimal example of using markdown with fastpages.
+description: A minimal example of using markdown with Fastpages.
 categories: [markdown]
 title: Markdown Post
 
@@ -12,8 +12,8 @@ title: Markdown Post
      
 
 # Largest Heading
-## Second Size of Heading
-### Third Size of Heading
+## Second Size Heading
+### Third Size Heading
 ####  More
 ##### Even More
 ###### Smallest Size of Heading
