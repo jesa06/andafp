@@ -23,7 +23,7 @@ question_and_answer("Are you ready to take a test?")
 rsp = question_with_response("What command is used to include other functions that are developed?")
 if rsp == "import":
     print(rsp + " is correct :)")
-    correct += 1
+    correct += 1 
 else:
     print(rsp + " is incorrect:(")
 
