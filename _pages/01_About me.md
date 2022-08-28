@@ -4,6 +4,7 @@ title: About Me
 permalink: /about/
 ---
 ## A Little Bit More About Me
+
 Hello everyone! 
 
 My name is Joselyn Elise Soriano Anda and I am apart of Del Norte Highschool in the class of '24 
