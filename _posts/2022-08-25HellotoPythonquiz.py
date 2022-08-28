@@ -13,7 +13,7 @@ def question_with_response(prompt):
     msg = input()
     return msg
 
-questions = 6
+questions = 6 
 correct = 0
 
 print('Hello, ' + getpass.getuser() + " running " + sys.executable)
