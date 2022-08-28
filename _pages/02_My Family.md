@@ -1,7 +1,7 @@
 ---
 layout: page
 title: My Family
-permalink: /MyFamily/
+permalink: /family/
 ---
 
 # A Little Background on My Family
