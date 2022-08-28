@@ -29,7 +29,7 @@
 ---
 ## Different File Types
 - ### .ipynb is Jupyter Notebook
-- ### .md is Markdown
+- ### .md is Markdown 
 
 
 

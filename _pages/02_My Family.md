@@ -13,7 +13,7 @@ permalink: /about/
 - Joselyn, me
 - Xandyr, my little brother
 - Elly, our Rottweiler
-- Athyna, out Pitbull
+- Athyna, out Pitbull 
 
 
 ![My family](B4C1E766-855A-41C4-96CE-77E9668A1498.png)
