@@ -72,8 +72,19 @@
       ,"page1": {
           "title": "My Family",
           "content": "A Little Background on My Family . We are a family of 6, plus two dogs. . Leslie, my mom | Derryck, my dad | Cedric, my older brother | Kylie, my older sister | Joselyn, me | Xandyr, my little brother | Elly, our Rottweiler | Athyna, out Pitbull | . . .",
-          "url": "https://jesa06.github.io/andafp/about/",
-          "relUrl": "/about/",
+          "url": "https://jesa06.github.io/andafp/MyFamily/",
+          "relUrl": "/MyFamily/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
+          "title": "Notes",
+          "content": "Big Ideas/Terms . Vocabulary . Terminal- where you run commands . | Repository- where you store code/files (you can store anything in here) . Master branch- original branch | Branch- a version of the master branch | . | Compiler- takes your code and tries to translate it to tell u if u have errors, runs that command . . Actions . | Kernel- way of communication between machine language and hardware . | Push- send out changes from your local repository to remote branch . | Pull- taking from remote branch to local repository . | . . Formatting . To add an image in markdown- src=”/andafp/images/filename” . . | . Softwares &amp; Applications . VSCode- Code Editor . | Git- coordinating work among programmers to develop source code/source code management . | Jupyter Notebook- to edit and run notebook documents . | Bash- command-line interpreter or user shell used to interpret user commands . . Languages . | Python . | Java/Javascript . . Different File Types . | .ipynb is Jupyter Notebook . | .md is Markdown . | .",
+          "url": "https://jesa06.github.io/andafp/notes/",
+          "relUrl": "/notes/",
           "date": ""
       }
       
@@ -103,7 +114,7 @@
   
 
   
-      ,"page11": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://jesa06.github.io/andafp/robots.txt",
