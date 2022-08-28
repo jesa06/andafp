@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Notes
-permalink: /notes/ 
+permalink: /https://github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b352ae4c50724/_pages/03_Notes.md/ 
 ---
 
 
