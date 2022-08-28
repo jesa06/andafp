@@ -60,6 +60,6 @@ if rsp == "function str()":
     print (rsp + "is correct :)")
     correct += 1
 else:
-    print(rsp + "is incorrect :(")
+    print(rsp + "is incorrect :(") 
 
 print(getpass.getuser() + " great job! you scored " + str(correct) +"/" + str(questions))
