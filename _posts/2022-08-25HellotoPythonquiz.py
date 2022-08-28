@@ -12,7 +12,7 @@ def question_with_response(prompt):
     print("Question: " + prompt)
     msg = input()
     return msg
-
+   
 questions = 6 
 correct = 0
 
