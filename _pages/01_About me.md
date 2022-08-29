@@ -18,4 +18,4 @@ I have been doing Brazilian Jiu-Jitsu since 2012
 
 
 # Me on the first day of Junior year #
-![]({{site.baseurl}}/images/04F415CC-FD71-45FD-9609-FAC9267614FD.png)
+![]({{site.baseurl}}/images/junioryearme.png)
