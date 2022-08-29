@@ -15,7 +15,8 @@ permalink: https://github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b352
 - Elly, our Rottweiler
 - Athyna, out Pitbull 
 
+My family at my sister's 18th Birthday/Debut
+![](myfamily.png)
 
-![My family](B4C1E766-855A-41C4-96CE-77E9668A1498.png)
-
-![Some of my cousins](B9A3FAA1-120A-4117-909B-C1777EE16917.png)
+Some of my cousins on my mom's side
+![](cousins.png)
