@@ -15,7 +15,11 @@ My favorite color is red!
 
 I have been doing Brazilian Jiu-Jitsu since 2012
 
+I *love* music, especially singing and I am the Vice President of choir at Del Norte. I also am in Chamber Choir of Del Norte.
 
 
-# Me on the first day of Junior year #
+## Me on the first day of Junior year ##
 ![]({{site.baseurl}}/images/junioryearme.png)
+
+## Singing and dancing concert with some of the choir alumni ##
+![]({{site.baseurl}}/images/choirselfie.png)
