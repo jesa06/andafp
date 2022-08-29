@@ -16,7 +16,7 @@ permalink: https://github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b352
 - Athyna, out Pitbull 
 
 ## My family at my sister's 18th Birthday/Debut ##
-![](myfamily.png)
+![]({{site.baseurl}}/images/myfamily.png)
 
 ## Some of my cousins on my mom's side ##
-![](cousins.png)
+![]({{site.baseurl}}/images/cousins.png)
