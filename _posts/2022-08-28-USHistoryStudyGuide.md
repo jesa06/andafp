@@ -1,12 +1,9 @@
 ---
 toc: true
 layout: post
-description: A minimal example of using markdown with Fastpages.
+description: A study guide about the Bill of Rights, How Government is structured, & How Geography Affects the Development of Places 
 categories: [markdown]
-title: Markdown Post
----
-# United States History Study Guide
-> Study Guide about the Bill of Rights, How the Government is structured, & How Geography Affects the Development of Places
+title: United States History Study Guide
 ---
 
 ## Bill of Rights
