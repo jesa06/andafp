@@ -49,23 +49,24 @@ title: United States History Study Guide
 ## Geography Impacts the Development of the US
 ### 3 Main groups of Colonies
 1. Northern/New England: Massachusetts, (Vermont & New Hampshire), Maine, Connecticut, Rhode Island
-    - rocky terrain --> 
-    - woody/foresty -->
-    - wildlife -->
-    - rain/snowfall -->
-    - rugged coast -->
-    - bad soil --> 
+    - rocky terrain --> not suitable for farming, produce from South
+    - woody/foresty --> economy survives off of lumber for housing/ships...
+    - wildlife --> hunting > agriculture, heavy meat-diet
+    - rain/snowfall --> fast-moving, short rivers for trade/access to clean water (higher life expectancy)/water power sources, closer community --> direct democracy, good education
+    - rugged coast --> bad for transportation --> difficult international trade
+    - bad soil --> do not have fresh produce or farms
 2. Middle: New York, New Jersey, Pennsylvania, Delaware, Maryland
-    - rolling hills/plains -->
-    - thick, rich soil -->
-    - rivers -->
-    - waterways -->
-    - woods --> 
-    - wildlife -->
+    - rolling hills/plains --> good land for living, small farms
+    - thick, rich soil --> suitable for farming
+    - rivers --> access to clean water, transportation and trade
+    - waterways --> seaports for trade and transportation
+    - woods --> lumber economy and trade
+    - wildlife --> meat in diet, hunting to connect
+    - representative democracy 
 3. Southern: Maryland, Virginia, North Carolina, South Carolina, Georgia
-    - warm climate -->
-    - bays -->
-    - broad rivers -->
-    - swamps -->
-    - thick, rich soil -->
-    - Appalachian Mountains -->
+    - warm climate --> more prone to diseases, lower life expectancy
+    - bays --> trade ports
+    - broad rivers --> trade and transportation
+    - swamps --> more prone to diseases and bugs, lower life expectancy
+    - thick, rich soil --> cash crops
+    - Appalachian Mountains --> cannot try to become wealthy by expanding to buy land, live far apart --> Republic government
