@@ -23,3 +23,5 @@ I *love* music, especially singing and I am the Vice President of choir at Del N
 
 ## Singing and dancing concert with some of the choir alumni ##
 ![]({{site.baseurl}}/images/choirselfie.png)
+
+[My first Brazilian Jiu-Jistu Tournament]](https://youtu.be/RaerwRZCmMA) 
