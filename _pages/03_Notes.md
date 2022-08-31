@@ -22,6 +22,10 @@ permalink: /https://github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b35
 ---
 ## Formatting
 - ### To add an image in markdown- src="{{site.baseurl}}/images/filename"
+    - In Fastpages you can insert images in HTML or Markdown. The Teacher finds <img> easier to work with for embedding links when trying to control size.
+
+- ### Links
+    - Look up <href> and []() syntax in both HTML and Markdown. These should become easy and familiar.
 ---
 
 ## Softwares & Applications
