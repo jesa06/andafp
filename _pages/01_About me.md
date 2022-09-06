@@ -8,6 +8,19 @@ permalink: /https://github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b35
 Hello everyone! 
 
 My name is Joselyn Elise Soriano Anda and I am apart of Del Norte Highschool in the class of '24 
+- This is my Trimester 1 schedule
+
+| Period # | Course | Teacher |
+|-|-|-|
+| 1 | American Literature | Theodore West |
+|-|-|-|
+| 2 | AP Calculus AB | Cherie Nydam |
+|-|-|-|
+| 3 | Classical Vocal Ensemble | Ruth Wong |
+|-|-|-|
+| 4 | AP Computer Science Principles | Mr. Yeung |
+|-|-|-|
+| 5 | United States History | Elizabeth Ayres |
 
 My birthday is January 15, 2006
 
