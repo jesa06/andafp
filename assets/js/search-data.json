@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Htmlmarkdownfragments",
-            "content": "HTML Markdown Fragments . Progress each week | Week # | Topic/Focus | Issue/Hacks/Review Tickets | |-|-|-| | 0 | Tool Setup | Tools and Equipment | |-|-|-| | 1 | Introduction to Python | Bash and Checks Fastpages | |-|-|-| | 2 | Data Abstraction | Data Abstraction .",
+            "content": "HTML Markdown Fragments . Progress each week | Week # | Topic/Focus | Issue/Hacks/Review Tickets | Notes/Things to remember | |-|-|-| | 0 | Tool Setup | Tools and Equipment | When doing hacks, post as an issue | |-|-|-| | 1 | Introduction to Python | Bash and Checks Fastpages | We can verify versions and tools/kernels installed using different codes in Terminal | |-|-|-| | 2 | Data Abstraction | Data Abstraction | There are different types of loops. Index can be used to select/refer to a certain language or record or list | .",
             "url": "https://jesa06.github.io/andafp/2022/09/06/HTMLmarkdownfragments.html",
             "relUrl": "/2022/09/06/HTMLmarkdownfragments.html",
             "date": " • Sep 6, 2022"
