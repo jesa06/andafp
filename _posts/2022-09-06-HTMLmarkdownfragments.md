@@ -1,3 +1,10 @@
+---
+toc: true
+layout: post
+description: Time Stamp of weekly progress
+categories: [markdown]
+title: A HTML Markdown Fragment
+---
 # HTML Markdown Fragments
 > Progress each week
 
