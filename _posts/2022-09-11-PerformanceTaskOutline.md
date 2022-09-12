@@ -73,23 +73,24 @@ def for_loop():
 
 for_loop()
 ```
-    [{'Name': 'Elly', 'DogBreed': 'Rottweiler', 'DOB': 'January 18 2010', 'Residence': 'Escondido', 'FavoriteColor': 'Red', 'FavoriteHobbies': ['Sleeping', 'Eating', 'Playing'], 'Weight': '96.7 pounds'}, {'Name': 'Athyna', 'DogBreed': 'Pitbull', 'DOB': 'April 25 2012', 'Residence': 'Escondido', 'FavoriteColor': 'Purple', 'FavoriteHobbies': ['Sleeping', 'Chasing animals', 'Playing'], 'Weight': '45.5 pounds'}]
-   
-      My Dogs Info
+[{'Name': 'Elly', 'DogBreed': 'Rottweiler', 'DOB': 'January 18 2010', 'Residence': 'Escondido', 'FavoriteColor': 'Red', 'FavoriteHobbies': ['Sleeping', 'Eating', 'Playing'], 'Weight': '96.7 pounds'}, {'Name': 'Athyna', 'DogBreed': 'Pitbull', 'DOB': 'April 25 2012', 'Residence': 'Escondido', 'FavoriteColor': 'Purple', 'FavoriteHobbies': ['Sleeping', 'Chasing animals', 'Playing'], 'Weight': '45.5 pounds'}]
 
-	   Elly
-	   Residence: Escondido
-	   Birth Day: January 18 2010
-	   Favorite Color: Red
-	   Favorite Hobbies: ['Sleeping', 'Eating', 'Playing']
-	   Weight: 96.7 pounds
+My Dogs Info
 
-	   Athyna
-	   Residence: Escondido
-	   Birth Day: April 25 2012
-	   Favorite Color: Purple
-	   Favorite Hobbies: ['Sleeping', 'Chasing animals', 'Playing']
-	   Weight: 45.5 pounds
+	 Elly
+	 Residence: Escondido
+	 Birth Day: January 18 2010
+	 Favorite Color: Red
+	 Favorite Hobbies: ['Sleeping', 'Eating', 'Playing']
+	 Weight: 96.7 pounds
+
+	 Elly
+	 Residence: Escondido
+	 Birth Day: January 18 2010
+	 Favorite Color: Red
+	 Favorite Hobbies: ['Sleeping', 'Eating', 'Playing']
+	 Weight: 96.7 pounds
+    
 
 
 
