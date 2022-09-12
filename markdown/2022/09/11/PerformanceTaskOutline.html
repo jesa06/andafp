@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -150,12 +150,76 @@ window.onload = wrap_img;
 <h3 id="codes-i-will-use-in-my-performance-task">
 <a class="anchor" href="#codes-i-will-use-in-my-performance-task" aria-hidden="true"><span class="octicon octicon-link"></span></a>Codes I will use in my Performance Task</h3>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Prints '2'
-</span><span class="k">print</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Prints a dictionary and the lists and records within it
+</span>
+<span class="c1"># Define an empty List called InfoDb
+</span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Append to List a Dictionary of key/values related to a person and cars
+</span><span class="n">InfoDb</span><span class="p">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s">"Name"</span><span class="p">:</span> <span class="s">"Elly"</span><span class="p">,</span>
+    <span class="s">"DogBreed"</span><span class="p">:</span> <span class="s">"Rottweiler"</span><span class="p">,</span>
+    <span class="s">"DOB"</span><span class="p">:</span> <span class="s">"January 18 2010"</span><span class="p">,</span>
+    <span class="s">"Residence"</span><span class="p">:</span> <span class="s">"Escondido"</span><span class="p">,</span>
+    <span class="s">"FavoriteColor"</span><span class="p">:</span> <span class="s">"Red"</span><span class="p">,</span>
+    <span class="s">"FavoriteHobbies"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Sleeping"</span><span class="p">,</span> <span class="s">"Eating"</span><span class="p">,</span> <span class="s">"Playing"</span><span class="p">],</span> 
+    <span class="s">"Weight"</span><span class="p">:</span> <span class="s">"96.7 pounds"</span>
+
+<span class="p">})</span>
+
+
+<span class="c1"># Append to List a 2nd Dictionary of key/values
+</span><span class="n">InfoDb</span><span class="p">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s">"Name"</span><span class="p">:</span> <span class="s">"Athyna"</span><span class="p">,</span>
+    <span class="s">"DogBreed"</span><span class="p">:</span> <span class="s">"Pitbull"</span><span class="p">,</span>
+    <span class="s">"DOB"</span><span class="p">:</span> <span class="s">"April 25 2012"</span><span class="p">,</span>
+    <span class="s">"Residence"</span><span class="p">:</span> <span class="s">"Escondido"</span><span class="p">,</span>
+    <span class="s">"FavoriteColor"</span><span class="p">:</span> <span class="s">"Purple"</span><span class="p">,</span>
+    <span class="s">"FavoriteHobbies"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Sleeping"</span><span class="p">,</span><span class="s">"Chasing animals"</span><span class="p">,</span> <span class="s">"Playing"</span> <span class="p">],</span> 
+    <span class="s">"Weight"</span><span class="p">:</span> <span class="s">"45.5 pounds"</span>
+
+<span class="p">})</span>
+
+<span class="c1"># Print the data structure
+</span><span class="k">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span><span class="c1"># given and index this will print InfoDb content
+</span><span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s">"Name"</span><span class="p">])</span>  <span class="c1"># using comma puts space between values
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="s">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s">"Residence"</span><span class="p">])</span> <span class="c1"># \t is a tab indent
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="s">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s">"DOB"</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="s">"Favorite Color:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s">"FavoriteColor"</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="s">"Favorite Hobbies:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s">"FavoriteHobbies"</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="s">"Weight: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>  <span class="c1"># end="" make sure no return occurs
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s">"Weight"</span><span class="p">]))</span>  <span class="c1"># join allows printing a string list with separator
+</span>    <span class="k">print</span><span class="p">()</span> 
+
+<span class="k">def</span> <span class="nf">for_loop</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"My Dogs Info</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">InfoDb</span><span class="p">:</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+
+<span class="n">for_loop</span><span class="p">()</span>
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[{'Name': 'Elly', 'DogBreed': 'Rottweiler', 'DOB': 'January 18 2010', 'Residence': 'Escondido', 'FavoriteColor': 'Red', 'FavoriteHobbies': ['Sleeping', 'Eating', 'Playing'], 'Weight': '96.7 pounds'}, {'Name': 'Athyna', 'DogBreed': 'Pitbull', 'DOB': 'April 25 2012', 'Residence': 'Escondido', 'FavoriteColor': 'Purple', 'FavoriteHobbies': ['Sleeping', 'Chasing animals', 'Playing'], 'Weight': '45.5 pounds'}]
 </code></pre></div></div>
+
+<p>My Dogs Info</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Elly
+ Residence: Escondido
+ Birth Day: January 18 2010
+ Favorite Color: Red
+ Favorite Hobbies: ['Sleeping', 'Eating', 'Playing']
+ Weight: 96.7 pounds
+
+ Athyna
+ Residence: Escondido
+ Birth Day: April 25 2012
+ Favorite Color: Purple
+ Favorite Hobbies: ['Sleeping', 'Chasing animals', 'Playing']
+ Weight: 45.5 pounds
+</code></pre></div></div>
+
 
   </div><a class="u-url" href="/andafp/markdown/2022/09/11/PerformanceTaskOutline.html" hidden></a>
 </article>
