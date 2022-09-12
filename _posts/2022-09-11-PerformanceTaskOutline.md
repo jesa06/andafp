@@ -20,3 +20,12 @@ title: College Board Create Performance Task
 
 ## My preparation
 I will look over all of my notes taken and my blogs demonstration different requirements, like lists, iterations, loops, etc. I will also look over examples in the collegeboard, ones that are great on including every aspect and earned great scores, and ones that did not include every aspect and lost a lot of points. I will also review the rubric and scoring as I am looking at these examples, and as I am adding onto my ideas of the performance task. During my code I will add comments, cite codes that I got from others, rearrange codes in better orders, shortening codes with variables, and just fine tuning it to be at its best. 
+
+### Codes I will use in my Performance Task
+
+```python
+# Prints '2'
+print(1+1)
+```
+
+    2
