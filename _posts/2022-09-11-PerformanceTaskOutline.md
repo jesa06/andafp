@@ -24,8 +24,79 @@ I will look over all of my notes taken and my blogs demonstration different requ
 ### Codes I will use in my Performance Task
 
 ```python
-# Prints '2'
-print(1+1)
+# Prints a dictionary and the lists and records within it
+
+# Define an empty List called InfoDb
+InfoDb = []
+
+# Append to List a Dictionary of key/values related to a person and cars
+InfoDb.append({
+    "Name": "Elly",
+    "DogBreed": "Rottweiler",
+    "DOB": "January 18 2010",
+    "Residence": "Escondido",
+    "FavoriteColor": "Red",
+    "FavoriteHobbies": ["Sleeping", "Eating", "Playing"], 
+    "Weight": "96.7 pounds"
+
+})
+
+
+# Append to List a 2nd Dictionary of key/values
+InfoDb.append({
+    "Name": "Athyna",
+    "DogBreed": "Pitbull",
+    "DOB": "April 25 2012",
+    "Residence": "Escondido",
+    "FavoriteColor": "Purple",
+    "FavoriteHobbies": ["Sleeping","Chasing animals", "Playing" ], 
+    "Weight": "45.5 pounds"
+
+})
+
+# Print the data structure
+print(InfoDb)# given and index this will print InfoDb content
+def print_data(d_rec):
+    print("\t", d_rec["Name"])  # using comma puts space between values
+    print("\t", "Residence:", d_rec["Residence"]) # \t is a tab indent
+    print("\t", "Birth Day:", d_rec["DOB"])
+    print("\t", "Favorite Color:", d_rec["FavoriteColor"])
+    print("\t", "Favorite Hobbies:", d_rec["FavoriteHobbies"])
+    print("\t", "Weight: ", end="")  # end="" make sure no return occurs
+    print("".join(d_rec["Weight"]))  # join allows printing a string list with separator
+    print() 
+
+def for_loop():
+    print("My Dogs Info\n")
+    for record in InfoDb:
+        print_data(record)
+
+for_loop()
 ```
 
-    2
+    [{'Name': 'Elly', 'DogBreed': 'Rottweiler', 'DOB': 'January 18 2010', 'Residence': 'Escondido', 'FavoriteColor': 'Red', 'FavoriteHobbies': ['Sleeping', 'Eating', 'Playing'], 'Weight': '96.7 pounds'}, {'Name': 'Athyna', 'DogBreed': 'Pitbull', 'DOB': 'April 25 2012', 'Residence': 'Escondido', 'FavoriteColor': 'Purple', 'FavoriteHobbies': ['Sleeping', 'Chasing animals', 'Playing'], 'Weight': '45.5 pounds'}]
+   
+   My Dogs Info
+
+	 Elly
+	 Residence: Escondido
+	 Birth Day: January 18 2010
+	 Favorite Color: Red
+	 Favorite Hobbies: ['Sleeping', 'Eating', 'Playing']
+	 Weight: 96.7 pounds
+
+	 Athyna
+	 Residence: Escondido
+	 Birth Day: April 25 2012
+	 Favorite Color: Purple
+	 Favorite Hobbies: ['Sleeping', 'Chasing animals', 'Playing']
+	 Weight: 45.5 pounds
+
+
+
+
+
+
+
+
+
