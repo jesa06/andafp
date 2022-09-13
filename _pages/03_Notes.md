@@ -34,6 +34,7 @@ permalink: /https://github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b35
 - ### Git- coordinating work among programmers to develop source code/source code management
 - ### Jupyter Notebook- to edit and run notebook documents
 - ### Bash- command-line interpreter or user shell used to interpret user commands
+- ### Docker- platform that simplifies the process of building, running, managing and distributing applications. it deploys software ni packages called containers
 ---
 ## Languages
 - ### Python
