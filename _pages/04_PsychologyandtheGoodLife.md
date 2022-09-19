@@ -1,7 +1,7 @@
 ---
 layout: page
 description: Understanding how the mind's functions of individuals, including stress and collaboration, affect success and problem solving.
-title: Psychology and the Good Life Notes and Vocab
+title: Psychology and the Good Life
 ---
 # [Psychology and the Good Life](https://www.youtube.com/watch?v=ZizdB0TgAVM)
 > Focus and Habits Hacks: Notes, Gratitude List, and Goals
