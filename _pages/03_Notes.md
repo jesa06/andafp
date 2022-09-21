@@ -38,7 +38,13 @@ permalink: /https://github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b35
 ---
 ## Languages
 - ### Python
-- ### Java/Javascript
+    - for function it is def
+    - to type message, print
+- ### Java/Javascript: loosely typed language
+    - for function it is function 
+    - parameter (inside function)
+    - to type message, console.log
+    - JSON: long string of information, can be used to transfer different data structures to different languages
 ---
 ## Different File Types
 - ### .ipynb is Jupyter Notebook
