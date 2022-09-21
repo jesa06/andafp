@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "1.2programfunctionandpurposenotes",
-            "content": "",
-            "url": "https://jesa06.github.io/andafp/2022/09/20/1.2ProgramFunctionandPurposeNotes.html",
-            "relUrl": "/2022/09/20/1.2ProgramFunctionandPurposeNotes.html",
+            "title": "1.2 Program Function & Purpose",
+            "content": "Computing Innovations . Applications . Games | Social Media | Business | Productivity | . | Physical Devices . Computers | Smart phones/tablets | Smart “Things” | Wearables (apple watches, things to help keep people alive/alert health or vitals) | . | Systems . E-commerce (online shopping) | Cloud services (files stored online) | E-mail (communication) | . | Purpose of Innovations . Guidance . Why does this computing innovation exist? safety, convenience, efficiency | . | What problems does this computing innovation solve? does not have to be negative, an issue | . | What does the computing innovation allow us to do that we could not do before? | . Inputs to Programs . touch/tactile swipe | press | . | audio voice recognition (siri) | . | visual facial recognition | . | text (including numbers) passwords | . | Programs Receiving Input- events are triggered by some sort of action, which usually sends input to the program . mouse clicks | swipes | taps | certain entries or keys together | key words/phrases | physical buttons | What dees Input accomplish? . usually affects the output | Must follow a sequence or series for it to work | . How does a program know what to do? . action triggers an event (Ring doorbell) | the program jumps to the code according to the event –&gt; directs you to different spots/segments (as they are called, not necessarily in order) –&gt; output is triggered | . . What is a program? . a collection of statements, often referred to as software | needs to work for a variety of inputs and situations | a statement is a single command | a code segment is a group of statements can be in order or not, depending on coding language | . | .",
+            "url": "https://jesa06.github.io/andafp/markdown/2022/09/20/1.2ProgramFunctionandPurposeNotes.html",
+            "relUrl": "/markdown/2022/09/20/1.2ProgramFunctionandPurposeNotes.html",
             "date": " • Sep 20, 2022"
         }
         
