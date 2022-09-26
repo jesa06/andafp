@@ -1,0 +1,107 @@
+---
+layout: default
+permalink: /HTMLJSTable/
+title: HTML and JS Table
+search_exclude: true
+---
+<div class="p-3 mb-2 bg-info text-white">Table about Dog Information</div>
+
+    <script>
+
+        function Dog(name, breed, color, age) {
+            this.name = name;
+            this.breed = breed;
+            this.color = color;
+            this.age = age;
+        }
+
+        Dog.prototype.toJSON = function() {
+            const obj = {name: this.name, breed: this.breed, color: this.color, age: this.age};
+            const json = JSON.stringify(obj);
+            return json;
+        }
+
+    
+        var dogs = [ 
+            new dog("Elly", "Rottweiler", "Black and Brown", 9),
+            new dog("Athyna" , "Pit Bull", "Brown and White", 8),
+            new dog("Pippy", "German Shepard, Boxer, Pit Bull, Greyhound", "Tan, Black, White, and Brown", 1),
+            new dog("Rosie", "Dachsund", "Brown", 5)
+           
+        ];
+
+        function Litter(dogs){ 
+         
+            this.litter = [dog];
+        
+            this.dogs = dogs;
+            this.dogs.forEach(dog => this.litter.push(dog));
+        
+            this.json = [];
+            this.litter.forEach(dog => this.json.push(dog.toJSON()));
+        }
+
+        Anda = new Litter (dogs);
+        
+
+        Litter.prototype._toHtml = function() {
+
+            // HTML Style is build using inline structure
+            var style = (
+                "display:inline-block;" +
+                "border: 2px solid teal;" +
+                "box-shadow: 0.8em 0.4em 0.4em black;"
+            );
+
+            //alert(style);
+
+
+            // HTML Body of Table is build as a series of concatenations (+=)
+            var body = "";
+            // Heading for Array Columns
+            body += "<tr>";
+            body += "<th><mark>" + " Name " + "</mark></th>";
+            body += "<th><mark>" + "Breed" + "</mark></th>";
+            body += "<th><mark>" + " Color" + "</mark></th>";
+            body += "<th><mark>" + " Age " + "</mark></th>";
+            body += "</tr>";
+
+            // Data of Array, iterate through each row of compsci.classroom 
+            for (var row of Anda.litter) {
+                // tr for each row, a new line
+                body += "<tr>";
+                // td for each column of data
+                body += "<td>" + row.name + "</td>";
+                body += "<td>" + row.breed + "</td>";
+                body += "<td>" + row.color + "</td>";
+                body += "<td>" + row.age + "</td>";
+                // tr to end line
+                body += "</tr>";
+            }
+
+
+            // Build and HTML fragment of div, table, table body
+            var sHtml = 
+                "<div style='" + style + "'>" +
+                "<table>" +
+                    body +
+                "</table>" +
+                "</div>";
+
+            document.write(sHtml);
+
+            
+            // return (
+            //     "<div style='" + style + "'>" +
+            //     "<table>" +
+            //         body +
+            //     "</table>" +
+            //     "</div>"
+            // );
+
+        };
+
+        $.html(Anda._toHtml());
+    </script>
+
+{% endblock %}
