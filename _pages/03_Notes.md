@@ -14,6 +14,8 @@ permalink: /https://github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b35
     - *Branch*- a version of the master branch
 - ### Compiler- takes your code and tries to translate it to tell u if u have errors, runs that command
  - ### Procedural Abstraction- making/combining smaller parts in html to create a website
+ - ### Project Based Learning- students learn by collaborating together and creating projects to encounter and learn real-world problems
+
 ---
 ## Actions
 - ### Kernel- way of communication between machine language and hardware
