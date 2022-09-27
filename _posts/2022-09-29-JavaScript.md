@@ -1,6 +1,7 @@
 ---
 keywords: fastai
-title: Javascript use in Jupyter Notebook!     
+description: Printing and showing setting up a function 
+title: Javascript use in Jupyter Notebook!    
 nb_path: _notebooks/2022-09-29-JavaScript.ipynb
 layout: notebook
 ---
@@ -16,7 +17,7 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Writing/Printing-in-JavaScript">Writing/Printing in JavaScript<a class="anchor-link" href="#Writing/Printing-in-JavaScript"> </a></h1>
+<h2 id="Writing/Printing-in-JavaScript">Writing/Printing in JavaScript<a class="anchor-link" href="#Writing/Printing-in-JavaScript"> </a></h2>
 </div>
 </div>
 </div>
@@ -27,7 +28,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;what&#39;s up&quot;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;what&#39;s up!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -40,7 +41,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>what&#39;s up
+<pre>what&#39;s up!
 </pre>
 </div>
 </div>
