@@ -104,85 +104,70 @@ window.onload = wrap_img;
 
     
         var dogs = [ 
-            new dog("Elly", "Rottweiler", "Black and Brown", 9),
-            new dog("Athyna" , "Pit Bull", "Brown and White", 8),
-            new dog("Pippy", "German Shepard, Boxer, Pit Bull, Greyhound", "Tan, Black, White, and Brown", 1),
-            new dog("Rosie", "Dachsund", "Brown", 5)
+            new Dog("Elly", "Rottweiler", "Black and Brown", 9),
+            new Dog("Athyna" , "Pit Bull", "Brown and White", 8),
+            new Dog("Pippy", "German Shepard, Boxer, Pit Bull, Greyhound", "Tan, Black, White, and Brown", 1),
+            new Dog("Rosie", "Dachsund", "Brown", 5)
            
         ];
 
         function Litter(dogs){ 
-         
-            this.litter = [dog];
-        
-            this.dogs = dogs;
-            this.dogs.forEach(dog => this.litter.push(dog));
-        
-            this.json = [];
-            this.litter.forEach(dog => this.json.push(dog.toJSON()));
+            this.litter = []; //define empty array (litter)
+
+            this.dogs = dogs; //pass parameter dogs to scope variable dogs
+            this.dogs.forEach(dog => this.litter.push(dog)); //loop through list of dogs and add to litter[] array
+
+            this.json = []; //define an empty json array variable
+            this.litter.forEach(dog => this.json.push(dog.toJSON())); //loop through the litter of string dogs and add then convert to JSON AND add to json array
         }
 
         Anda = new Litter (dogs);
-        
 
-        Litter.prototype._toHtml = function() {
+        // HTML Style is build using inline structure
+        var style = (
+            "display:inline-block;" +
+            "border: 2px solid teal;" +
+            "box-shadow: 0.8em 0.4em 0.4em black;"
+        );
 
-            // HTML Style is build using inline structure
-            var style = (
-                "display:inline-block;" +
-                "border: 2px solid teal;" +
-                "box-shadow: 0.8em 0.4em 0.4em black;"
-            );
-
-            //alert(style);
+        //alert(style);
 
 
-            // HTML Body of Table is build as a series of concatenations (+=)
-            var body = "";
-            // Heading for Array Columns
+        // HTML Body of Table is build as a series of concatenations (+=)
+        var body = "";
+        // Heading for Array Columns
+        body += "<tr>";
+        body += "<th><mark>" + " Name " + "</mark></th>";
+        body += "<th><mark>" + "Breed" + "</mark></th>";
+        body += "<th><mark>" + " Color" + "</mark></th>";
+        body += "<th><mark>" + " Age " + "</mark></th>";
+        body += "</tr>";
+
+        // Data of Array, iterate through each row of compsci.classroom 
+        for (var row of Anda.litter) {
+            // tr for each row, a new line
             body += "<tr>";
-            body += "<th><mark>" + " Name " + "</mark></th>";
-            body += "<th><mark>" + "Breed" + "</mark></th>";
-            body += "<th><mark>" + " Color" + "</mark></th>";
-            body += "<th><mark>" + " Age " + "</mark></th>";
+            // td for each column of data
+            body += "<td>" + row.name + "</td>";
+            body += "<td>" + row.breed + "</td>";
+            body += "<td>" + row.color + "</td>";
+            body += "<td>" + row.age + "</td>";
+            // tr to end line
             body += "</tr>";
-
-            // Data of Array, iterate through each row of compsci.classroom 
-            for (var row of Anda.litter) {
-                // tr for each row, a new line
-                body += "<tr>";
-                // td for each column of data
-                body += "<td>" + row.name + "</td>";
-                body += "<td>" + row.breed + "</td>";
-                body += "<td>" + row.color + "</td>";
-                body += "<td>" + row.age + "</td>";
-                // tr to end line
-                body += "</tr>";
-            }
+        }
+        //alert(body);
 
 
-            // Build and HTML fragment of div, table, table body
-            var sHtml = 
-                "<div style='" + style + "'>" +
-                "<table>" +
-                    body +
-                "</table>" +
-                "</div>";
+        // Build and HTML fragment of div, table, table body
+        var sHtml = 
+            "<div style='" + style + "'>" +
+            "<table>" +
+                body +
+            "</table>" +
+            "</div>";
 
-            document.write(sHtml);
+        document.write(sHtml);
 
-            
-            // return (
-            //     "<div style='" + style + "'>" +
-            //     "<table>" +
-            //         body +
-            //     "</table>" +
-            //     "</div>"
-            // );
-
-        };
-
-        $.html(Anda._toHtml());
     </script>
 
 
