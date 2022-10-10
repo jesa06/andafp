@@ -97,7 +97,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -550,7 +550,11 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">menu</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;burger&quot;</span><span class="p">:</span> <span class="mf">3.99</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">truediv</span>
+<span class="kn">from</span> <span class="nn">pickle</span> <span class="kn">import</span> <span class="n">TRUE</span>
+
+
+<span class="n">menu</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;burger&quot;</span><span class="p">:</span> <span class="mf">3.99</span><span class="p">,</span>
          <span class="s2">&quot;fries&quot;</span><span class="p">:</span> <span class="mf">1.99</span><span class="p">,</span>
          <span class="s2">&quot;drink&quot;</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">}</span>
 <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
@@ -562,9 +566,29 @@ window.onload = wrap_img;
 
 <span class="c1">#ideally the code should prompt the user multiple times</span>
 <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please select an item from the menu&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="n">match</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="s2">&quot; $&quot;</span> <span class="p">,</span> <span class="n">v</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+        <span class="c1"># print(str(v))</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="n">TRUE</span>    
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">v</span> 
+    <span class="n">otheritem</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Anything else? y/n &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">otheritem</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span> <span class="ow">or</span> <span class="n">otheritem</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">:</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please select an item from the menu&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+                <span class="c1"># print(str(v))</span>
+                <span class="n">match</span> <span class="o">=</span> <span class="n">TRUE</span>    
+                <span class="n">total</span> <span class="o">+=</span> <span class="n">v</span>     
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">break</span>
+        
+
+<span class="k">if</span> <span class="n">match</span> <span class="o">==</span> <span class="kc">False</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;item not found&quot;</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total is $&quot;</span> <span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">total</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -581,23 +605,8 @@ window.onload = wrap_img;
 burger  $3.99
 fries  $1.99
 drink  $0.99
-burger
+Your total is $ 3.99
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/jesa/vscode/andafp/_notebooks/2022-10-03-AP-error_testing.ipynb Cell 20</span> in <span class="ansi-cyan-fg">&lt;cell line: 14&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-10-03-AP-error_testing.ipynb#X25sZmlsZQ%3D%3D?line=12&#39;&gt;13&lt;/a&gt;</span> print(item)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-10-03-AP-error_testing.ipynb#X25sZmlsZQ%3D%3D?line=13&#39;&gt;14&lt;/a&gt;</span> for k, v in menu.items():
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-10-03-AP-error_testing.ipynb#X25sZmlsZQ%3D%3D?line=14&#39;&gt;15&lt;/a&gt;</span>     print(item, &#34; $&#34; , v(item))
-
-<span class="ansi-red-fg">TypeError</span>: &#39;float&#39; object is not callable</pre>
 </div>
 </div>
 
