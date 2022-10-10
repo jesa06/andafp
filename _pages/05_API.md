@@ -77,6 +77,8 @@ week: 7
 </div>
 
 <!-- HTML table fragment for page -->
+<a href={{}} class="btn btn-primary">Frontend Code!</a>
+<a href={{https://github.com/jesa06/andafp/blob/f5ded5f90611be9291c8ffe45f696a5e8b42e9b8/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb}} class="btn btn-primary">Backend Code!</a>
 <table>
   <thead>Location Details
   <tr>
