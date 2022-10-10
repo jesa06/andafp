@@ -97,7 +97,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      8 min read
     
 </span></p>
 
@@ -257,6 +257,7 @@ window.onload = wrap_img;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;bound method Response.json of &lt;Response [200]&gt;&gt;
 World Totals
+dict_items([('total_cases', '509,268,964'), ('new_cases', '204,268'), ('total_deaths', '6,242,509'), ('new_deaths', '630'), ('total_recovered', '461,827,849'), ('active_cases', '41,198,606'), ('serious_critical', '42,510'), ('total_cases_per_1m_population', '65,334'), ('deaths_per_1m_population', '800.9'), ('statistic_taken_at', '2022-04-24 11:18:01')])
 total_cases 509,268,964
 new_cases 204,268
 total_deaths 6,242,509
@@ -682,7 +683,7 @@ Rank Url: https://coinranking.com/coin/iAzbfXiBBKkR6+eos-eos
 <li><a href="https://www.reddit.com/dev/api/">Reddit Developer</a></li>
 </ul>
 <p>Show API and format results in either Web Page or Jupyter Notebook.  Ultimately, I will expect that we do APIs in backend (Python/Flask).  However, for this Hack you can pick your preference.  We will discuss pros and cons in next API tech talk.
-I will be using and API relating to Fantasy Football, to be able to extract data about different players.</p>
+I will be using and API relating to weather, to be able to extract data about astronomy in different cities.</p>
 </blockquote>
 
 </div>
@@ -695,40 +696,39 @@ I will be using and API relating to Fantasy Football, to be able to extract data
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">Requests is a HTTP library for the Python programming language. </span>
-<span class="sd">"""</span>
-<span class="kn">import</span> <span class="nn">requests</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://football-datafeeds-by-rolling-insights1.p.rapidapi.com/team-stats/%7Bdate%7D/NFL"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://weatherapi-com.p.rapidapi.com/astronomy.json"</span>
 
-<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"RSC_token"</span><span class="p">:</span><span class="s2">"undefined"</span><span class="p">,</span><span class="s2">"team_id"</span><span class="p">:</span><span class="s2">"28"</span><span class="p">}</span>
+<span class="n">city</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Choose a city"</span><span class="p">)</span>
+<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"q"</span><span class="p">:</span><span class="n">city</span><span class="p">}</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-	<span class="s2">"RS-DATA-TYPE"</span><span class="p">:</span> <span class="s2">"TEAM-STATS"</span><span class="p">,</span>
 	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"0b6ef107f7msh5606de624633ceap17521ejsn27566d20ff5b"</span><span class="p">,</span>
-	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"football-datafeeds-by-rolling-insights1.p.rapidapi.com"</span>
+	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"weatherapi-com.p.rapidapi.com"</span>
 <span class="p">}</span>
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
 
-<span class="c1"># This code looks for "world data"</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Team Statistics"</span><span class="p">)</span>
-<span class="n">team</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'team_id'</span><span class="p">)</span> 
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">team</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># this finds key, value pairs in country</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Location details"</span><span class="p">)</span>
+<span class="n">loc</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'location'</span><span class="p">)</span>  <span class="c1"># turn response to json() so we can extract "world_total"</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">loc</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># this finds key, value pairs in country</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="c1"># This code looks for USA in "countries_stats"</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Player Statistics"</span><span class="p">)</span>
-<span class="n">player</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'player_season_statistics'</span><span class="p">)</span> <span class="c1"># countries is the key, countries_stat is the value</span>
-<span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">team</span><span class="p">:</span>  <span class="c1"># countries is a list</span>
-    <span class="k">if</span> <span class="n">player</span><span class="p">[</span><span class="s2">"player_name"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"..."</span><span class="p">:</span>  <span class="c1"># this filters for PI</span>
-        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">player</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># this finds key, value pairs in country</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="c1"># look for each level of json --&gt; look for country that you chose/typed --&gt; once it finds that it enters that dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Astronomy details"</span><span class="p">)</span>
+<span class="n">astro</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'astronomy'</span><span class="p">)</span> <span class="c1"># countries is the key, countries_stat is the value</span>
+<span class="c1">#print(astro.items())</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">astro</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+	<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="p">:</span>
+		<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">value</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+
+<span class="c1">#astro in astronomy:  # countries is a list</span>
+    <span class="c1">#print(astro)</span>
 </pre></div>
 
     </div>
@@ -742,25 +742,24 @@ I will be using and API relating to Fantasy Football, to be able to extract data
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;bound method Response.json of &lt;Response [200]&gt;&gt;
-Team Statistics
+Location details
+name : Escondido
+region : California
+country : United States of America
+lat : 33.12
+lon : -117.09
+tz_id : America/Los_Angeles
+localtime_epoch : 1665391413
+localtime : 2022-10-10 1:43
+
+Astronomy details
+sunrise : 06:49 AM
+sunset : 06:21 PM
+moonrise : 07:03 PM
+moonset : 07:35 AM
+moon_phase : Waxing Gibbous
+moon_illumination : 99
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/jesa/vscode/andafp/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb Cell 11</span> in <span class="ansi-cyan-fg">&lt;cell line: 22&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb#X14sZmlsZQ%3D%3D?line=19'&gt;20&lt;/a&gt;</span> # This code looks for "world data"
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb#X14sZmlsZQ%3D%3D?line=20'&gt;21&lt;/a&gt;</span> print("Team Statistics")
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb#X14sZmlsZQ%3D%3D?line=21'&gt;22&lt;/a&gt;</span> team = response.json().get('team_id') 
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb#X14sZmlsZQ%3D%3D?line=22'&gt;23&lt;/a&gt;</span> for key, value in team.items():  # this finds key, value pairs in country
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb#X14sZmlsZQ%3D%3D?line=23'&gt;24&lt;/a&gt;</span>     print(key, value)
-
-<span class="ansi-red-fg">AttributeError</span>: 'NoneType' object has no attribute 'get'</pre>
 </div>
 </div>
 
