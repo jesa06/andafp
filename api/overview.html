@@ -85,7 +85,8 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <h3 id="apis-in-this-sub-menu">APIs in this Sub Menu</h3>
+        <p>| Overview | Weather API |</p>
+<h3 id="apis-in-this-sub-menu">APIs in this Sub Menu</h3>
 <blockquote>
   <p>HTML, CSS, and JavaScript are the front-end of the API.  Python and API resource definitions are used for RESTful API definitions. Abstraction of Frontend and Backend code, the exchange of standard data format (JSON), and guidelines for exchange (REST) is a technique that saves a lot of time between developers.  Learning APIs is a highly recommended step for every developer trying to break into the world of tech.</p>
   <ul>
@@ -147,6 +148,80 @@ window.onload = wrap_img;
     </div>
 
 </div>
+
+<!-- HTML table fragment for page -->
+<table>
+  <thead>Location Details
+  <tr>
+    <th>City</th>
+    <th>Region</th>
+    <th>Country</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Time Zone</th>
+    <th>Local Time Epoch</th>
+    <th>Local Date and Time</th>
+    
+
+  </tr>
+  </thead>
+  <tbody>
+    <td id="location"></td>
+  </tbody>
+</table>
+
+<table>
+    <thead>Astronomy Details
+    <tr>
+        <th>Sunrise</th>
+        <th>Sunset</th>
+        <th>Moonrise</th>
+        <th>Moonset</th>
+        <th>Moon Phase</th>
+        <th>Moon Illumination</th>
+    </tr>
+    </thead>
+    <tbody>
+        <td id="astronomy"></td>
+    </tbody>
+</table>
+
+<script>
+    import requests
+
+url = "https://weatherapi-com.p.rapidapi.com/astronomy.json"
+
+city = input("Choose a city")
+querystring = {"q":city}
+
+headers = {
+	"X-RapidAPI-Key": "0b6ef107f7msh5606de624633ceap17521ejsn27566d20ff5b",
+	"X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com"
+}
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.json)
+
+print("Location details")
+loc = response.json().get('location')  // turn response to json() so we can extract "world_total"
+for key, value in loc.items():  // this finds key, value pairs in country
+    print(key, ":", value)
+
+print()
+
+// This code looks for USA in "countries_stats"
+print("Astronomy details")
+astro = response.json().get('astronomy') # countries is the key, countries_stat is the value
+// print(astro.items())
+for key, value in astro.items():
+	for x in value.keys() :
+		print(x, ":", value[x])
+
+//astro in astronomy:  # countries is a list
+    //print(astro)
+<script>
+</script>
 
       </div>
     </main><footer class="site-footer h-card">
