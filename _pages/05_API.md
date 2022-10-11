@@ -96,9 +96,9 @@ week: 7
                     // add HTML to container
                     resultContainer.appendChild(tr);
                 }
-        */
             })
         })
+        */
 
     }
 
@@ -110,10 +110,10 @@ week: 7
 <h1>API Information and Example</h1>
 
 <a href="#overviewbutton"><button> Overview </button></a>
-<a href="#astronomybutton"><button> Weather API </button></a>
+<a href="#astronomybutton"><button> Astronomy API </button></a>
 
 
-### Web API Overview <div id="overviewbutton">&nbsp;</div>
+<div id="overviewbutton">&nbsp;</div>
 
     <div>
         <hr>
@@ -159,7 +159,7 @@ week: 7
 
 <!-- HTML table fragment for page -->
 
-### Astronomy API
+
 If you choose a city, it will list out the location and astronomy details.
 
 <div id="astronomybutton">
