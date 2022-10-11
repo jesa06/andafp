@@ -10,9 +10,95 @@ week: 7
 > HTML, CSS, and JavaScript are the front-end of the API.  Python and API resource definitions are used for RESTful API definitions. Abstraction of Frontend and Backend code, the exchange of standard data format (JSON), and guidelines for exchange (REST) is a technique that saves a lot of time between developers.  Learning APIs is a highly recommended step for every developer trying to break into the world of tech.<html>
 
 <script>
+
     function testButtonClick() {
+        
         alert("yo momma!");
+
+        // prepare HTML result container for new output
+            const resultContainer = document.getElementById("astronomy");
+
+        // prepare fetch options
+            const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json";
+            const headers = {
+                method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors', // no-cors, *cors, same-origin
+                cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: 'omit', // include, *same-origin, omit
+                headers: {
+                    'Content-Type': 'application/json'
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-RapidAPI-Key': '0b6ef107f7msh5606de624633ceap17521ejsn27566d20ff5b',
+                    'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+                },
+            };
+
+
+        // fetch the API
+        fetch(url, headers)
+        // response is a RESTful "promise" on any successful fetch
+        .then(response => {
+            // check for response errors
+            if (response.status !== 200) {
+                const errorMsg = 'Database response error: ' + response.status;
+                console.log(errorMsg);
+                const tr = document.createElement("tr");
+                const td = document.createElement("td");
+                td.innerHTML = errorMsg;
+                tr.appendChild(td);
+                resultContainer.appendChild(tr);
+                return;
+            }
+            // valid response will have json data
+            response.json().then(data => {
+                console.log(data);
+                console.log(data.location)
+
+                // World Data
+                document.getElementById("name").innerHTML = data.location.name;
+                document.getElementById("region").innerHTML = data.location.region;
+                document.getElementById("country").innerHTML = data.location.country;
+                document.getElementById("lat").innerHTML = data.location.lat;
+                document.getElementById("lon").innerHTML = data.location.lon;
+                document.getElementById("tz_id").innerHTML = data.location.tz_id;
+                document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
+                document.getElementById("localtime").innerHTML = data.location.localtime;
+
+        /*
+                // Country data
+                for (const row of data.countries_stat) {
+                    console.log(row);
+
+                    // tr for each row
+                    const tr = document.createElement("tr");
+                    // td for each column
+                    const name = document.createElement("td");
+                    const cases = document.createElement("td");
+                    const deaths = document.createElement("td");
+                    const active = document.createElement("td");
+
+                    // data is specific to the API
+                    name.innerHTML = row.country_name;
+                    cases.innerHTML = row.cases; 
+                    deaths.innerHTML = row.deaths; 
+                    active.innerHTML = row.active_cases; 
+
+                    // this builds td's into tr
+                    tr.appendChild(name);
+                    tr.appendChild(cases);
+                    tr.appendChild(deaths);
+                    tr.appendChild(active);
+
+                    // add HTML to container
+                    resultContainer.appendChild(tr);
+                }
+        */
+            })
+        })
+
     }
+
+
 </script>
 
 <body>
@@ -135,86 +221,6 @@ week: 7
 
 <script>
 
-// prepare HTML result container for new output
-    const resultContainer = document.getElementById("astronomy");
-
-// prepare fetch options
-    const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json";
-    const headers = {
-        method: 'GET', // *GET, POST, PUT, DELETE, etc.
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'omit', // include, *same-origin, omit
-        headers: {
-            'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-	        'X-RapidAPI-Key': '0b6ef107f7msh5606de624633ceap17521ejsn27566d20ff5b',
-	        'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
-        },
-    };
-
-
-// fetch the API
-fetch(url, headers)
-// response is a RESTful "promise" on any successful fetch
-.then(response => {
-    // check for response errors
-    if (response.status !== 200) {
-        const errorMsg = 'Database response error: ' + response.status;
-        console.log(errorMsg);
-        const tr = document.createElement("tr");
-        const td = document.createElement("td");
-        td.innerHTML = errorMsg;
-        tr.appendChild(td);
-        resultContainer.appendChild(tr);
-        return;
-    }
-    // valid response will have json data
-    response.json().then(data => {
-        console.log(data);
-        console.log(data.location)
-
-        // World Data
-        document.getElementById("name").innerHTML = data.location.name;
-        document.getElementById("region").innerHTML = data.location.region;
-        document.getElementById("country").innerHTML = data.location.country;
-        document.getElementById("lat").innerHTML = data.location.lat;
-        document.getElementById("lon").innerHTML = data.location.lon;
-        document.getElementById("tz_id").innerHTML = data.location.tz_id;
-        document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
-        document.getElementById("localtime").innerHTML = data.location.localtime;
-
-/*
-        // Country data
-        for (const row of data.countries_stat) {
-            console.log(row);
-
-            // tr for each row
-            const tr = document.createElement("tr");
-            // td for each column
-            const name = document.createElement("td");
-            const cases = document.createElement("td");
-            const deaths = document.createElement("td");
-            const active = document.createElement("td");
-
-            // data is specific to the API
-            name.innerHTML = row.country_name;
-            cases.innerHTML = row.cases; 
-            deaths.innerHTML = row.deaths; 
-            active.innerHTML = row.active_cases; 
-
-            // this builds td's into tr
-            tr.appendChild(name);
-            tr.appendChild(cases);
-            tr.appendChild(deaths);
-            tr.appendChild(active);
-
-            // add HTML to container
-            resultContainer.appendChild(tr);
-        }
-*/
-    })
-})
 
 /*
 import requests
