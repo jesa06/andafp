@@ -13,12 +13,10 @@ week: 7
 
 <h1>API Information and Example</h1>
 
-<a href=#overviewbutton><button> Overview </button></a>
-<a href="https://tutorial.eyehunts.com//"><button> Weather API </button></a>
+<a href="#overviewbutton"><button> Overview </button></a>
+<a href="#weatherbutton"><button> Weather API </button></a>
 
 </body>
-</html>
-
 
 
 ### Web API Overview
@@ -70,6 +68,11 @@ week: 7
 </div>
 
 <!-- HTML table fragment for page -->
+
+### Weather API
+
+<div id="weatherbutton">
+
 <a href={{}} class="btn btn-primary">Frontend Code!</a>
 <a href="https://github.com/jesa06/andafp/blob/f5ded5f90611be9291c8ffe45f696a5e8b42e9b8/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb" class="btn btn-primary">Backend Code!</a>
 
@@ -135,7 +138,7 @@ print()
 
 // This code looks for USA in "countries_stats"
 print("Astronomy details")
-astro = response.json().get('astronomy') # countries is the key, countries_stat is the value
+astro = response.json().get('astronomy') // countries is the key, countries_stat is the value
 // print(astro.items())
 for key, value in astro.items():
 	for x in value.keys() :
