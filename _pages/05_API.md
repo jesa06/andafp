@@ -6,6 +6,7 @@ type: pbl
 week: 7
 ---
 <!-- HTML table fragment for page -->
+[Python RapidAPI in Jupyter Notebook](https://jesa06.github.io/andafp/techtalk/rapidapi)
 ## APIs in this Sub Menu
 > HTML, CSS, and JavaScript are the front-end of the API.  Python and API resource definitions are used for RESTful API definitions. Abstraction of Frontend and Backend code, the exchange of standard data format (JSON), and guidelines for exchange (REST) is a technique that saves a lot of time between developers.  Learning APIs is a highly recommended step for every developer trying to break into the world of tech.<html>
 
@@ -21,7 +22,8 @@ alert("yo momma!:  " + city);
 alert("1: " + resultContainer);
 
         // prepare fetch options
-            const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json";
+            const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json?” + new URLSearchParams({“q”:”San Diego”}); 
+
 
 alert("2: " + url);
             
