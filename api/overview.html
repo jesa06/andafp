@@ -161,7 +161,7 @@ window.onload = wrap_img;
 
 <label for="city">Enter city name:</label>
 <input type="text" id="city" name="city" /><br /><br />
-&lt;input type="button" value="Submit" onclick="&gt;
+<input type="button" value="Submit" onclick="testButtonClick()" />
 
 
 <table>
@@ -214,6 +214,9 @@ window.onload = wrap_img;
 
 
 <script>
+    function testButtonClick() {
+        alert('yo momma!');
+    }
 
 // prepare HTML result container for new output
     const resultContainer = document.getElementById("astronomy");
