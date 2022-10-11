@@ -16,9 +16,9 @@ week: 7
         alert("yo momma!:  " + city);
 
         // prepare HTML result container for new output
-//        const resultContainer = document.getElementById("astronomy");
+        const resultContainer = document.getElementById("astronomy");
 
-//        alert("1: " + resultContainer);
+        alert("1: " + resultContainer);
 
 /*
         // prepare fetch options
