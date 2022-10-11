@@ -16,8 +16,11 @@ week: 7
         alert("yo momma!");
 
         // prepare HTML result container for new output
-            const resultContainer = document.getElementById("astronomy");
+        const resultContainer = document.getElementById("astronomy");
 
+        alert("1: " + resultContainer);
+
+/*
         // prepare fetch options
             const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json";
             const headers = {
@@ -63,6 +66,7 @@ week: 7
                 document.getElementById("tz_id").innerHTML = data.location.tz_id;
                 document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
                 document.getElementById("localtime").innerHTML = data.location.localtime;
+*/
 
         /*
                 // Country data
@@ -153,12 +157,10 @@ week: 7
         <hr>
     </div>
 
-</div>
-
 <!-- HTML table fragment for page -->
 
 ### Astronomy API
-> If you choose a city, it will list out the location and astronomy details.
+If you choose a city, it will list out the location and astronomy details.
 
 <div id="astronomybutton">
 
