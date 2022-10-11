@@ -24,6 +24,8 @@ week: 7
             const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json";
 
 alert("2: " + url);
+
+/*
             
             const headers = {
                 method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -39,9 +41,7 @@ alert("2: " + url);
             };
 
 
-alert("3: " + headers);
 
-/*
         // fetch the API
         fetch(url, headers)
         // response is a RESTful "promise" on any successful fetch
