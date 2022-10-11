@@ -22,6 +22,9 @@ week: 7
 
         // prepare fetch options
             const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json";
+
+alert("2: " + url);
+            
             const headers = {
                 method: 'GET', // *GET, POST, PUT, DELETE, etc.
                 mode: 'cors', // no-cors, *cors, same-origin
@@ -36,7 +39,6 @@ week: 7
             };
 
 
-alert("2: " + url);
 alert("3: " + headers);
 
 /*
