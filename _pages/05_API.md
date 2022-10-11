@@ -77,7 +77,7 @@ week: 7
 
 <label for="city">Enter city name:</label>
 <input type="text" id="city" name="city"><br><br>
-<input type="button" value="Submit" onclick=">
+<input type="button" value="Submit" onclick="testButtonClick()">
 
 
 <table>
@@ -130,6 +130,9 @@ week: 7
 
 
 <script>
+    function testButtonClick() {
+        alert('yo momma!');
+    }
 
 // prepare HTML result container for new output
     const resultContainer = document.getElementById("astronomy");
