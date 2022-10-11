@@ -18,8 +18,7 @@ week: 7
 
 </body>
 
-
-<div id="overviewbutton"### Web API Overview>
+### Web API Overview <div id="overviewbutton">&nbsp;</div>
 
     <div>
         <hr>
@@ -72,13 +71,12 @@ week: 7
 
 <div id="astronomybutton">
 
-<a href={{}} class="btn btn-primary">Frontend Code!</a>
+<a href="#" class="btn btn-primary">Frontend Code!</a>
 <a href="https://github.com/jesa06/andafp/blob/f5ded5f90611be9291c8ffe45f696a5e8b42e9b8/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb" class="btn btn-primary">Backend Code!</a><br>
 
 <label for="city">Enter city name:</label>
-<input type="text" id="city" name="city"><br><br>
-<input type="button" value="Submit" onclick="testButtonClick()">
-
+<input type="text" id="city" name="city">&nbsp;&nbsp;<input type="button" value="Get Location & Astronomy" onclick="testButtonClick()">
+<br><br>
 
 <table>
   <thead>Location Details
@@ -131,7 +129,7 @@ week: 7
 
 <script>
     function testButtonClick() {
-        alert('yo momma!');
+        alert("yo momma!");
     }
 
 // prepare HTML result container for new output
