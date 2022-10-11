@@ -22,7 +22,6 @@ week: 7
 <a href="#overviewbutton"><button> Overview </button></a>
 <a href="#astronomybutton"><button> Weather API </button></a>
 
-</body>
 
 ### Web API Overview <div id="overviewbutton">&nbsp;</div>
 
@@ -131,6 +130,7 @@ week: 7
 </table>    
 
 
+</body>
 
 
 <script>
