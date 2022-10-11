@@ -4,13 +4,12 @@ title: API
 permalink: /api/overview
 type: pbl
 week: 7
-toc: true 
 ---
 <!-- HTML table fragment for page -->
 <table>
   <thead> 
   <tr>
-    <th>Overview<a href= {{}}/th>
+    <th>Overview<a href={{}}></th>
     <th>Weather API<a href=></th>
  
   </tr>
@@ -19,9 +18,6 @@ toc: true
 
 ### APIs in this Sub Menu
 > HTML, CSS, and JavaScript are the front-end of the API.  Python and API resource definitions are used for RESTful API definitions. Abstraction of Frontend and Backend code, the exchange of standard data format (JSON), and guidelines for exchange (REST) is a technique that saves a lot of time between developers.  Learning APIs is a highly recommended step for every developer trying to break into the world of tech.
-- Covid19: RapidAPI example.  This is introducing APIs by accessing something that already exists.  RapidAPI shows how many  practice RESTful definitions.  Almost any data source imagined can be accessed here.
-- Jokes: An introduction to Python RESTful API libraries.  A Python List is used to make a Data Model, but persistence in this technique is limited, each time server is refreshed data is lost.  This example is great for learning, but data is considered volatile.
-- Users: Another RESTful API library example.  However, this backend establishes data persistence through the use of a database.  This data if properly managed in deployment and migrated when changed can last forever.
 
 ### Web API Overview
 
@@ -79,7 +75,8 @@ toc: true
 
 <!-- HTML table fragment for page -->
 <a href={{}} class="btn btn-primary">Frontend Code!</a>
-<a href={{https://github.com/jesa06/andafp/blob/f5ded5f90611be9291c8ffe45f696a5e8b42e9b8/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb}} class="btn btn-primary">Backend Code!</a>
+<a href="https://github.com/jesa06/andafp/blob/f5ded5f90611be9291c8ffe45f696a5e8b42e9b8/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb" class="btn btn-primary">Backend Code!</a>
+
 <table>
   <thead>Location Details
   <tr>
