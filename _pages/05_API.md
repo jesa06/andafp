@@ -14,14 +14,12 @@ week: 7
 <h1>API Information and Example</h1>
 
 <a href="#overviewbutton"><button> Overview </button></a>
-<a href="#weatherbutton"><button> Weather API </button></a>
+<a href="#astronomybutton"><button> Weather API </button></a>
 
 </body>
 
 
-### Web API Overview
-
-<div id="overviewbutton">
+<div id="overviewbutton"### Web API Overview>
 
     <div>
         <hr>
@@ -69,12 +67,18 @@ week: 7
 
 <!-- HTML table fragment for page -->
 
-### Weather API
+### Astronomy API
+> If you choose a city, it will list out the location and astronomy details.
 
-<div id="weatherbutton">
+<div id="astronomybutton">
 
 <a href={{}} class="btn btn-primary">Frontend Code!</a>
-<a href="https://github.com/jesa06/andafp/blob/f5ded5f90611be9291c8ffe45f696a5e8b42e9b8/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb" class="btn btn-primary">Backend Code!</a>
+<a href="https://github.com/jesa06/andafp/blob/f5ded5f90611be9291c8ffe45f696a5e8b42e9b8/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb" class="btn btn-primary">Backend Code!</a><br>
+
+<label for="city">Enter city name:</label>
+<input type="text" id="city" name="city"><br><br>
+<input type="button" value="Submit" onclick=">
+
 
 <table>
   <thead>Location Details
@@ -87,14 +91,24 @@ week: 7
     <th>Time Zone</th>
     <th>Local Time Epoch</th>
     <th>Local Date and Time</th>
-    
-
   </tr>
   </thead>
   <tbody>
-    <td id="location"></td>
+    <td id="name"></td>
+    <td id="region"></td>
+    <td id="country"></td>
+    <td id="lat"></td>
+    <td id="lon"></td>
+    <td id="tz_id"></td>
+    <td id="localtime_epoch"></td>
+    <td id="localtime"></td>
   </tbody>
 </table>
+
+
+
+
+
 
 <table>
     <thead>Astronomy Details
@@ -112,8 +126,94 @@ week: 7
     </tbody>
 </table>    
 
+
+
+
 <script>
-    import requests
+
+// prepare HTML result container for new output
+    const resultContainer = document.getElementById("astronomy");
+
+// prepare fetch options
+    const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json";
+    const headers = {
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, *cors, same-origin
+        cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'omit', // include, *same-origin, omit
+        headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+	        'X-RapidAPI-Key': '0b6ef107f7msh5606de624633ceap17521ejsn27566d20ff5b',
+	        'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+        },
+    };
+
+
+// fetch the API
+fetch(url, headers)
+// response is a RESTful "promise" on any successful fetch
+.then(response => {
+    // check for response errors
+    if (response.status !== 200) {
+        const errorMsg = 'Database response error: ' + response.status;
+        console.log(errorMsg);
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        td.innerHTML = errorMsg;
+        tr.appendChild(td);
+        resultContainer.appendChild(tr);
+        return;
+    }
+    // valid response will have json data
+    response.json().then(data => {
+        console.log(data);
+        console.log(data.location)
+
+        // World Data
+        document.getElementById("name").innerHTML = data.location.name;
+        document.getElementById("region").innerHTML = data.location.region;
+        document.getElementById("country").innerHTML = data.location.country;
+        document.getElementById("lat").innerHTML = data.location.lat;
+        document.getElementById("lon").innerHTML = data.location.lon;
+        document.getElementById("tz_id").innerHTML = data.location.tz_id;
+        document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
+        document.getElementById("localtime").innerHTML = data.location.localtime;
+
+/*
+        // Country data
+        for (const row of data.countries_stat) {
+            console.log(row);
+
+            // tr for each row
+            const tr = document.createElement("tr");
+            // td for each column
+            const name = document.createElement("td");
+            const cases = document.createElement("td");
+            const deaths = document.createElement("td");
+            const active = document.createElement("td");
+
+            // data is specific to the API
+            name.innerHTML = row.country_name;
+            cases.innerHTML = row.cases; 
+            deaths.innerHTML = row.deaths; 
+            active.innerHTML = row.active_cases; 
+
+            // this builds td's into tr
+            tr.appendChild(name);
+            tr.appendChild(cases);
+            tr.appendChild(deaths);
+            tr.appendChild(active);
+
+            // add HTML to container
+            resultContainer.appendChild(tr);
+        }
+*/
+    })
+})
+
+/*
+import requests
 
 url = "https://weatherapi-com.p.rapidapi.com/astronomy.json"
 
@@ -146,4 +246,6 @@ for key, value in astro.items():
 
 //astro in astronomy:  # countries is a list
     //print(astro)
+*/
+
 <script>
