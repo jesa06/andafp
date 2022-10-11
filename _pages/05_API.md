@@ -6,29 +6,25 @@ type: pbl
 week: 7
 ---
 <!-- HTML table fragment for page -->
-<table>
-  <thead> 
-  <tr>
-    <th>Overview<a href={{}}></th>
-    <th>Weather API<a href=></th>
- 
-  </tr>
-  </thead>
-</table>
+## APIs in this Sub Menu
+> HTML, CSS, and JavaScript are the front-end of the API.  Python and API resource definitions are used for RESTful API definitions. Abstraction of Frontend and Backend code, the exchange of standard data format (JSON), and guidelines for exchange (REST) is a technique that saves a lot of time between developers.  Learning APIs is a highly recommended step for every developer trying to break into the world of tech.<html>
 
-### APIs in this Sub Menu
-> HTML, CSS, and JavaScript are the front-end of the API.  Python and API resource definitions are used for RESTful API definitions. Abstraction of Frontend and Backend code, the exchange of standard data format (JSON), and guidelines for exchange (REST) is a technique that saves a lot of time between developers.  Learning APIs is a highly recommended step for every developer trying to break into the world of tech.
+<body>
+
+<h1>API Information and Example</h1>
+
+<a href=#overviewbutton><button> Overview </button></a>
+<a href="https://tutorial.eyehunts.com//"><button> Weather API </button></a>
+
+</body>
+</html>
+
+
 
 ### Web API Overview
 
-<div>
+<div id="overviewbutton">
 
-    <div style="float: left; margin: 0px 10px 10px 0px;">
-        <a href="https://en.wikipedia.org/wiki/Web_API">
-            <img atl="Wikipedia Web API" src="{{site.baseurl}}/images/webapi.png" title=""
-            width="200">
-        </a>
-    </div>
     <div>
         <hr>
         <p>
