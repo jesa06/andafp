@@ -39,7 +39,6 @@ alert("2: " + url);
 
 alert("3: " + headers);
 
-/*
         // fetch the API
         fetch(url, headers)
         // response is a RESTful "promise" on any successful fetch
@@ -69,7 +68,7 @@ alert("3: " + headers);
                 document.getElementById("tz_id").innerHTML = data.location.tz_id;
                 document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
                 document.getElementById("localtime").innerHTML = data.location.localtime;
-*/
+
 
         /*
                 // Country data
@@ -99,10 +98,9 @@ alert("3: " + headers);
                     // add HTML to container
                     resultContainer.appendChild(tr);
                 }
+        */
             })
         })
-        */
-
     }
 
 
