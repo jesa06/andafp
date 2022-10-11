@@ -101,6 +101,9 @@ alert("3: " + headers);
         */
             })
         })
+
+alert("3: post fetch");
+
     }
 
 
