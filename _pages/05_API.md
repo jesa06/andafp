@@ -21,8 +21,8 @@ alert("yo momma!:  " + city);
 alert("1: " + resultContainer);
 
         // prepare fetch options
-            const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json?q=San%20Diego"; 
-
+            const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json?q=" + city; 
+                        
 alert("2: " + url);
             
             const headers = {
