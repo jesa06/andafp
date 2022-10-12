@@ -74,7 +74,7 @@ alert("3a: pre-fetch" + headers);
                 document.getElementById("localtime").innerHTML = data.location.localtime;
 
 
-              //  alert("data.astronomy" + data.astronomy);
+                alert("data.astronomy" + data.astronomy);
 
                 //for (const row of data.astronomy) {
                 //    alert(row.sunrise)
