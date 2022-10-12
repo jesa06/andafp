@@ -21,8 +21,7 @@ alert("yo momma!:  " + city);
 alert("1: " + resultContainer);
 
         // prepare fetch options
-            //const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json?” + new URLSearchParams({'q':'San Diego'}); 
-            const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json?q=San%20Diego”;
+            const url = "https://weatherapi-com.p.rapidapi.com/astronomy.ison"; 
 
 alert("2: " + url);
             
@@ -219,11 +218,13 @@ If you choose a city, it will list out the location and astronomy details.
     </thead>
     <tbody>
         <td id= "astronomy"></td>
+        <td id= "astronomy"></td>
+        <td id= "astronomy"></td>
+        <td id= "astronomy"></td>
+        <td id= "astronomy"></td>
+        <td id= "astronomy"></td>
     </tbody>
 </table>    
-
-
-</body>
 
 
 <script>
