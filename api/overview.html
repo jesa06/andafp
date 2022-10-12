@@ -127,7 +127,7 @@ a//lert("2: " + url);
         .then(response => {
             // check for response errors
             if (response.status !== 200) {
-/*
+
                 const errorMsg = 'Database response error: ' + response.status;
                 console.log(errorMsg);
                 const tr = document.createElement("tr");
@@ -135,8 +135,7 @@ a//lert("2: " + url);
                 td.innerHTML = errorMsg;
                 tr.appendChild(td);
                 resultContainer.appendChild(tr);
-*/
-                alert("Invalid city");                
+
                 return;
             }
             // valid response will have json data
@@ -154,7 +153,7 @@ a//lert("2: " + url);
                 document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
                 document.getElementById("localtime").innerHTML = data.location.localtime;
 
-
+                document.getElementById("sunrise").innerHTML = data.astronomy.astro.sunrise;
         /*
                 // Country data
                 for (const row of data.countries_stat) {
@@ -187,7 +186,7 @@ a//lert("2: " + url);
             })
         })
 
-alert("3: post fetch");
+//alert("4: post fetch");
 
     }
 
@@ -302,12 +301,12 @@ If you choose a city, it will list out the location and astronomy details.
     </tr>
     </thead>
     <tbody>
-        <td id="astronomy"></td>
-        <td id="astronomy"></td>
-        <td id="astronomy"></td>
-        <td id="astronomy"></td>
-        <td id="astronomy"></td>
-        <td id="astronomy"></td>
+        <td id="sunrise"></td>
+        <td id="sunset"></td>
+        <td id="moonrise"></td>
+        <td id="moonset"></td>
+        <td id="moon_phase"></td>
+        <td id="moon_illumination"></td>
     </tbody>
 </table>    
 
