@@ -13,17 +13,17 @@ week: 7
 
     function testButtonClick(city) {
         
-alert("yo momma!:  " + city);
+//alert("yo momma!:  " + city);
 
         // prepare HTML result container for new output
         const resultContainer = document.getElementById("astronomy");
 
-alert("1: " + resultContainer);
+//alert("1: " + resultContainer);
 
         // prepare fetch options
             const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json?q=" + city; 
                         
-alert("2: " + url);
+a//lert("2: " + url);
             
             const headers = {
                 method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -37,7 +37,7 @@ alert("2: " + url);
                 },
             };
 
-alert("3: " + headers);
+//alert("3: " + headers);
 
         // fetch the API
         fetch(url, headers)
@@ -45,6 +45,7 @@ alert("3: " + headers);
         .then(response => {
             // check for response errors
             if (response.status !== 200) {
+/*
                 const errorMsg = 'Database response error: ' + response.status;
                 console.log(errorMsg);
                 const tr = document.createElement("tr");
@@ -52,6 +53,8 @@ alert("3: " + headers);
                 td.innerHTML = errorMsg;
                 tr.appendChild(td);
                 resultContainer.appendChild(tr);
+*/
+                alert("Invalid city");                
                 return;
             }
             // valid response will have json data
