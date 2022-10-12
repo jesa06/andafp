@@ -37,7 +37,9 @@ a//lert("2: " + url);
                 },
             };
 
-//alert("3: " + headers);
+//alert("3: " + headers)
+
+alert("3a: pre-fetch" + headers);
 
         // fetch the API
         fetch(url, headers)
@@ -104,7 +106,7 @@ a//lert("2: " + url);
             })
         })
 
-//alert("4: post fetch");
+alert("4: post fetch");
 
     }
 
