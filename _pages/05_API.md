@@ -73,7 +73,13 @@ alert("3a: pre-fetch" + headers);
                 document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
                 document.getElementById("localtime").innerHTML = data.location.localtime;
 
-                document.getElementById("sunrise").innerHTML = data.astronomy.astro.sunrise;
+
+                alert("data.astronomy" + data.astronomy);
+
+                for (const row of data.astronomy) {
+                    alert(row.sunrise);
+                }
+
         /*
                 // Country data
                 for (const row of data.countries_stat) {
