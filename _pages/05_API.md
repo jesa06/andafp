@@ -79,7 +79,7 @@ alert("3a: pre-fetch" + headers);
                 document.getElementById("localtime").innerHTML = data.location.localtime;
 
                 //alert("data.astronomy" + data.astronomy.astro.sunrise);
-
+/*
                 // tr for each row
                 const tr = document.createElement("tr");
 
@@ -109,7 +109,7 @@ alert("3a: pre-fetch" + headers);
 
                 // add HTML to container
                 resultContainer.appendChild(tr);
-
+*/
             })
         })
 
