@@ -160,45 +160,38 @@ alert("3a: pre-fetch" + headers);
                 document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
                 document.getElementById("localtime").innerHTML = data.location.localtime;
 
+                //alert("data.astronomy" + data.astronomy.astro.sunrise);
 
-                alert("data.astronomy" + data.astronomy.astro.sunrise);
+                // tr for each row
+                const tr = document.createElement("tr");
 
-                for (const row of data.astronomy) {
-                    alert("inside loop");
-                    alert(row);
+                // td for each column
+                const sunrise = document.createElement("td");
+                const sunset = document.createElement("td");
+                const moonrise = document.createElement("td");
+                const moonset = document.createElement("td");
+                const moon_phase = document.createElement("td");
+                const moonset = document.createElement("td");
 
-                }
+                // data is specific to the API
+                sunrise.innerHTML = data.astronomy.astro.sunrise;
+                sunset.innerHTML = data.astronomy.astro.sunset; 
+                moonrise.innerHTML = data.astronomy.astro.moonrise; 
+                deaths.innerHTML = data.astronomy.astro.deaths; 
+                moon_phase.innerHTML = data.astronomy.astro.moon_phase; 
+                moonset.innerHTML = data.astronomy.astro.moonset; 
 
-                alert("post for");
-        /*
-                // Country data
-                for (const row of data.countries_stat) {
-                    console.log(row);
+                // this builds td's into tr
+                tr.appendChild(sunrise);
+                tr.appendChild(sunset);
+                tr.appendChild(moonrise);
+                tr.appendChild(deaths);
+                tr.appendChild(moon_phase);
+                tr.appendChild(moonset);
 
-                    // tr for each row
-                    const tr = document.createElement("tr");
-                    // td for each column
-                    const name = document.createElement("td");
-                    const cases = document.createElement("td");
-                    const deaths = document.createElement("td");
-                    const active = document.createElement("td");
+                // add HTML to container
+                resultContainer.appendChild(tr);
 
-                    // data is specific to the API
-                    name.innerHTML = row.country_name;
-                    cases.innerHTML = row.cases; 
-                    deaths.innerHTML = row.deaths; 
-                    active.innerHTML = row.active_cases; 
-
-                    // this builds td's into tr
-                    tr.appendChild(name);
-                    tr.appendChild(cases);
-                    tr.appendChild(deaths);
-                    tr.appendChild(active);
-
-                    // add HTML to container
-                    resultContainer.appendChild(tr);
-                }
-        */
             })
         })
 
