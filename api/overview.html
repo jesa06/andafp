@@ -177,17 +177,17 @@ alert("3a: pre-fetch" + headers);
                 sunrise.innerHTML = data.astronomy.astro.sunrise;
                 sunset.innerHTML = data.astronomy.astro.sunset; 
                 moonrise.innerHTML = data.astronomy.astro.moonrise; 
-                deaths.innerHTML = data.astronomy.astro.deaths; 
-                moon_phase.innerHTML = data.astronomy.astro.moon_phase; 
                 moonset.innerHTML = data.astronomy.astro.moonset; 
+                moon_phase.innerHTML = data.astronomy.astro.moon_phase; 
+                moon_illumination.innerHTML = data.astronomy.astro.moon_illumination; 
 
                 // this builds td's into tr
                 tr.appendChild(sunrise);
                 tr.appendChild(sunset);
                 tr.appendChild(moonrise);
-                tr.appendChild(deaths);
-                tr.appendChild(moon_phase);
                 tr.appendChild(moonset);
+                tr.appendChild(moon_phase);
+                tr.appendChild(moon_illumination);
 
                 // add HTML to container
                 resultContainer.appendChild(tr);
