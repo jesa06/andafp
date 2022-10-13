@@ -23,6 +23,9 @@ week: 7
         // prepare HTML result container for new output
         const resultContainer = document.getElementById("astronomy");
 
+        //clear contents of astronomy table
+        resultContainer.innerHTML = "";
+
 //alert("1: " + resultContainer);
 
         // prepare fetch options
@@ -44,7 +47,7 @@ week: 7
 
 //alert("3: " + headers)
 
-alert("3a: pre-fetch" + headers);
+//alert("3a: pre-fetch" + headers);
 
         // fetch the API
         fetch(url, headers)
@@ -111,7 +114,7 @@ alert("3a: pre-fetch" + headers);
             })
         })
 
-alert("4: post fetch");
+//alert("4: post fetch");
 
     }
 
