@@ -82,6 +82,7 @@ alert("3a: pre-fetch" + headers);
                 alert("data.astronomy" + data.astronomy);
 
                 for (const row of data.astronomy) {
+                    alert("inside loop");
                     alert(row);
                 }
 
