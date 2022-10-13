@@ -105,6 +105,9 @@ window.onload = wrap_img;
         // prepare HTML result container for new output
         const resultContainer = document.getElementById("astronomy");
 
+        //clear contents of astronomy table
+        resultContainer.innerHTML = "";
+
 //alert("1: " + resultContainer);
 
         // prepare fetch options
@@ -126,7 +129,7 @@ window.onload = wrap_img;
 
 //alert("3: " + headers)
 
-alert("3a: pre-fetch" + headers);
+//alert("3a: pre-fetch" + headers);
 
         // fetch the API
         fetch(url, headers)
@@ -193,7 +196,7 @@ alert("3a: pre-fetch" + headers);
             })
         })
 
-alert("4: post fetch");
+//alert("4: post fetch");
 
     }
 
