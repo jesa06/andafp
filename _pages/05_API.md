@@ -79,7 +79,6 @@ alert("3a: pre-fetch" + headers);
                 document.getElementById("localtime").innerHTML = data.location.localtime;
 
                 //alert("data.astronomy" + data.astronomy.astro.sunrise);
-/*
                 // tr for each row
                 const tr = document.createElement("tr");
 
@@ -89,7 +88,7 @@ alert("3a: pre-fetch" + headers);
                 const moonrise = document.createElement("td");
                 const moonset = document.createElement("td");
                 const moon_phase = document.createElement("td");
-                const moonset = document.createElement("td");
+                const moon_illumination = document.createElement("td");
 
                 // data is specific to the API
                 sunrise.innerHTML = data.astronomy.astro.sunrise;
@@ -109,7 +108,6 @@ alert("3a: pre-fetch" + headers);
 
                 // add HTML to container
                 resultContainer.appendChild(tr);
-*/
             })
         })
 
