@@ -13,6 +13,11 @@ week: 7
 
     function testButtonClick(city) {
         
+        if (!city.trim()) {
+            alert("Enter a city.");
+            return;
+        }  
+
 //alert("yo momma!:  " + city);
 
         // prepare HTML result container for new output
@@ -21,21 +26,21 @@ week: 7
 //alert("1: " + resultContainer);
 
         // prepare fetch options
-            const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json?q=" + city; 
+        const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json?q=" + city; 
                         
 //alert("2: " + url);
             
-            const headers = {
-                method: 'GET', // *GET, POST, PUT, DELETE, etc.
-                mode: 'cors', // no-cors, *cors, same-origin
-                cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-                credentials: 'omit', // include, *same-origin, omit
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-RapidAPI-Key': '0b6ef107f7msh5606de624633ceap17521ejsn27566d20ff5b',
-                    'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
-                },
-            };
+        const headers = {
+            method: 'GET', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'omit', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json',
+                'X-RapidAPI-Key': '0b6ef107f7msh5606de624633ceap17521ejsn27566d20ff5b',
+                'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+            },
+        };
 
 //alert("3: " + headers)
 
@@ -80,6 +85,7 @@ alert("3a: pre-fetch" + headers);
                     alert(row);
                 }
 
+                alert("post for");
         /*
                 // Country data
                 for (const row of data.countries_stat) {
