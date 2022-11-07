@@ -207,54 +207,9 @@ window.onload = wrap_img;
 
 <h1>API Information and Example</h1>
 
-<a href="#overviewbutton"><button> Overview </button></a>
 <a href="#astronomybutton"><button> Astronomy API </button></a>
 
-
-<div id="overviewbutton">&nbsp;</div>
-
-    <div>
-        <hr />
-        <p>
-            A Web API is an application programming interface typically for a web browser.  Non-changing or Static Endpoints are used in interacting with the server-side Web APIs.  RESTful Web APIs use HTTP methods to access resources via URL parameters, and use JSON for transmitting text between client and server.
-            <ul>
-                <li>Server.  In these examples, we will be using Python to define REST APIs. Python tools are very popular for building RESTful APIs</li>
-                <ul> 
-                    <li>REST: Representational State Transfer.  A set of guidelines on how to architect a network-connected software system.</li>
-                    <li>Client-server: One guideline is a client and server must be decoupled from each other, allowing each to develop independently.</li>
-                    <li>Layered system: The client may access the resources on the server indirectly through other layers such as a proxy or using authentication. This will be clarified by application and security requirements.</li>
-                </ul>
-
-                <li>Client.  JavaScript is the frontend language used to consume data from the Python defined REST APIs. Fetch will be used to make HTTP requests, as well as handle HTTP response.  There are four basic HTTP methods, they align with Create, Read, Update, Delete (CRUD).</li>
-                <ul> 
-                    <li>GET =&gt; Retrieve/Read data</li>
-                    <li>POST =&gt; Create data</li>
-                    <li>PUT =&gt; Update data</li>
-                    <li>DELETE =&gt; Delete data</li>
-                </ul>
-
-                <li>REST endpoints will have similarity from application to application.  In planning APIs, for a Users system you can anticipate key methods.  The Users RESTful APIs would likely contain these endpoints.</li>
-                <ul> 
-                    <li>GET: /users =&gt; Get a list of users</li>
-                    <li>GET: /users(id) =&gt; Get a single user</li>
-                    <li>POST: /users =&gt; Create a new user</li>
-                    <li>PUT: /users(id) =&gt; Update a user</li>
-                    <li>DELETE: /users(id) =&gt; Delete a user</li>
-                </ul>
-
-                <li>Once a RESTful API receives and processes an HTTP request, it will return an HTTP response. Included in this response is an HTTP status code.  Common status codes are shown.</li>
-                <ul> 
-                    <li>200 =&gt; OK, this response will then have the promise of JSON data</li>
-                    <li>400 =&gt; Bad Request</li>
-                    <li>404 =&gt; Not Found</li>
-                    <li>500 =&gt; Internal Server Error (aka bug)</li>
-                </ul>
-
-            </ul>
-        </p>
-        <hr />
-    </div>
-
+    
 <!-- HTML table fragment for page -->
 
 
@@ -262,8 +217,6 @@ If you choose a city, it will list out the location and astronomy details.
 
 <div id="astronomybutton">
 
-<a href="https://github.com/jesa06/andafp/blob/master/images/frontendcode.png" class="btn btn-primary">Frontend Code!</a>
-<a href="https://github.com/jesa06/andafp/blob/f5ded5f90611be9291c8ffe45f696a5e8b42e9b8/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb" class="btn btn-primary">Backend Code!</a><br />
 
 <label for="city">Enter city name:</label>
 <input type="text" id="city" name="city" />&nbsp;&nbsp;<input type="button" value="Get Location &amp; Astronomy" onclick="testButtonClick(document.getElementById('city').value)" />
