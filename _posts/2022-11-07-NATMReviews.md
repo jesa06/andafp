@@ -7,16 +7,16 @@ title: Night at The Museum Review/Experience
 ---
 
 # Personal Experience
-### - Overall, my experience at the museum was very interesting, chaotic, stressful, but a little fun. 
-### - My group and I were not really prepared and did not manage our time correctly. Therefore, we were rushing before and during our presentation time for our final product and also how we would present it. 
-### - It was really fun though walking around to see other people's projects from APCSP and APCSA. The projects were really impressive and some were also simple but well worked out. 
-### - I was able to see a lot of APCSA projects and meet new people. It was cool talking about the classes with them and the differences between our courses. They were able to help me with some things in my project and explain other things more elaborately and in a way I understand. It was really interesting hearing things from new perspectives of other students.
+- Overall, my experience at the museum was very interesting, chaotic, stressful, but a little fun. 
+- My group and I were not really prepared and did not manage our time correctly. Therefore, we were rushing before and during our presentation time for our final product and also how we would present it. 
+- It was really fun though walking around to see other people's projects from APCSP and APCSA. The projects were really impressive and some were also simple but well worked out. 
+- I was able to see a lot of APCSA projects and meet new people. It was cool talking about the classes with them and the differences between our courses. They were able to help me with some things in my project and explain other things more elaborately and in a way I understand. It was really interesting hearing things from new perspectives of other students.
 
 ---
 
 # Parent and Families
-### - I think a lot of families enjoy the Night at the Museum experience. It is a way for parents to be involved in their children's education, understand what work they are expected to do, and just connect with them and be proud of their accomplishments. 
-### - From what I saw, a lot of the parents were very impressed with the variety of projects from APCSP and APCSA classes. 
+- I think a lot of families enjoy the Night at the Museum experience. It is a way for parents to be involved in their children's education, understand what work they are expected to do, and just connect with them and be proud of their accomplishments. 
+- From what I saw, a lot of the parents were very impressed with the variety of projects from APCSP and APCSA classes. 
 
 ---
 
