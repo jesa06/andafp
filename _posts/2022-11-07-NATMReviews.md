@@ -36,3 +36,7 @@ title: Night at The Museum Review/Experience
 3. Another project was the snake game with a Frequently Asked Questions page as their API. They built their own API in their backend and pulled it into the frontend. They connected their flask server and FastPages server. It was really fun playing this game and understanding a little bit of how it was built and how the data shows up. 
 
 4. One group had their project that connected to Spotify and a Spotify API. It was able to generate a given album and then list the songs within that album. In their backend they used Python to generate the API and for other functions. For their frontend they made many buttons in HTML and customized the colors, sizes, fonts, and shapes. 
+
+![NATM Photo]({{site.baseurl}}/images/playlisthelper.png)
+![NATM Photo]({{site.baseurl}}/images/DNMarketplace.png)
+![NATM Photo]({{site.baseurl}}/images/FutnitureLayout.png)
