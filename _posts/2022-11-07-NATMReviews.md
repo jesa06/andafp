@@ -39,4 +39,4 @@ title: Night at The Museum Review/Experience
 
 ![NATM Photo]({{site.baseurl}}/images/playlisthelper.png)
 ![NATM Photo]({{site.baseurl}}/images/DNMarketplace.png)
-![NATM Photo]({{site.baseurl}}/images/FutnitureLayout.png)
+![NATM Photo]({{site.baseurl}}/images/FurnitureLayout.png)
