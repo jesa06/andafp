@@ -38,10 +38,10 @@ baseurl: "/andafp" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
-  social_links:
-    instagram: _joselyn_anda_
-    github: jesa06
-    TikTok: _j_e_s_a_
+  # social_links:
+    # instagram: _joselyn_anda_
+    # github: jesa06
+    # TikTok: _j_e_s_a_
 
 # Set this to true to get LaTeX math equation support
 use_math: true
