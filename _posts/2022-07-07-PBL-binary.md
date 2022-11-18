@@ -55,9 +55,9 @@ type: pbl
             </tr>
             <tr>
                 {% comment %}Value of bit{% endcomment %}
-                {% for i in (0..bits) %}
+                {% comment for i in (0..bits) endcomment %}
                 <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
-                {% endfor %}
+                {% comment endfor endcomment %}
             </tr>
             </table>
         </div>
