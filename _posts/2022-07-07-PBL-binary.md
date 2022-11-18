@@ -54,7 +54,7 @@ type: pbl
                         <td> 
                     {% endif %}    
                             <img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/ellyflower.png" alt="" width="40" height="Auto">
-                            <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
+                            <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Elly</button>
                         </td>
                 {% endfor %}
             </tr>
@@ -72,9 +72,9 @@ type: pbl
 <script>
     const BITS = {{ BITS }};
     const MAX = 2 ** BITS - 1;
-    const MSG_ON = "Turn on";
+    const MSG_ON = "Athyna" ;
     const IMAGE_ON = "{{site.baseurl}}/images/ellyflower.png";
-    const MSG_OFF = "Turn off";
+    const MSG_OFF = "Elly";
     const IMAGE_OFF = "{{site.baseurl}}/images/athynascarf.jpeg"
 
     // return string with current value of each bit
