@@ -3,7 +3,7 @@ title: Lesson Homework Reflections
 layout: post 
 description: Reflection on the grades I received. 
 ---
-# Lesson 3.3-3.4 Homework Grade
+# Lesson 3.3-3.4 Homework Grade   
 - I received a 1/1 on the homework grading. I think I did a really good on note taking, I focused on writing about key vocabulary terms and including examples from in class. I made sure to write my notes in ways that I understood the topics. 
 I completed all of the practice problems with explanations and demonstrated what I knew. I added comments within my practice code to make sure I understood what the code meant. 
 - "You attempted all of the problems with good explanations for most which show that you understand the core concept. The notes and effort are great."
