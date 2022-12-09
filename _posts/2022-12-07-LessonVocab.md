@@ -44,7 +44,7 @@ title: Key Vocabulary
     - *Lists*: AKA an array, an abstract data type that represents a finite number of ordered values
         - ex. in Python array = ["hello", 17, true, apple]
     - *2D Lists*: AKA nested list or a list inside a list, each row can have different lengths and supports different data types
-    ![nestedlist]({{site.baseurl}}/images/2slist.png)
+    ![nestedlist]({{site.baseurl}}/images/2dlist.png)
     - *Dictionaries*: an abstract data type that defines an unordered collection of data as a set of key-value pairs, can hold booleans, strings, etc.
     - *Class*: an object, with the name and defines a set of properties and methods that are common to all objects of one type
 - <mark>Algorithms</mark>: finite set of instructions that accomplish a specific task or perform tasks, idea of available alternatives and multiple ways to get to a solution
