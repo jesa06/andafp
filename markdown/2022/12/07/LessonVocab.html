@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      5 min read
     
 </span></p>
 
@@ -116,29 +116,69 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#unit-3-algorithmprogramming-terms">Unit 3… Algorithm/Programming Terms</a></li>
 </ul><h1 id="unit-2-binarydata-terms">
 <a class="anchor" href="#unit-2-binarydata-terms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 2… Binary/Data Terms</h1>
+
 <ul>
-  <li>Bits</li>
-  <li>Bytes</li>
-  <li>Hexadecimal / Nibbles</li>
-  <li>Binary Numbers:
+  <li>
+<mark>Bits</mark>: the smallest unit of data that a computer can process and store, represented by a binary value 0 or 1</li>
+  <li>
+<mark>Bytes</mark>: a unit of data that is equivalent to eight bits
+<img src="/andafp/images/bitandbyte.png" alt="Bits vs Bytes">
+</li>
+  <li>
+<mark>Hexadecimal</mark>: a number system with base 16 that uses 0-9 and letters A-F to represent data 10-15
+<img src="/andafp/images/hexadecimal.jpeg" alt="Hexadecimal">
+</li>
+  <li>
+<mark>Nibbles</mark>: a combination of four binary digits or half of an 8-bit byte
+<img src="/andafp/images/nibble.png" alt="Nibbles">
+</li>
+  <li>
+<mark>Binary Numbers</mark>: base-two positional numeral system represented by a combination of 0’s and 1’s, it’s easier for computers to process and it takes up less space
     <ul>
-      <li>Unsigned Integer</li>
-      <li>Signed Integer</li>
-      <li>Floating Point</li>
+      <li>
+<em>Unsigned Integer</em>: whole numbers without a + or - sign, used when we know that the value that we are storing will always be non-negative</li>
+      <li>
+<em>Signed Integer</em>: whole numbers that can be either positive or negative</li>
+      <li>
+<em>Floating Point</em>: decimal numbers, can be positive or negative</li>
     </ul>
   </li>
-  <li>Binary Data Abstractions
+  <li>
+<mark>Binary Data Abstractions</mark>: reducing parts of data to manage its complexity and reveal only a simplified representation
     <ul>
-      <li>Boolean</li>
-      <li>ASCII</li>
-      <li>Unicode</li>
-      <li>RGB</li>
+      <li>
+<em>Boolean</em>: logical data type that can have only the values true or false</li>
+      <li>
+<em>ASCII</em>: AKA “American Standard Code for Information Interchange”, a code that uses numbers to represent characters, upper case and lower case hold different values, used for the representation of text (symbols, letters, digits…)
+        <ul>
+          <li>ex. A = 65 and a = 97</li>
+        </ul>
+      </li>
+      <li>
+<em>Unicode</em>: international character-encoding system to support the electronic interchange/processing/display of the written texts of different languages, written with a “U” followed by a plus sign and the number in hex
+        <ul>
+          <li>ex. “Hello” = U+0048 U+0065 U+006C U+006C U+006F</li>
+        </ul>
+      </li>
+      <li>
+<em>RGB</em>: red, blue, green, combination of the 3 colors can make any color, each range from 0 to 100 percent of full intensity</li>
     </ul>
   </li>
-  <li>Data Compression
+  <li>
+<mark>Data Compression</mark>: a reduction in the number of bits needed to represent data
     <ul>
-      <li>Lossy</li>
-      <li>Lossless (note discussed yet)</li>
+      <li>
+<em>Lossy</em>: data in a file is removed and not restored to its original form after decompression, permanently removes redundant  information
+        <ul>
+          <li>JPEG images</li>
+        </ul>
+      </li>
+      <li>
+<em>Lossless</em>: data in a file can be restored/rebuilt in its original form, data is rearranged to be more efficient
+        <ul>
+          <li>PNG or GIF</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -146,51 +186,106 @@ window.onload = wrap_img;
 <h1 id="unit-3-algorithmprogramming-terms">
 <a class="anchor" href="#unit-3-algorithmprogramming-terms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 3… Algorithm/Programming Terms</h1>
 <ul>
-  <li>Variables</li>
-  <li>Data Types</li>
-  <li>Assignment Operators</li>
-  <li>Managing Complexity with Variables
+  <li>
+<mark>Variables</mark>: abstract storage location paired with an associated symbolic name, used to store information to be referenced and manipulated in a computer program</li>
+  <li>
+<mark>Data Types</mark>: a set of possible values and a set of allowed operations on it
     <ul>
-      <li>Lists</li>
-      <li>2D Lists</li>
-      <li>Dictionaries</li>
-      <li>Class</li>
+      <li>boolean, integer, string, floating point</li>
     </ul>
   </li>
-  <li>Algorithms</li>
-  <li>Sequence</li>
-  <li>Selection</li>
-  <li>Iteration</li>
-  <li>Expressions</li>
-  <li>Comparison Operators</li>
-  <li>Booleans Expressions</li>
-  <li>Boolean Selection</li>
-  <li>Booleans Expressions</li>
-  <li>Boolean Iteration</li>
-  <li>Truth Tables</li>
-  <li>Characters</li>
-  <li>Strings</li>
-  <li>Length</li>
-  <li>Concatenation</li>
-  <li>Upper</li>
-  <li>Lower</li>
-  <li>Traversing Strings</li>
-  <li>Python:
+  <li>
+<mark>Assignment Operators</mark>: =, +=, -=, /=, *= and %=, used to assigning value to a variable</li>
+  <li>
+<mark>Managing Complexity with Variables</mark>: breaking down complex data and showing the essential parts at a simplified level
     <ul>
-      <li>If</li>
-      <li>Elif</li>
-      <li>Else conditionals</li>
-      <li>Nested Selection Statements</li>
-      <li>For</li>
-      <li>While loops with Range</li>
-      <li>While loops with List</li>
+      <li>
+<em>Lists</em>: AKA an array, an abstract data type that represents a finite number of ordered values
+        <ul>
+          <li>ex. in Python array = [“hello”, 17, true, apple]</li>
+        </ul>
+      </li>
+      <li>
+<em>2D Lists</em>: AKA nested list or a list inside a list, each row can have different lengths and supports different data types
+  <img src="/andafp/images/2slist.png" alt="nestedlist">
+</li>
+      <li>
+<em>Dictionaries</em>: an abstract data type that defines an unordered collection of data as a set of key-value pairs, can hold booleans, strings, etc.</li>
+      <li>
+<em>Class</em>: an object, with the name and defines a set of properties and methods that are common to all objects of one type</li>
     </ul>
   </li>
-  <li>Combining loops with conditionals to Break, Continue</li>
-  <li>Procedural Abstraction</li>
-  <li>Python Def procedures</li>
-  <li>Parameters</li>
-  <li>Return Values</li>
+  <li>
+<mark>Algorithms</mark>: finite set of instructions that accomplish a specific task or perform tasks, idea of available alternatives and multiple ways to get to a solution</li>
+  <li>
+<mark>Sequence</mark>: the whole code, start to finish</li>
+  <li>
+<mark>Selection</mark>: a section of code is run only if a condition is met, when the programmer decides between two different outcomes</li>
+  <li>
+<mark>Iteration</mark>: repeating a certain part of code until a condition is fulfilled</li>
+  <li>
+<mark>Expressions</mark>: combinations of comparisons operators, functions, variables, or constants…like in math</li>
+  <li>
+<mark>Comparison Operators</mark>: operators that compare values and return true or false, &lt;, &gt;, &lt;=. &gt;=, !=, ==</li>
+  <li>
+<mark>Booleans Expressions</mark>: a logical statement that is either TRUE or FALSE, test data to see if it is equal to, greater than, or less than other data</li>
+  <li>
+<mark>Boolean Selection</mark>: using the booleans to select subsets of data</li>
+  <li>
+<mark>Boolean Iteration</mark>: iterating based on a boolean expression
+    <ul>
+      <li>expression always results in true or false</li>
+    </ul>
+  </li>
+  <li>
+<mark>Truth Tables</mark>: a way of checking the logic of a circuit, it shows all possible combinations of inputs and outputs. You can produce truth tables for parts of a circuit to check the logic at any stage.
+<img src="/andafp/images/truthtable.jpeg" alt="Truth Tables">
+</li>
+  <li>
+<mark>Characters</mark>: a display unit of information that is equivalent to an alphabetic symbol or letter</li>
+  <li>
+<mark>Strings</mark>: a type of variable made up of a sequence of characters</li>
+  <li>
+<mark>Length</mark>: amount of characters in a string, amount of elements in a list</li>
+  <li>
+<mark>Concatenation</mark>: combining two strings together</li>
+  <li>
+<mark>Upper</mark>: changing a string to all upper case</li>
+  <li>
+<mark>Lower</mark>: changing a string to all lower case</li>
+  <li>
+<mark>Traversing Strings</mark>: the process of going through a String one character at a time, often using loops</li>
+  <li>
+<mark>Python</mark>: a coding language
+    <ul>
+      <li>
+<em>If</em>: how you perform this sort of decision-making, allows for conditional execution of a statement or group of statements based on the value of an expression</li>
+      <li>
+<em>Elif</em>: short for “else if” and is used when the first if statement isn’t true, but you want to check for another condition</li>
+      <li>
+<em>Else conditionals</em>: used when you have to judge one statement on the basis of other, else keyword is used in conditional statements (if statements), and decides what to do if the condition is False</li>
+      <li>
+<em>Nested Selection Statements</em>: an if statement placed inside another if statement</li>
+      <li>
+<em>For</em>: for statement iterates over the members of a sequence in order, executing the block each time</li>
+      <li>
+<em>While loops with Range</em>: run a piece of code while a condition is True, range method in python is used to create a sequence ranging between a certain limit</li>
+      <li>
+<em>While loops with List</em>: repeating something over and over the items of a list, until a particular condition is satisfied</li>
+    </ul>
+  </li>
+  <li>
+<mark>Combining loops with conditionals to Break, Continue</mark>: stops a code loop after it has looped x amount of times, and to later continue the code
+<img src="/andafp/images/breakcontinue.png" alt="loops">
+</li>
+  <li>
+<mark>Procedural Abstraction</mark>: code sections/procedures, generalised by having variable parameters The idea is that we have code which can cope with a variety of different situations, depending on how its parameters are set when it is called.</li>
+  <li>
+<mark>Python Def procedures</mark>: def defines a function</li>
+  <li>
+<mark>Parameters</mark>: variables or placeholders for the actual values the function needs. When the function is called, these values are passed in as arguments.</li>
+  <li>
+<mark>Return Values</mark> : a value that a function returns to the calling script or function when it completes its task</li>
 </ul>
 
   </div><a class="u-url" href="/andafp/markdown/2022/12/07/LessonVocab.html" hidden></a>
