@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lesson 6 3.12-3.13 Notes and Hacks | JESA’s Fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Lesson 6 3.12-3.13 Notes and Hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Joselyn Anda" />
+<meta property="og:description" content="Joselyn Anda" />
+<link rel="canonical" href="https://jesa06.github.io/andafp/2022/12/07/Lesson312and313.html" />
+<meta property="og:url" content="https://jesa06.github.io/andafp/2022/12/07/Lesson312and313.html" />
+<meta property="og:site_name" content="JESA’s Fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-07T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lesson 6 3.12-3.13 Notes and Hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-07T00:00:00-06:00","datePublished":"2022-12-07T00:00:00-06:00","description":"Joselyn Anda","headline":"Lesson 6 3.12-3.13 Notes and Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://jesa06.github.io/andafp/2022/12/07/Lesson312and313.html"},"url":"https://jesa06.github.io/andafp/2022/12/07/Lesson312and313.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/andafp/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jesa06.github.io/andafp/feed.xml" title="JESA's Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/andafp/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/andafp/">JESA&#39;s Fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/andafp/https:/github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b352ae4c50724/_pages/01_About%20me.md/">About Me</a><a class="page-link" href="/andafp/https:/github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b352ae4c50724/_pages/02_My%20Family.md/">My Family</a><a class="page-link" href="/andafp/https:/github.com/jesa06/andafp/blob/9663f63361b75e4ffd7b14d3ed1b352ae4c50724/_pages/03_Notes.md/">Notes</a><a class="page-link" href="/andafp/_pages/04_PsychologyandtheGoodLife.html">Psychology and the Good Life</a><a class="page-link" href="/andafp/api/overview">API</a><a class="page-link" href="/andafp/HTMLJSTable/">HTML and JS Table</a><a class="page-link" href="/andafp/search/">Search</a><a class="page-link" href="/andafp/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Lesson 6 3.12-3.13 Notes and Hacks</h1><p class="page-description">Joselyn Anda</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-07T00:00:00-06:00" itemprop="datePublished">
+        Dec 7, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/jesa06/andafp/tree/master/_notebooks/2022-12-07-Lesson312and313.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/andafp/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/jesa06/andafp/master?filepath=_notebooks%2F2022-12-07-Lesson312and313.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/andafp/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/jesa06/andafp/blob/master/_notebooks/2022-12-07-Lesson312and313.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/andafp/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fjesa06%2Fandafp%2Fblob%2Fmaster%2F_notebooks%2F2022-12-07-Lesson312and313.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/andafp/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-07-Lesson312and313.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.12">3.12<a class="anchor-link" href="#3.12"> </a></h1><blockquote><p>Calling procedures</p>
+</blockquote>
+<h2 id="Key-Vocabulary">Key Vocabulary<a class="anchor-link" href="#Key-Vocabulary"> </a></h2><ul>
+<li><em>Procedure</em>:a named group of programming instructions that may have parameters and return values.- <em>Parameters</em>: input values of a procedure.</li>
+<li><em>Arguments</em>: specify the values of the parameters when a procedure is called.</li>
+</ul>
+<h2 id="Big-Ideas">Big Ideas<a class="anchor-link" href="#Big-Ideas"> </a></h2><ul>
+<li>Procedures can be referred to as method or function depending on the programing language.</li>
+<li>A procedure call interrupts an execution of statements and makes the program execute the statements in the procedure.</li>
+<li>If you have a set of statements and inside there is a procedure then when it reaches that procedure it will execute that procedure and then go back to the rest of the statments.</li>
+<li>If you see a return statement you automatically end the procedure even if there is more statements</li>
+<li>Procedures are that a catch-all term for codes used to identify what was done to or given to a patient</li>
+<li>If you have a set of statements in a procedure the statement will go thought the top of the procedure to the bottom in order.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Practice">Practice<a class="anchor-link" href="#Practice"> </a></h3><ol>
+<li>Here is a practice problem that involves calling a procedure by having an input and an output. This is a apply discount and apply tax procedure.<ul>
+<li>$80 item receives a 20% discount and a tax is 8%</li>
+<li>PROCEDURE applyDiscount (cost, percentDiscounted) { temp &lt;-- 100 - percentDiscounted</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">&lt;-</span> <span class="n">temp</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">cost</span> <span class="o">&lt;-</span> <span class="n">cost</span> <span class="o">*</span> <span class="n">temp</span>
+
+<span class="n">Print</span><span class="p">(</span><span class="n">cost</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/jesa/vscode/andafp/_notebooks/2022-12-07-Lesson312and313.ipynb Cell 3</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-12-07-Lesson312and313.ipynb#W3sZmlsZQ%3D%3D?line=0&#39;&gt;1&lt;/a&gt;</span> temp &lt;- temp / 100
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-12-07-Lesson312and313.ipynb#W3sZmlsZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt;</span> cost &lt;- cost * temp
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa/vscode/andafp/_notebooks/2022-12-07-Lesson312and313.ipynb#W3sZmlsZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span> Print(cost)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;temp&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Temperature Procedure</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>This procedure is used to Convert Fahrenheit to Celsius</p>
+</li>
+<li><p>What is 80 degrees in Celsius?</p>
+</li>
+<li><p>PROCEDURE convert Fahrenheit (temperature) {</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Celsius</span> <span class="o">&lt;-</span> <span class="n">tempature</span> <span class="o">-</span> <span class="mi">32</span>
+<span class="n">Celsius</span> <span class="o">&lt;-</span> <span class="n">Celsius</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">9</span>
+
+<span class="n">Print</span> <span class="p">(</span><span class="n">Celsius</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.13">3.13<a class="anchor-link" href="#3.13"> </a></h1><blockquote><p>Developing procedures, to manage a program and the complexity</p>
+</blockquote>
+<h2 id="Key-Vocabulary">Key Vocabulary<a class="anchor-link" href="#Key-Vocabulary"> </a></h2><p><em>Modularity</em> - the practice of breaking a complex program into smaller, independent parts or modules that can be used and reused in different parts of the program</p>
+<h2 id="Big-Ideas">Big Ideas<a class="anchor-link" href="#Big-Ideas"> </a></h2><ul>
+<li>There are two types of procedures, one that returns a value or some type of data and on that just executes a block of statements</li>
+<li>Procedure-is a named group of programming instructions that serves a purpose</li>
+<li>How to code Procedures-While Coding a procedure you must makes sure it has as name and a clear purpose weather to execute a response or complete an action</li>
+<li>One common type of abstraction is procedural abstraction, which provides a name for a process and allows a procedure to be only knowing what it doe,not how it does it.</li>
+<li>The subdivision of a computer program into separate subprograms is called modularity</li>
+<li>It is important to understand you procedures procedure does when creating one as it will help you create a impactful procedure</li>
+</ul>
+<h3 id="Creating-a-Procedure">Creating a Procedure<a class="anchor-link" href="#Creating-a-Procedure"> </a></h3><ol>
+<li>Pick a descriptive name</li>
+<li>See if you need any parameters for this procedure (what data do you need to accomplish my goal? What king of information am I going to need?)</li>
+<li>2 of the parameters in the example below could be the quizGrade and currentPoints (need this data)</li>
+</ol>
+<h3 id="Practice">Practice<a class="anchor-link" href="#Practice"> </a></h3><ol>
+<li><p>PROCEDURE updateGRADE(points, current grade,new grade){</p>
+<ul>
+<li>currentGrade &lt;-- current points/total points</li>
+<li>currentGrade &lt;-- current grade * 100</li>
+<li>if (currentGrade &gt; quizGrade){
+  quizGrade &lt;-- currentGrade
+}</li>
+<li>return (quizGrade)
+}</li>
+</ul>
+</li>
+<li><p>after you take a quiz your teacher lets you retake it for full credit in which your are able to replace your grade
+TEST WITH first quiz GRADE is 40% and second is 90%</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PROCEDURE</span> <span class="n">updateGRADE</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">current</span> <span class="n">grade</span><span class="p">,</span><span class="n">new</span> <span class="n">grade</span><span class="p">){</span>
+    <span class="n">currentGrade</span> <span class="o">=</span> <span class="n">current</span> <span class="n">points</span> <span class="o">/</span><span class="mi">75</span>
+    <span class="n">currentGrade</span> <span class="o">=</span> <span class="n">current</span> <span class="n">grade</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">if</span> <span class="n">currentGrade</span> <span class="o">&gt;</span> <span class="n">quizGrade</span>
+    <span class="k">return</span> <span class="n">currentGrade</span> <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  Input </span><span class="ansi-green-fg">In [3]</span>
+<span class="ansi-red-fg">    PROCEDURE updateGRADE(points, current grade,new grade){</span>
+              ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Hackathon!">Hackathon!<a class="anchor-link" href="#Hackathon!"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Procedure</span> <span class="n">winner</span><span class="p">(){</span>
+    <span class="n">If</span> <span class="n">Can_Move</span><span class="p">(</span><span class="n">Forward</span><span class="p">)</span>
+        <span class="n">Move_Forward</span><span class="p">()</span>
+    <span class="n">Else</span> <span class="n">Rotate_Left</span><span class="p">()</span>
+        <span class="n">Move_Forward</span><span class="p">()</span>
+        <span class="n">If</span> <span class="n">Can_Move</span><span class="p">(</span><span class="n">Right</span><span class="p">)</span>
+            <span class="n">Rotate_Right</span><span class="p">()</span>
+            <span class="n">Move_Forward</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">Procedure</span> <span class="n">maze</span><span class="p">(){</span>
+        <span class="n">If</span><span class="p">:</span> <span class="n">Can_Move</span><span class="p">(</span><span class="n">Forward</span><span class="p">)</span>
+            <span class="n">Move_Forward</span><span class="p">()</span>
+        <span class="n">Else</span><span class="p">:</span> <span class="n">Rotate_Right</span><span class="p">()</span>
+            <span class="n">Move_Forward</span><span class="p">()</span>
+            <span class="n">If</span> <span class="n">Can_Move</span><span class="p">(</span><span class="n">Left</span><span class="p">)</span>
+                <span class="n">Rotate_Left</span><span class="p">()</span>
+                <span class="n">Move_Forward</span><span class="p">()</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span>
+        <span class="k">break</span>
+    <span class="n">Procedure</span> <span class="n">top</span><span class="p">(){</span>
+    <span class="n">If</span> <span class="n">Can_Move</span><span class="p">(</span><span class="n">Left</span><span class="p">)</span>
+        <span class="n">Rotate_Left</span><span class="p">()</span>
+        <span class="n">Move_Forward</span><span class="p">()</span>
+    <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Homework-Hacks">Homework Hacks<a class="anchor-link" href="#Homework-Hacks"> </a></h1><ol>
+<li>Problem 1: This problem involves parameters
+Qais is writing code to calculate formulas from his math class. 
+He's currently working on a procedure to calculate average speed, based on this formula:</li>
+</ol>
+<p>Average speed=</p>
+<p>Total Time/Total Distance​</p>
+<p>Highlight which of these is the best procedure for calculating and displaying average speed.
+PROCEDURE calcAvgSpeed (distance, time) { DISPLAY (distance/time) }
+PROCEDURE calcAvgSpeed (distance) { DISPLAY (distance/time) }
+<mark>PROCEDURE calcAvgSpeed (distance, time) { DISPLAY (time/distance) }</mark></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Problem 2: Procedures with return values
+James Hunter is looking through his classmate's program and sees a procedure called heightenEmotions: </li>
+</ol>
+<p>PROCEDURE heightenEmotions(myEmotion){ 
+    moreEnergy ← CONCAT(myEmotion, "!!!")
+moreVolume ← UPPER(moreEnergy)</p>
+<p>RETURN moreVolume }</p>
+<p>That procedure manipulates strings using two built-in procedures, CONCAT for concatenating two strings together, and UPPER for converting a string to uppercase.</p>
+<p>James Hunter then sees this line of code:</p>
+<p>heightenEmotions("im mad")</p>
+<p>After that line of code runs, will nothing be displayed?</p>
+<p><mark>True</mark>, because it does not have DISPLAY in the procedure</p>
+<p>False</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Problem 3: Procedures with return values
+Bubz is writing a program to calculate the carbon footprint of his activities. The procedure calcFlightFootprint calculates the pounds of carbon dioxide produced per passenger in a flight that covers a given number of miles and seats a given number of passengers.</li>
+</ol>
+<p>PROCEDURE calcFlightFootprint(numMiles, numPassengers) { CO2_PER_MILE ← 53.29</p>
+<p>carbonPerFlight ← numMiles * CO2_PER_MILE</p>
+<p>carbonPerPassenger ← carbonPerFlight / numPassengers</p>
+<p>RETURN carbonPerPassenger</p>
+<p>}</p>
+<p>Bubz wants to use that procedure to calculate the total footprint for his two upcoming flights: LA to NY: 2,451 miles and 118 passengers NY to London: 3,442 miles and 252 passengers</p>
+<p>Which of these code snippets successfully calculates and stores her total footprint? Highlight 2 answers.</p>
+<p>totalFootprint ← calcFlightFootprint(2451, 118) + calcFlightFootprint(3442, 252)</p>
+<p>totalFootprint ← calcFlightFootprint(2451, 118 + 3442, 252)</p>
+<p>totalFootprint ← calcFlightFootprint((2451, 118) + (3442, 252))</p>
+<ol>
+<li>laNyCarbon ← calcFlightFootprint(2451, 118) nyLondonCarbon ← calcFlightFootprint(3442, 252) totalFootprint ← laNyCarbon + nyLondonCarbon</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/andafp/2022/12/07/Lesson312and313.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/andafp/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/andafp/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/andafp/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My first blog with Fastpages! I literally don&#39;t understand what I&#39;m doing but socials down below lol</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
