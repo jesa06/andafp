@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -645,7 +645,7 @@ List after using shuffle method:  [7, 22, 8, 10]
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
 
-<span class="n">possible_people</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the names into a lottery. This is a chance to win $10 Million!&quot;</span><span class="p">)</span>
+<span class="n">possible_people</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the names into a lottery, separated by a comma. This is a chance to win $10 Million!&quot;</span><span class="p">)</span>
 <span class="n">people</span> <span class="o">=</span> <span class="n">possible_people</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
 
 <span class="n">num_people</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
@@ -661,6 +661,20 @@ List after using shuffle method:  [7, 22, 8, 10]
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> athyna won the lottery of $10 Million
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -673,6 +687,55 @@ List after using shuffle method:  [7, 22, 8, 10]
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+<span class="n">possible_rolls</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="n">player_1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter 1st player&#39;s name&quot;</span><span class="p">)</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">possible_rolls</span><span class="p">)</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">possible_rolls</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">player_1</span><span class="p">,</span> <span class="s2">&quot;rolled&quot;</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="s2">&quot;and&quot;</span><span class="p">,</span> <span class="n">r2</span><span class="p">)</span>
+
+<span class="n">player_2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter 2nd players name&quot;</span><span class="p">)</span>
+<span class="n">r3</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">possible_rolls</span><span class="p">)</span>
+<span class="n">r4</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">possible_rolls</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">player_2</span><span class="p">,</span> <span class="s2">&quot;rolled&quot;</span><span class="p">,</span> <span class="n">r3</span><span class="p">,</span> <span class="s2">&quot;and&quot;</span><span class="p">,</span> <span class="n">r4</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">r1</span> <span class="o">+</span> <span class="n">r2</span> <span class="o">&gt;</span> <span class="n">r3</span> <span class="o">+</span> <span class="n">r4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">player_1</span><span class="p">,</span> <span class="s2">&quot;wins&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">r1</span> <span class="o">+</span><span class="n">r2</span> <span class="o">&lt;</span> <span class="n">r3</span> <span class="o">+</span> <span class="n">r4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">player_2</span><span class="p">,</span> <span class="s2">&quot;wins&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>joselyn rolled 1 and 1
+lina rolled 5 and 3
+lina wins
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
