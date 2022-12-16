@@ -28,6 +28,9 @@ title: Key Vocabulary
     - *Unicode*: international character-encoding system to support the electronic interchange/processing/display of the written texts of different languages, written with a "U" followed by a plus sign and the number in hex
         - ex. "Hello" = U+0048 U+0065 U+006C U+006C U+006F
     - *RGB*: red, blue, green, combination of the 3 colors can make any color, each range from 0 to 100 percent of full intensity
+        - ex. real life example is in LED light strips that people usually use to decorate their rooms. It has RGB lights that have different combinations and intensities to create different colors even like peach and teal
+        - ![LED Lights]({{site.baseurl}}/images/ledlights.webp)
+
 - <mark>Data Compression</mark>: a reduction in the number of bits needed to represent data
     - *Lossy*: data in a file is removed and not restored to its original form after decompression, permanently removes redundant  information
         - JPEG images
@@ -51,6 +54,7 @@ title: Key Vocabulary
 - <mark>Sequence</mark>: the whole code, start to finish 
 - <mark>Selection</mark>: a section of code is run only if a condition is met, when the programmer decides between two different outcomes
 - <mark>Iteration</mark>: repeating a certain part of code until a condition is fulfilled
+ - ![Iteration]({{site.baseurl}}/images/iteration.gif)
 - <mark>Expressions</mark>: combinations of comparisons operators, functions, variables, or constants...like in math 
 - <mark>Comparison Operators</mark>: operators that compare values and return true or false, <, >, <=. >=, !=, ==
 - <mark>Booleans Expressions</mark>: a logical statement that is either TRUE or FALSE, test data to see if it is equal to, greater than, or less than other data
