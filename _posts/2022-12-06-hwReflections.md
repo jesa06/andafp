@@ -35,5 +35,8 @@ I completed all of the practice problems with explanations and demonstrated what
 - *What I learned*: I learned what the random library was. You can import random which is built in the python, and you can use functions like random.choice, random.shuffle, random.randint, random.randrange and more. They function depending on the variables and data types you are using in your code. I learned that in using these you have to be careful with your parameters, the indicies/index, and the length of the lists. In the parameters you could have x = start, y = stop, z = step. Also randomization we use daily are like rolling die or dice, picking a card from a deck, and lottery.
 
 # Lesson 3.16 Homework Grade
+- I received a 0.9/1 on the homework grading, meeting expectations. This group graded some things based on correctness on the multiple choice homework hack section. I got two of those wrong so a score of 4/6. Besides that, I had very thorough explanations of each homework question and my understanding of it. 
+- "4/6; Showed thorough understanding of this topic and planned out a nice simulation"
+- *What I learned*: I learned that simulations are useful for making predictions, and is a way to simulate real-world environments to test safety or logistics.  This is why it differs from experiments, because experiments are usually easier to conduct and obtain the supplies necessary for it. So, simulations are safer, less expensive, and repeatable. You can create hypotheses and predictions in simulations. One good example are airplane simulations. 
 
 # Lesson 3.17 and 3.18 Homework Grade 
