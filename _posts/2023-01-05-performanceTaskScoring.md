@@ -21,10 +21,8 @@ description: Practice with Collegeboard Performance Task Scoring
 | Program Purpose and Function | 1 | 1, The response specifies the program’s purposeas entertainment. It describes how it functions, the input of "placing and removing tiles" and the output of patterns. | 
 | Data Abstraction | 1 | 1, 2 code segments are provided. One of the multiple list's name is startGrid. The response says what is being stored in the list, which is the possible tiles on the screen. |
 | Managing Complexity | 0, does not include the procedure name in the list. | 1, The response includes code that uses a list to manage complexity. It explains how the code could not be written without using a list. |
-| Procedural Abstraction | 1 | 1, The response includes a created procedure, "replaceList", with 2 parameters,
-current and replacement. The response also includes a description of the functionality and a call to this procedure. The response describes the functionality of the procedure. |
-| Algorithm Implementation | 1 | 1, The created algorithm in the procedure, replaceList, includes sequencing,
-selection and iteration. The response explains how the algorithm functions can be recreated in another way. |
+| Procedural Abstraction | 1 | 1, The response includes a created procedure, "replaceList", with 2 parameters, current and replacement. The response also includes a description of the functionality and a call to this procedure. The response describes the functionality of the procedure. |
+| Algorithm Implementation | 1 | 1, The created algorithm in the procedure, replaceList, includes sequencing, selection and iteration. The response explains how the algorithm functions can be recreated in another way. |
 | Testing | 1 | 1, The response describes 2 different calls to the procedure which results in different code being ran through. The response states that the second call is “parameter inputs of 2, 1, being the current and replacement parameters respectively.” The response describes both of the conditions being tested. | 
 
 ##  Create Performance Task scoring on these examples will help me exceed CPT requirements because it gives me good and bad examples of the written portion. It helps me figure out what is required, what is extra, and what is not needed in the explanation. The scoring will help me realize what I need included in my written response. 
