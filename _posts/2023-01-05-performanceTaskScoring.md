@@ -28,6 +28,7 @@ description: Practice with Collegeboard Performance Task Scoring
 ##  Create Performance Task scoring on these examples will help me exceed CPT requirements because it gives me good and bad examples of the written portion. It helps me figure out what is required, what is extra, and what is not needed in the explanation. The scoring will help me realize what I need included in my written response. 
 
 # Submission 3
+
 | Reporting Category | My Score + Explanation | Collegeboard Score + Explanation |
 |-|-|-|
 | Program Purpose and Function | 1 | 0, The video satisfies the first three criteria for the video. But the response describes the function of the program but not its purpose, it describes the functionality demonstrated in the video. The response describes the input and the output. | 
@@ -38,6 +39,7 @@ description: Practice with Collegeboard Performance Task Scoring
 | Testing | 1 | 1, The response describes two calls to the procedure with different arguments that lead to different results from the procedure. The first call uses the arguments Vision and Bishop. The second call uses the arguments Carnage and Venom. The response describes the conditions being tested for the two procedure calls. | 
 
 # Submission 4
+
 | Reporting Category | My Score + Explanation | Collegeboard Score + Explanation |
 |-|-|-|
 | Program Purpose and Function | 1 | 1, The video demonstrates the running of the program, collecting input using a text entry field and displaying output results on the screen showing letters that matched. The response states that the program’s purpose is “to test critical thinking skills.” The response describes the functionality demonstrated in the video. The response describes the input and the output. | 
