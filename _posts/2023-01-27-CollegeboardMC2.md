@@ -37,8 +37,8 @@ My overall score was a 44/50. I did better than I expected and compared to the l
 
 
 ![Q6]({{site.baseurl}}/images/question6.png)
-- *The correct answer*: B. ![A6]({{site.baseurl}}/images/answerB.png).  The robot turns to the right one, two, or three times and then moves one or two squares forward. The possible final locations are to the right, below, or to the left of the starting position.
-- *My answer*: I chose answer C. ![wrongA6]({{site.baseurl}}/images/answerC.png) It is wrong because the robot turns right one, two, or three times and could end up in a square to the left of its initial position. It cannot end up in a square above its initial position.
+- *The correct answer*: B. ![A6]({{site.baseurl}}/images/answerB.jpeg).  The robot turns to the right one, two, or three times and then moves one or two squares forward. The possible final locations are to the right, below, or to the left of the starting position.
+- *My answer*: I chose answer C. ![wrongA6]({{site.baseurl}}/images/answerC.jpeg) It is wrong because the robot turns right one, two, or three times and could end up in a square to the left of its initial position. It cannot end up in a square above its initial position.
 
 # What I will do to improve
 - In order to improve on my skills and take in more knowledge, I will review the videos that Collegeboard provides for each question that I got wrong. I will then rework the problems tha challenge dme to see if I more deeply understand
