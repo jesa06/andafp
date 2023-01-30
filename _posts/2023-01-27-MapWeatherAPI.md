@@ -13,3 +13,8 @@ description: How my feature in the group project fits CPT
 | Procedural Abstraction | ... |
 | Algorithm Implementation | ... |
 | Testing | ... | 
+
+
+# Code plan 
+
+# Video plan 
