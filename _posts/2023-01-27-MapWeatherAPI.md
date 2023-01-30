@@ -3,18 +3,21 @@ title: Individual Feature in Project
 layout: post 
 description: How my feature in the group project fits CPT
 ---
+ 
+# My Feature
+My feature is a page that has a weather forecast and also a map. These will be connected to 2 different REST API's, one from Google and one from RapidAPI. The weather will help people decide how to dress for the occasion, for example if it were cold they would layer up and dress warmer. It will also help them decide on the actual activities they wanat to do or places they want to go. If they wanted to hike, but checked the forecast for that day and saw there would be a storm, they would reschedule or choose a different activity. The map will help people decided on transportation and routes to take. It will act like a GPS, hopefully, and provide the ETA. The length of their location and the actual landmark could be a big factor because some people would not want to travel to far to make sure it fits their schedules. 
 
-
-| Reporting Category | How I will Fit Criteria |
-|-|-|
-| Program Purpose and Function | ... | 
-| Data Abstraction | ... |
-| Managing Complexity | ... |
-| Procedural Abstraction | ... |
-| Algorithm Implementation | ... |
-| Testing | ... | 
+| Reporting Category | Criteria | How I will Fit Criteria |
+|-|-|-|
+| Program Purpose and Function | ✅ describes the overall purpose of the program demonstrated in the video ✅ describes what functionality of the program is demonstrated in the video ✅ describes the input and output of the program | The purpose of the map and weather page is to help the users narrow down on the activities and places they want to visit. The weather and location of places help people determine what they want to wear, the best time/day to go, which transportation to take, or even if they want to go to the place at all. |
+| Data Abstraction | ✅ one program code that shows how data has been stored in this list (or another collection type). ✅ one program code that shows the data in this same list being used as part of fulfilling the program’s purpose. ✅ identifies the name of the variable representing the list being used in this response. ✅ describes what the data contained in this list is representing in the program | The data is being stored in API systems. | 
+| Managing Complexity | ✅ includes a program code segment that shows a list being used to manage complexity in the program  ✅ explains how the named, selected list manages complexity in the program code by explaining why the program code could not be written, or how it would be written differently, without using this list. | Without |
+| Procedural Abstraction | ✅ one program code showing a student-developed procedure with at least one parameter that has an effect on the functionality of the procedure ✅ one program code showing where the student-developed procedure is being called. ✅ describes what the identified procedure does and how it contributes to the overall functionality of the program | All of this data is being abstracted from outside REST API's. I will create procedures that will go through the list of cities to output results of the user input city. |
+| Algorithm Implementation | ✅ includes a program code segment of a student-developed algorithm that includes sequencing, selection, and iteration ✅ explains in detailed steps how the identified algorithm works in enough detail that someone else could recreate it | The code would include selection by choosing the city within the huge list of cities in San Diego County. And to actually select this city, the code will have to iterate through the list which is held in alphabetical order. |
+| Testing | ✅ describes two calls to the selected procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute. ✅ describes the condition(s) being tested by each call to the procedure. ✅ identifies the result of each call | The different arguments will be the different locations that I decide to test in the video. I will show the different results of each call, so the weather and how far the location is from my location will be the results.  | 
 
 
 # Code plan 
-
+My plan for the code is using Javascript to access the API and GET data from it. I will display the data using HTML and input that data into a table. I will also incorporate HTML buttons and an input space for people to enter the city in San Diego County that they wanted to check, and a button that onclick will actually GET the data and POST it into the table. Each time they put in a new city the backend code will UPDATE the data that is in the table and DELETE it, replacing with new data. i do not yet know how I will get a functional map into the page, but I will look into that and do more research on how to incorporate a functional live map on the page. 
 # Video plan 
+In the video I will choose a city that I was planning to visit. Then I would enter the city in the search bar to check the weather forecast and data will be inputted into the table. I will then go to the map and map how far my location is from the place I want to visit. Then on a little note box that I am planning to incorporate, I will chose which way of transportation I will be taking and what time I would leave. Then I would show going back to the weather section and change the city to a different destination, I will then do the same for the map. And then I will decide on which place I want to go to, and in my notes plan what type of clothing I would wear and how I would get to that location. 
