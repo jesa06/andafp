@@ -1,0 +1,362 @@
+
+<!-- saved from url=(0035)http://0.0.0.0:4001/mapweather.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Map and Weather API | JANL Dubai Trip</title>
+<meta name="generator" content="Jekyll v3.9.2">
+<meta property="og:title" content="Map and Weather API">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Joselyn A., Amitha S., Naja F., Lina A.">
+<meta property="og:description" content="Joselyn A., Amitha S., Naja F., Lina A.">
+<link rel="canonical" href="http://0.0.0.0:4001/mapweather">
+<meta property="og:url" content="http://0.0.0.0:4001/mapweather">
+<meta property="og:site_name" content="JANL Dubai Trip">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Map and Weather API">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Joselyn A., Amitha S., Naja F., Lina A.","headline":"Map and Weather API","url":"http://0.0.0.0:4001/mapweather"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="./Map and Weather API _ JANL Dubai Trip_files/style.css">
+    <script src="./Map and Weather API _ JANL Dubai Trip_files/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="./Map and Weather API _ JANL Dubai Trip_files/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+  <style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Black.woff2') format('woff2');
+}</style></head>
+  <body data-new-gr-c-s-check-loaded="14.1094.0" data-gr-ext-installed="">
+      
+    <div class="wrapper">
+
+      <section>
+        <!-- nighthawk coding society has altered arrangement and inserted navigation that is updated in independent file -->
+        <div id="title">
+          <h1><a href="https://github.com/jm1021/leuck_reunion">JANL Dubai Trip </a></h1>
+          <p>Joselyn A., Amitha S., Naja F., Lina A.</p>
+          <hr>
+          <table>
+    <tbody><tr>
+        <td><a style="color: rgb(1, 100, 37);" href="http://0.0.0.0:4001/homepage.html">Home</a></td>
+        <td><a style="color: rgb(1, 100, 37);" href="http://0.0.0.0:4001/mapweather.html">Map &amp; Weather</a></td>
+        <td><a style="color: rgb(1, 100, 37);" href="http://0.0.0.0:4001/reviews.html">Reviews</a></td>
+        <td><a style="color: rgb(1, 100, 37);" href="http://0.0.0.0:4001/foryou.html">For You</a></td>
+        <td><a style="color: rgb(1, 100, 37);" href="http://0.0.0.0:4001/yourlikes.html">Your Likes</a></td>
+    </tr>
+</tbody></table>
+ 
+
+        </div>
+
+        <!-- this is Jekyll magic, each md file in site will be inserted here -->
+        <!-- HTML table fragment for page -->
+
+
+
+<h1>Weather Forecast</h1>
+
+<!-- <a href="#astronomybutton"><button> Weather API </button></a>
+
+    
+<!-- HTML table fragment for page -->
+
+<script>
+    alert("hi");
+
+    function cityButtonClick(city) {
+        
+        if (!city.trim()) {
+            alert("Enter a city in San Diego County.");
+            return;
+        }  
+
+alert("yo momma!:  " + city);
+
+        // prepare HTML result container for new output
+//        const resultContainer = document.getElementById("test");
+
+        //clear contents of astronomy table
+//        resultContainer.innerHTML = "<i>hhhhhh</>";
+
+//alert("1: " + resultContainer);
+
+        // prepare fetch options
+        const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + city + '&days=7';
+
+alert(url);
+//alert("2: " + url);
+            
+        const headers = {
+            method: 'GET', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached 
+            credentials: 'omit', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json',
+                'X-RapidAPI-Key': '0b6ef107f7msh5606de624633ceap17521ejsn27566d20ff5b',
+		        'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+            },
+        };
+
+//alert("3: " + headers)
+
+//alert("3a: pre-fetch" + headers);
+
+        // fetch the API
+        fetch(url, headers)
+        // response is a RESTful "promise" on any successful fetch
+        .then(response => {
+            // check for response errors
+            if (response.status !== 200) {
+
+                const errorMsg = 'Database response error: ' + response.status;
+                console.log(errorMsg);
+                const tr = document.createElement("tr");
+                const td = document.createElement("td");
+                td.innerHTML = errorMsg;
+                tr.appendChild(td);
+                resultContainer.appendChild(tr);
+
+                return;
+            }
+            // valid response will have json data
+            response.json().then(data => {
+                console.log(data);
+                console.log(data.location)
+                console.log(data.current)
+                console.log(data.condition)
+                console.log(data.forecast)
+
+                // Weather Data
+                document.getElementById("name").innerHTML = data.location.name;
+                document.getElementById("region").innerHTML = data.location.region;
+                document.getElementById("country").innerHTML = data.location.country;                
+                document.getElementById("tz_id").innerHTML = data.location.tz_id;
+                document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
+                document.getElementById("localtime").innerHTML = data.location.localtime;
+
+
+            
+                //alert("data.astronomy" + data.astronomy.astro.sunrise);
+                // tr for each row
+                const tr = document.createElement("tr");
+
+                // td for each column
+                const temp_f = document.createElement("td"); 
+                const wind_mph = document.createElement("td"); 
+                const humidity = document.createElement("td"); 
+                const cloud = document.createElement("td"); 
+                const feelslike_f = document.createElement("td"); 
+                const text = document.createElement("td");
+                const icon = document.createElement("td"); 
+                const date = document.createElement("td"); 
+                const maxtemp_f = document.createElement("td");                
+                const mintemp_f = document.createElement("td"); 
+                const avgtemp_f = document.createElement("td");                 
+                const maxwind_mph = document.createElement("td");                 
+                const totalprecip_in = document.createElement("td");                
+                const daily_will_it_rain = document.createElement("td"); 
+                const daily_chance_of_rain = document.createElement("td");                 
+                const textsss = document.createElement("td");                
+                const icon = document.createElement("td"); 
+
+
+
+                // data is specific to the API
+                temp_f.innerHTML = "temp"; //data.current.temp_f;
+                wind_mph.innerHTML = "temp"; //data.condition.wind_mph;
+                humidity.innerHTML = "temp"; //data.condition.humidity;
+                cloud.innerHTML = "temp"; //data.condition.cloud;                 
+                feelslike_f.innerHTML = "temp"; //data.condition.feelslike_f;
+                text.innerHTML = "temp"; //data.condition.text;
+                icon.innerHTML = "temp"; //data.condition.icon;
+                date.innerHTML = "temp"; //data.forecast.forecastday.date;
+                maxtemp_f.innerHTML = "temp"; //data.forecast.forecastday[0].day.maxtemp_f;
+                mintemp_f.innerHTML = "temp"; //data.forecast.forecastday[0].day.mintemp_f;
+                avgtemp_f.innerHTML = "temp"; //data.forecast.forecastday[0].day.avgtemp_f;
+                maxwind_mph.innerHTML = "temp"; //data.forecast.forecastday[0].day.maxwind_mph;
+                totalprecip_in.innerHTML = "temp"; //data.forecast.forecastday[0].day.totalprecip_in;
+                daily_will_it_rain.innerHTML = "temp"; //data.forecast.forecastday[0].day.daily_will_it_rain;
+                daily_chance_of_rain.innerHTML = "temp"; //data.forecast.forecastday[0].day.daily_chance_of_rain;
+                text.innerHTML = "temp"; //data.forecast.forecastday[0].day.condition.text;
+                icon.innerHTML = "temp"; //data.forecast.forecastday[0].day.condition.icon;
+
+
+                // this builds td's into tr
+                tr.appendChild(temp_f);
+                tr.appendChild(wind_mph);
+                tr.appendChild(humidity);
+                tr.appendChild(cloud);
+                tr.appendChild(feelslike_f);
+                tr.appendChild(text);
+                tr.appendChild(icon);
+                tr.appendChild(date);
+                tr.appendChild(maxtemp_f);
+                tr.appendChild(mintemp_f);
+                tr.appendChild(avgtemp_f);
+                tr.appendChild(maxwind_mph);
+                tr.appendChild(totalprecip_in);             
+                tr.appendChild(daily_will_it_rain);
+                tr.appendChild(daily_chance_of_rain);
+                tr.appendChild(text);
+                tr.appendChild(icon);
+
+                // add HTML to container
+                resultContainer.appendChild(tr);
+*/
+            })
+        })
+/*
+
+//alert("4: post fetch");
+*/    
+
+    }
+</script>
+If you choose a city, it will list out the location and weather forecast details.
+
+<div id="astronomybutton">
+
+
+<label for="city">Enter city name:</label>
+<input type="text" id="city" name="city">&nbsp;&nbsp;<input type="button" value="Get Location &amp; Weather Forecast" onclick="cityButtonClick(document.getElementById(&#39;city&#39;).value)">
+<br><br>
+
+Location Details
+  <table>
+  <thead><tr>
+    <th>City</th>
+    <th>Region</th>
+    <th>Country</th>
+    <th>Time Zone</th>
+    <th>Local Time Epoch</th>
+    <th>Local Date and Time</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr><td id="name"></td>
+    <td id="region"></td>
+    <td id="country"></td>
+    <td id="tz_id"></td>
+    <td id="localtime_epoch"></td>
+    <td id="localtime"></td>
+  </tr></tbody>
+</table>
+
+
+Current Conditions
+    <table>
+    <thead><tr>
+        <th>Temperature</th>
+        <th>Wind</th>
+        <th>Humidity</th>
+        <th>Cloud</th>
+        <th>Feels Like</th>
+        <th>Overall Condition</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody> 
+        <tr><td id="temp_f"></td>
+        <td id="wind_mph"></td>
+        <td id="humidity"></td>        
+        <td id="cloud"></td>
+        <td id="feelslike_f"></td>
+        <td id="text"></td>
+        <td id="icon"></td>
+    </tr></tbody>
+</table>
+
+Weather Forecast
+    <table>
+    <thead><tr>
+        <th>Date</th>
+        <th> Max Temperature</th>
+        <th> Min Temperature</th>
+        <th> Average Temperature</th>
+        <th> Max Wind</th>
+        <th> Total Precipitation</th>
+        <th> Will it Rain?</th>
+        <th> Chance of Rain</th>
+        <th> Overall Condition</th>
+        <th> </th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr><td id="date"></td>        
+        <td id="maxtemp_f"></td>
+        <td id="mintemp_f"></td>
+        <td id="avgtemp_f"></td>
+        <td id="maxwind_mph"></td>
+        <td id="totalprecip_in"></td>
+        <td id="daily_will_it_rain"></td>
+        <td id="daily_chance_of_rain"></td>
+        <td id="text"></td>
+        <td id="icon"></td>
+        <!-- generated rows -->
+    </tr></tbody>
+</table>    
+
+
+<script>
+
+
+</script></div>
+
+
+      </section>
+
+    </div>
+  
+
+<link rel="stylesheet" type="text/css" href="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/css/blur.css" class="loom-blur-styles"></body><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container><loom-container id="lo-companion-container"><loom-shadow classname="resolved"></loom-shadow></loom-container><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

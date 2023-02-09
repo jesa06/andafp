@@ -1,7 +1,7 @@
 ---
-title: Blog Questions/Reflection of 5.1-5.5
+title: Blog Questions/Reflection of 5.1-5.6
 layout: post 
-description: Beneficial and Harmful Effects, Digital Divide, Computing Bias, Crowdsourcing
+description: Beneficial and Harmful Effects, Digital Divide, Computing Bias, Crowdsourcing, Legal and Ethical Concerns, and Safe Computing
 ---
 
 # 5.1 Questions
@@ -59,3 +59,41 @@ description: Beneficial and Harmful Effects, Digital Divide, Computing Bias, Cro
 - Yes our project could be better with crowdsourcing because many of us have been living within San Diego County or is somewhat familiar with the area. Our project is about places in SD County so in the review section/feature we have, it would be great to have local people's input on various places. 
 3. What kind of data could you capture at N@tM to make evening interesting? Perhaps use this data to impress Teachers during finals week.
 - Related to our project we could capture or collect data by crowdsourcing families, teachers, and students at Night at the Museum. We could ask questions sort of like surveying, asking about their favorite places in San Diego County and questions following up with it. 
+
+# 5.5 Reflection 
+1. When you create a GitHub repository it requests a license type. Review the license types in relationship to this Tech Talk and make some notes.
+- License type: open source MIT. People basically can do anything they want with having a copy of my repository. They can sell/edit/merge etc. as long as I am still credited in the comments or somewhere within their version/project.
+- [License](https://github.com/jesa06/andafp/blob/6250b9aa0a81223be9e3a1539719bce46e5907e7/LICENSE.md) on my GitHub Repository
+2. Summarize the discussions and personal analysis on Software Licenses/Options, Digital Rights, and other Legal and Ethical thoughts from this College Board topic.
+- Open licenses means that the project must be public and closed licenses means that they must be private.
+- License allow giving credit and distributing owned content (someone's own property/work). Some people get around this by using illegal websites but this also leads to developing viruses and getting your personal information leaked. 
+- Businesses won't last without engineers pulling Open Software. A lot of computing services are made from using someone else's software/code/work. It is important that people are allowed to share work, giving credit or buying (whatever the creator wants), to develop newer ideas and inventions. 
+3. Make a license for your personal (blog) and Team repositories for the CPT project. Be sure to have a license for both Team GitHub repositories (frontend/backend). Document license(s) you picked and why. FYI, frontend, since it is built on GitHub pages may come with a license and restrictions. Document in blog how team made license choice and process of update.
+- [License](https://github.com/jesa06/andafp/blob/6250b9aa0a81223be9e3a1539719bce46e5907e7/LICENSE.md) for personal blog.
+- GNU GENERAL PUBLIC [License](https://github.com/amitha-sanka/janl/blob/45c80427ccb4bff7b9782b455ab7856a35d8bf54/LICENSE.md) for group repository on the CPT project, SD County trip planner. 
+
+# 5.6 Reflection 
+1. Describe PII you have seen on project in CompSci Principles. 
+- on people's blogs or CPT group projects they have added their socials. In their author pages they included information about their name, age, birthdates, and family information
+2. What are your feelings about PII and your personal exposure?
+- I feel like it is very important to have private accounts or at least not use and put out personal information.
+- I think your name, socials, and maybe your birth day is acceptable
+- My personal exposure is fine because I have private accounts and don't display personal information about myself. However, I do use the same password for everything so once one thing gets hacked or leaked, all of my information can be leaked.
+- If you were to search up my name, you could find my address and dad's information because my dad's information is online. There are also videos of me competing in my sport and photos of my family and I. It also shows my Instagram and Facebook accounts. 
+3. Describe good and bad passwords? What is another step that is used to assist in authentication.
+- Good: special character, capital letter, and number
+- Bad: birthdays, names, and repeated passwords
+- Personal questions, confirm your password, biometrics
+- sending a code to an email/phone number on another device
+4. Try to describe Symmetric and Asymmetric encryption.
+- Symmetric encryption: uses only one secret key which uses an algorithm to jumble a given password up (encrypt) and put it back into its normal state (decrypt)
+- Asymmetric cryptography AKA public-key cryptography: is a process that uses a pair of related keys – one public key and one private key – to encrypt and decrypt a message and protect it from unauthorized access or use
+5. Provide an example of encryption we used in AWS deployment.
+- To create a repository in GitHub we needed to generate a private and public SSH key, this is asymmetric encryption.
+6. Describe a phishing scheme you have learned about the hard way. Describe some other phishing techniques.
+- I was looking for racecar jackets and I saw an add on one that I wanted which was a sketchy website with not many reviews (probably all bots or made by that company). I bought them and the material was cheap and not at all like the given pictures or the reviews. I got scammed lol.
+- Click here for a chance to win $
+- Email verifications
+- Phone Calls
+- Surveys
+- Having you sign into certain websites and click certain links
