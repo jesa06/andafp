@@ -186,7 +186,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFilter</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFilter</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
 <span class="kn">import</span> <span class="nn">base64</span>
 <span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
@@ -206,11 +206,10 @@ window.onload = wrap_img;
 
 
 <span class="c1"># color_data prepares a series of images for data analysis</span>
-<span class="k">def</span> <span class="nf">image_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;static/img/&quot;</span><span class="p">),</span> <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted</span>
+<span class="k">def</span> <span class="nf">image_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/andafp/images&quot;</span><span class="p">),</span> <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted</span>
     <span class="k">if</span> <span class="n">images</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># color_dict is defined with defaults</span>
         <span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;Peter Carolin&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Lassen Volcano&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;lassen-volcano-256.jpg&quot;</span><span class="p">},</span>
-            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;Peter Carolin&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Clouds Impression&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;clouds-impression.png&quot;</span><span class="p">}</span>
+            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;Google&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Happy Face &quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;happyface.jpeg&quot;</span><span class="p">}</span>
         <span class="p">]</span>
     <span class="c1"># gather analysis data and meta data for each image, adding attributes to each row in table</span>
     <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
@@ -267,7 +266,7 @@ window.onload = wrap_img;
 
 <span class="c1"># run this as standalone tester to see sample data printed in terminal</span>
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">local_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;../starter/static/img/&quot;</span><span class="p">)</span>
+    <span class="n">local_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;../andafp/images&quot;</span><span class="p">)</span>
     <span class="n">images</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">(</span><span class="n">local_path</span><span class="p">)</span>  <span class="c1"># path of local run</span>
     <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
         <span class="c1"># print some details about the image so you can validate that it looks like it is working</span>
@@ -307,6 +306,45 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb Cell 5</span> in <span class="ansi-cyan-fg">&lt;cell line: 80&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=79&#39;&gt;80&lt;/a&gt;</span> if __name__ == &#34;__main__&#34;:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=80&#39;&gt;81&lt;/a&gt;</span>     local_path = Path(&#34;../img&#34;)
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=81&#39;&gt;82&lt;/a&gt;</span>     images = image_data(local_path)  # path of local run
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=82&#39;&gt;83&lt;/a&gt;</span>     for image in images:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=83&#39;&gt;84&lt;/a&gt;</span>         # print some details about the image so you can validate that it looks like it is working
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=84&#39;&gt;85&lt;/a&gt;</span>         # meta data
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=85&#39;&gt;86&lt;/a&gt;</span>         print(&#34;---- meta data -----&#34;)
+
+<span class="ansi-green-intense-fg ansi-bold">/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb Cell 5</span> in <span class="ansi-cyan-fg">image_data</span><span class="ansi-blue-fg">(path, images)</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=28&#39;&gt;29&lt;/a&gt;</span> filename = path / image[&#39;file&#39;]  # file with path
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=30&#39;&gt;31&lt;/a&gt;</span> # Image open return PIL image object
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=31&#39;&gt;32&lt;/a&gt;</span> img_object = Image.open(filename)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=33&#39;&gt;34&lt;/a&gt;</span> # Python Image Library operations
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp/_notebooks/2023-03-06-Unit2.2DataCompression.ipynb#W5sZmlsZQ%3D%3D?line=34&#39;&gt;35&lt;/a&gt;</span> image[&#39;format&#39;] = img_object.format
+
+File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/PIL/Image.py:2953</span>, in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(fp, mode, formats)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2950</span>     filename = fp
+<span class="ansi-green-intense-fg ansi-bold">   2952</span> if filename:
+<span class="ansi-green-fg">-&gt; 2953</span>     fp = builtins.open(filename, &#34;rb&#34;)
+<span class="ansi-green-intense-fg ansi-bold">   2954</span>     exclusive_fp = True
+<span class="ansi-green-intense-fg ansi-bold">   2956</span> try:
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/Users/jesa_1/vscode/andafp/img/happyface.jpeg&#39;</pre>
+</div>
+</div>
+
 </div>
 </div>
 
