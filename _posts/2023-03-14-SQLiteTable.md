@@ -1,6 +1,8 @@
 ---
 keywords: fastai
-title: Title
+description: Using Programs with Data is focused on SQL and database actions.  Part A focuses on SQLAlchemy and an OOP programming style.
+title: SQALchemy Database 2.4a related to Tri 2 project
+toc: true
 nb_path: _notebooks/2023-03-14-SQLiteTable.ipynb
 layout: notebook
 ---
