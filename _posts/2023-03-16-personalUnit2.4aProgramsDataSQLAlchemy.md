@@ -1,7 +1,7 @@
 ---
 keywords: fastai
 description: Using Programs with Data is focused on SQL and database actions.  Part A focuses on SQLAlchemy and an OOP programming style.
-title: SQALchemy Database 2.4a related to Tri 2 project
+title: SQALchemy Database 2.4a related to Tri 2 Trip project
 toc: true
 nb_path: _notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb
 layout: notebook
@@ -16,6 +16,53 @@ layout: notebook
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Database-and-SQLAlchemy">Database and SQLAlchemy<a class="anchor-link" href="#Database-and-SQLAlchemy"> </a></h1><blockquote><p>In this blog we will explore using programs with data, focused on Databases.  We will use SQLite Database to learn more about using Programs with Data.  <strong><em>Use Debugging through these examples to examine Objects created in Code</em></strong>.</p>
+</blockquote>
+<ul>
+<li><p>College Board talks about ideas like</p>
+<ul>
+<li>Program Usage. "iterative and interactive way when processing information"</li>
+<li>Managing Data.  "classifying data are part of the process in using programs", "data files in a Table"</li>
+<li>Insight "insight and knowledge can be obtained from ...  digitally represented information"</li>
+<li>Filter systems. 'tools for finding information and recognizing patterns"</li>
+<li>Application. "the preserve has two databases", "an employee wants to count the number of book"</li>
+</ul>
+</li>
+<li><p>PBL, Databases, Iterative/OOP</p>
+<ul>
+<li>Iterative. Refers to a sequence of instructions or code being repeated until a specific end result is achieved</li>
+<li>OOP. A computer programming model that organizes software design around data, or objects, rather than functions and logic</li>
+<li>SQL. Structured Query Language, abbreviated as SQL, is a language used in programming, managing, and structuring data </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Imports-and-Flask-Objects">Imports and Flask Objects<a class="anchor-link" href="#Imports-and-Flask-Objects"> </a></h2><blockquote><p>Defines and key object creations</p>
+</blockquote>
+<ul>
+<li>Comment on where you have observed these working?  Provide a defintion of purpose.<ol>
+<li>Flask app object<ul>
+<li>we've used this in our CPT flask, for example we have used the init_app() method and can use the request and response objects.</li>
+</ul>
+</li>
+<li>SQLAlchemy db object<ul>
+<li>these are the objects from flask import Flaskfrom flask_sqlalchemy import SQLAlchemy</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Notes-input">Notes input<a class="anchor-link" href="#Notes-input"> </a></h3><ul>
@@ -76,6 +123,30 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Model-Definition">Model Definition<a class="anchor-link" href="#Model-Definition"> </a></h2><blockquote><p>Define columns, initialization, and CRUD methods for users table in sqlite.db</p>
+</blockquote>
+<ul>
+<li><p>Comment on these items in the class, purpose and definition.</p>
+<ul>
+<li>class User</li>
+<li>db.Model inheritance</li>
+<li><em>init</em> method</li>
+<li><code>@property</code>, <code>@&lt;column&gt;.setter</code></li>
+<li>create, read, update, delete methods</li>
+</ul>
+</li>
+<li><p>We need a constructor, init, method to create a User class</p>
+</li>
+<li>attributes:name, uid, password, dob- db.Model is an attribute of User class, inheriting data/functions in db.Model to build the User class</li>
+<li>@property, getter, Create or Update (CRUD) --&gt; add a user in db</li>
+<li>@"name".setter, setter, (CRUD)</li>
+</ul>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -234,6 +305,8 @@ layout: notebook
             <span class="bp">self</span><span class="o">.</span><span class="n">destination</span> <span class="o">=</span> <span class="n">destination</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">budget</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">budget</span> <span class="o">=</span> <span class="n">budget</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">dob</span>
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span>
 
@@ -253,6 +326,36 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Initial-Data">Initial Data<a class="anchor-link" href="#Initial-Data"> </a></h2><blockquote><p>Uses SQLALchemy db.create_all() to initialize rows into sqlite.db</p>
+</blockquote>
+<ul>
+<li>Comment on how these work?<ol>
+<li>Create All Tables from db Object<ul>
+<li>generates database tables based on a defined schema within a database object. Automates the creation of database tables base.</li>
+</ul>
+</li>
+<li>User Object Constructors<ul>
+<li>converts the inputs into an object</li>
+</ul>
+</li>
+<li>Try / Except <ul>
+<li>allows your program to take alternative actions in case an error occurs. Python will first attempt to execute the code in the try statement (code block 1). If no exception occurs, the except statement is skipped and the execution of the try statement is finished.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h3><ul>
+<li>inside initUsers, you add attributes in when creating the user (name, uid...)</li>
+<li>users are stored in a list</li>
+<li>object = user.create() goes through each user and adds to SQLite Table</li>
+</ul>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -265,16 +368,16 @@ layout: notebook
         <span class="sd">&quot;&quot;&quot;Create database and tables&quot;&quot;&quot;</span>
         <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
         <span class="sd">&quot;&quot;&quot;Tester data for table&quot;&quot;&quot;</span>
-        <span class="n">t1</span> <span class="o">=</span> <span class="n">Trip</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Joselyn Anda&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;jesa06&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123Oakllyna&#39;</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="s1">&#39;La Jolla Cove&#39;</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="s1">&#39;$150000&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
-        <span class="n">t2</span> <span class="o">=</span> <span class="n">Trip</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Naja Fonseca&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;najapotato&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;purplepotato&#39;</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="s1">&#39;Santee Lakes&#39;</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="s1">&#39;$1200&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2008</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">18</span><span class="p">))</span>
-        <span class="n">t3</span> <span class="o">=</span> <span class="n">Trip</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Lina Awad &#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;linaawad7&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;thomasT3&#39;</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="s1">&#39;Bahia Resort&#39;</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="s1">&#39;$30750&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">23</span><span class="p">))</span>
-        <span class="n">t4</span> <span class="o">=</span> <span class="n">Trip</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Amitha Sanka&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;aamithass&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;adventurous11&#39;</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="s1">&#39;San Diego Zoo&#39;</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span><span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
+        <span class="n">u1</span> <span class="o">=</span> <span class="n">Trip</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Joselyn Anda&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;jesa06&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123Oakllyna&#39;</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="s1">&#39;La Jolla Cove&#39;</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="s1">&#39;$150000&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+        <span class="n">u2</span> <span class="o">=</span> <span class="n">Trip</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Naja Fonseca&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;najapotato&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;purplepotato&#39;</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="s1">&#39;Santee Lakes&#39;</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="s1">&#39;$1200&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2008</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">18</span><span class="p">))</span>
+        <span class="n">u3</span> <span class="o">=</span> <span class="n">Trip</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Lina Awad &#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;linaawad7&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;thomasT3&#39;</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="s1">&#39;Bahia Resort&#39;</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="s1">&#39;$30750&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">23</span><span class="p">))</span>
+        <span class="n">u4</span> <span class="o">=</span> <span class="n">Trip</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Amitha Sanka&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;aamithass&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;adventurous11&#39;</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="s1">&#39;San Diego Zoo&#39;</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span><span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
 
 
-        <span class="n">trips</span> <span class="o">=</span> <span class="p">[</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t3</span><span class="p">,</span> <span class="n">t4</span><span class="p">]</span>
+        <span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">u4</span><span class="p">]</span>
 
         <span class="sd">&quot;&quot;&quot;Builds sample user/note(s) data&quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">Trip</span> <span class="ow">in</span> <span class="n">trips</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">theTrip</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="sd">&#39;&#39;&#39;add user to table&#39;&#39;&#39;</span>
                 <span class="nb">object</span> <span class="o">=</span> <span class="n">Trip</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
@@ -295,23 +398,12 @@ layout: notebook
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">UnboundLocalError</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb Cell 5</span> in <span class="ansi-cyan-fg">&lt;cell line: 25&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb#X16sZmlsZQ%3D%3D?line=21&#39;&gt;22&lt;/a&gt;</span>                 &#39;&#39;&#39;fails with bad or duplicate data&#39;&#39;&#39;
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb#X16sZmlsZQ%3D%3D?line=22&#39;&gt;23&lt;/a&gt;</span>                 print(f&#34;Records exist uid {Trip.uid}, or error.&#34;)
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb#X16sZmlsZQ%3D%3D?line=24&#39;&gt;25&lt;/a&gt;</span> initTrips()
-
-<span class="ansi-green-intense-fg ansi-bold">/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb Cell 5</span> in <span class="ansi-cyan-fg">initTrips</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb#X16sZmlsZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span> db.create_all()
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb#X16sZmlsZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span> &#34;&#34;&#34;Tester data for table&#34;&#34;&#34;
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb#X16sZmlsZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span> t1 = Trip(name=&#39;Joselyn Anda&#39;, uid=&#39;jesa06&#39;, password=&#39;123Oakllyna&#39;, destination=&#39;La Jolla Cove&#39;, budget=&#39;$150000&#39;, dob=datetime(2006, 2, 11))
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb#X16sZmlsZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span> t2 = Trip(name=&#39;Naja Fonseca&#39;, uid=&#39;najapotato&#39;, password=&#39;purplepotato&#39;, destination=&#39;Santee Lakes&#39;, budget=&#39;$1200&#39;, dob=datetime(2008, 7, 18))
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-16-personalUnit2.4aProgramsDataSQLAlchemy.ipynb#X16sZmlsZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> t3 = Trip(name=&#39;Lina Awad &#39;, uid=&#39;linaawad7&#39;, password=&#39;thomasT3&#39;, destination=&#39;Bahia Resort&#39;, budget=&#39;$30750&#39;, dob=datetime(2005, 6, 23))
-
-<span class="ansi-red-fg">UnboundLocalError</span>: local variable &#39;Trip&#39; referenced before assignment</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Records exist uid &lt;property object at 0x7fa2a0be7630&gt;, or error.
+Records exist uid &lt;property object at 0x7fa2a0be7630&gt;, or error.
+Records exist uid &lt;property object at 0x7fa2a0be7630&gt;, or error.
+Records exist uid &lt;property object at 0x7fa2a0be7630&gt;, or error.
+</pre>
 </div>
 </div>
 
@@ -321,6 +413,27 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Check-for-given-Credentials-in-users-table-in-sqlite.db">Check for given Credentials in users table in sqlite.db<a class="anchor-link" href="#Check-for-given-Credentials-in-users-table-in-sqlite.db"> </a></h2><blockquote><p>Use of ORM Query object and custom methods to identify user to credentials uid and password</p>
+</blockquote>
+<ul>
+<li>Comment on purpose of following<ol>
+<li>User.query.filter_by<ul>
+<li>query:a search to find something     2. user.password<ul>
+<li>checks the password of the user in the database</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>check_credentials(uid, password), use one object to find another object (check if userid is same --&gt; checks if password is same, if userid is not matching, the function does not happen) 2 layers of checking, each parameter</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -357,10 +470,26 @@ layout: notebook
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">return</span> <span class="kc">False</span>
         
-<span class="n">check_credentials</span><span class="p">(</span><span class="s2">&quot;aamithass&quot;</span><span class="p">,</span> <span class="s2">&quot;adventurous11&quot;</span><span class="p">)</span>
+<span class="n">check_credentials</span><span class="p">(</span><span class="s2">&quot;jesa06&quot;</span><span class="p">,</span> <span class="s2">&quot;123Oakllyna&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -369,7 +498,32 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create-a-new-User-in-table-in-Sqlite.db">Create a new User in table in Sqlite.db<a class="anchor-link" href="#Create-a-new-User-in-table-in-Sqlite.db"> </a></h2><p>&gt;</p>
+<h2 id="Create-a-new-User-in-Trips-table-in-Sqlite.db">Create a new User in Trips table in Sqlite.db<a class="anchor-link" href="#Create-a-new-User-in-Trips-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses SQLALchemy and custom user.create() method to add row.</p>
+</blockquote>
+<ul>
+<li>Comment on purpose of following<ol>
+<li>user.find_by_uid() and try/except<ul>
+<li>check if input uid matches another uid in the database</li>
+<li>allows program to continue to work through errors and lets the user know if data is found in the database</li>
+</ul>
+</li>
+<li>user = User(...)<ul>
+<li>initializes certain attributes and data that is given from the user input</li>
+</ul>
+</li>
+<li>user.dob and try/except<ul>
+<li>sets the dob to the new created user, in the date form </li>
+<li>if the date is not given or typed in incorrectly the dob is set to today</li>
+</ul>
+</li>
+<li>user.create() and try/except<ul>
+<li>the object, the function takes all of this input data to create another user and add it to the database</li>
+<li>except happens if an errored occurred and the program could not create another user</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
 
 </div>
 </div>
@@ -398,7 +552,7 @@ layout: notebook
     <span class="n">budget</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your budget:&quot;</span><span class="p">)</span>
     
     <span class="c1"># Initialize User object before date</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> 
+    <span class="n">user</span> <span class="o">=</span> <span class="n">Trip</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> 
                 <span class="n">uid</span><span class="o">=</span><span class="n">uid</span><span class="p">,</span> 
                 <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
                 <span class="n">destination</span><span class="o">=</span><span class="n">destination</span><span class="p">,</span>
@@ -434,8 +588,8 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Found
- {&#39;id&#39;: 5, &#39;name&#39;: &#39;Joselyn Anda&#39;, &#39;uid&#39;: &#39;jesa06&#39;, &#39;password&#39;: &#39;123EllynaO...&#39;, &#39;destination&#39;: &#39;Hooters&#39;, &#39;budget&#39;: &#39;$50&#39;, &#39;date of birth&#39;: &#39;12-21-2006&#39;}
+<pre>Created
+ {&#39;id&#39;: 9, &#39;name&#39;: &#39;Athyna&#39;, &#39;uid&#39;: &#39;athyna7&#39;, &#39;password&#39;: &#39;ilovetopla...&#39;, &#39;destination&#39;: &#39;Dog Beach&#39;, &#39;budget&#39;: &#39;none&#39;, &#39;date of birth&#39;: &#39;04-15-2013&#39;}
 </pre>
 </div>
 </div>
@@ -448,12 +602,18 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reading-users-table-in-sqlite.db">Reading users table in sqlite.db<a class="anchor-link" href="#Reading-users-table-in-sqlite.db"> </a></h2><blockquote><p>Uses SQLALchemy query.all method to read data</p>
+<h2 id="Reading-Trips-table-in-sqlite.db">Reading Trips table in sqlite.db<a class="anchor-link" href="#Reading-Trips-table-in-sqlite.db"> </a></h2><blockquote><p>Uses SQLALchemy query.all method to read data</p>
 </blockquote>
 <ul>
 <li>Comment on purpose of following<ol>
-<li>User.query.all</li>
-<li>json_ready assignment, google List Comprehension</li>
+<li>User.query.all   <ul>
+<li>searches for all of the attributes and data within the Trip table</li>
+</ul>
+</li>
+<li>json_ready assignment, google List Comprehension<ul>
+<li>we use json because you can convert into each language, it is a universal translator</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
@@ -470,8 +630,8 @@ layout: notebook
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
-        <span class="n">table</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-    <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span> <span class="c1"># &quot;List Comprehensions&quot;, for each user add user.read() to list</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">Trip</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">trip</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">trip</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span> <span class="c1"># &quot;List Comprehensions&quot;, for each user add user.read() to list</span>
     <span class="k">return</span> <span class="n">json_ready</span>
 
 <span class="n">read</span><span class="p">()</span>
@@ -503,13 +663,6 @@ layout: notebook
   &#39;destination&#39;: &#39;La Jolla Cove&#39;,
   &#39;budget&#39;: &#39;$50000&#39;,
   &#39;date of birth&#39;: &#39;03-14-2023&#39;},
- {&#39;id&#39;: 3,
-  &#39;name&#39;: &#39;Indiana Jones&#39;,
-  &#39;uid&#39;: &#39;indijj&#39;,
-  &#39;password&#39;: &#39;adventurou...&#39;,
-  &#39;destination&#39;: &#39;San Diego Zoo&#39;,
-  &#39;budget&#39;: &#39;none&#39;,
-  &#39;date of birth&#39;: &#39;10-21-1920&#39;},
  {&#39;id&#39;: 4,
   &#39;name&#39;: &#39;Marion Ravenwood&#39;,
   &#39;uid&#39;: &#39;ravenrion&#39;,
@@ -544,7 +697,14 @@ layout: notebook
   &#39;password&#39;: &#39;ilovefood...&#39;,
   &#39;destination&#39;: &#39;Home&#39;,
   &#39;budget&#39;: &#39;none&#39;,
-  &#39;date of birth&#39;: &#39;01-19-2012&#39;}]</pre>
+  &#39;date of birth&#39;: &#39;01-19-2012&#39;},
+ {&#39;id&#39;: 9,
+  &#39;name&#39;: &#39;Athyna&#39;,
+  &#39;uid&#39;: &#39;athyna7&#39;,
+  &#39;password&#39;: &#39;ilovetopla...&#39;,
+  &#39;destination&#39;: &#39;Coronado Dog Beach&#39;,
+  &#39;budget&#39;: &#39;none&#39;,
+  &#39;date of birth&#39;: &#39;04-15-2013&#39;}]</pre>
 </div>
 
 </div>
@@ -557,7 +717,7 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Updating-users-table-in-sqlite.db">Updating users table in sqlite.db<a class="anchor-link" href="#Updating-users-table-in-sqlite.db"> </a></h2><blockquote><p>Uses SQLALchemy</p>
+<h2 id="Updating-&quot;destination&quot;-in-Trips-table-in-sqlite.db">Updating "destination" in Trips table in sqlite.db<a class="anchor-link" href="#Updating-&quot;destination&quot;-in-Trips-table-in-sqlite.db"> </a></h2><blockquote><p>Updating using object functions</p>
 </blockquote>
 
 </div>
@@ -570,40 +730,27 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
-
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter user id to update&quot;</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter updated password&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;hacked&quot;</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;gothackednewpassword123&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;successfully updated&quot;</span>
-
-    <span class="c1"># Connect to the database file</span>
-    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
-
-    <span class="c1"># Create a cursor object to execute SQL commands</span>
-    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="c1"># optimize user time to see if uid exists</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your user id:&quot;</span><span class="p">)</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># Execute an SQL command to update data in a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;UPDATE Trips SET _destination = ? WHERE _uid = ?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">destination</span><span class="p">,</span> <span class="n">uid</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c1"># The uid was not found in the table</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The row with user id </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> the password has been </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error while executing the UPDATE:&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span> <span class="c1"># keep going</span>
+    
+    <span class="n">destination</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your new destination:&quot;</span><span class="p">)</span>
+
+    <span class="n">user</span><span class="o">.</span><span class="n">destination</span><span class="o">=</span><span class="n">destination</span>
+    
+    <span class="c1"># write object to database</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">object</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Updated</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">except</span><span class="p">:</span>  <span class="c1"># error raised if object not created</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown error uid </span><span class="si">{uid}</span><span class="s2">&quot;</span><span class="p">)</span>
         
-    
-    <span class="c1"># Close the cursor and connection objects</span>
-    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    
 <span class="n">update</span><span class="p">()</span>
 </pre></div>
 
@@ -616,23 +763,12 @@ layout: notebook
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-14-SQLiteTable.ipynb Cell 8</span> in <span class="ansi-cyan-fg">&lt;cell line: 12&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-14-SQLiteTable.ipynb#W6sZmlsZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> password=input(&#34;Enter password&#34;)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-14-SQLiteTable.ipynb#W6sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span> destination = input(&#34;Update destination:&#34;)
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-14-SQLiteTable.ipynb#W6sZmlsZQ%3D%3D?line=11&#39;&gt;12&lt;/a&gt;</span> update()
-
-<span class="ansi-green-intense-fg ansi-bold">/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-14-SQLiteTable.ipynb Cell 8</span> in <span class="ansi-cyan-fg">update</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-14-SQLiteTable.ipynb#W6sZmlsZQ%3D%3D?line=0&#39;&gt;1&lt;/a&gt;</span> def update():
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-14-SQLiteTable.ipynb#W6sZmlsZQ%3D%3D?line=1&#39;&gt;2&lt;/a&gt;</span>     uid=input(&#34;Enter user id&#34;)
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-14-SQLiteTable.ipynb#W6sZmlsZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt;</span>     user = find_by_uid(uid)
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-14-SQLiteTable.ipynb#W6sZmlsZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span>     try:
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-14-SQLiteTable.ipynb#W6sZmlsZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span>         print(&#34;Found\n&#34;, user.read())
-
-<span class="ansi-red-fg">NameError</span>: name &#39;find_by_uid&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Found
+ {&#39;id&#39;: 9, &#39;name&#39;: &#39;Athyna&#39;, &#39;uid&#39;: &#39;athyna7&#39;, &#39;password&#39;: &#39;ilovetopla...&#39;, &#39;destination&#39;: &#39;Coronado Dog Beach&#39;, &#39;budget&#39;: &#39;none&#39;, &#39;date of birth&#39;: &#39;04-15-2013&#39;}
+Updated
+ {&#39;id&#39;: 9, &#39;name&#39;: &#39;Athyna&#39;, &#39;uid&#39;: &#39;athyna7&#39;, &#39;password&#39;: &#39;ilovetopla...&#39;, &#39;destination&#39;: &#39;Home&#39;, &#39;budget&#39;: &#39;none&#39;, &#39;date of birth&#39;: &#39;04-15-2013&#39;}
+</pre>
 </div>
 </div>
 
@@ -658,11 +794,44 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
-
+    <span class="c1"># optimize user time to see if uid exists</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the user id you want to delete:&quot;</span><span class="p">)</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span> <span class="c1"># keep going</span>
+       
+    
+    <span class="c1"># write object to database</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">user</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Deleted</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">uid</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>  <span class="c1"># error raised if object not created</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown error uid </span><span class="si">{uid}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
 <span class="n">delete</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Found
+ {&#39;id&#39;: 3, &#39;name&#39;: &#39;Indiana Jones&#39;, &#39;uid&#39;: &#39;indijj&#39;, &#39;password&#39;: &#39;adventurou...&#39;, &#39;destination&#39;: &#39;San Diego Zoo&#39;, &#39;budget&#39;: &#39;none&#39;, &#39;date of birth&#39;: &#39;10-21-1920&#39;}
+Deleted
+ indijj
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
