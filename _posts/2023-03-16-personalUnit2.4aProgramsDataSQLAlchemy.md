@@ -649,14 +649,7 @@ Records exist uid &lt;property object at 0x7fa2a0be7630&gt;, or error.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[{&#39;id&#39;: 1,
-  &#39;name&#39;: &#39;Thomas Edison&#39;,
-  &#39;uid&#39;: &#39;tommye&#39;,
-  &#39;password&#39;: &#39;lightbulb...&#39;,
-  &#39;destination&#39;: &#39;SeaWorld&#39;,
-  &#39;budget&#39;: &#39;$150000&#39;,
-  &#39;date of birth&#39;: &#39;02-11-1847&#39;},
- {&#39;id&#39;: 2,
+<pre>[{&#39;id&#39;: 2,
   &#39;name&#39;: &#39;Nikola Tesla&#39;,
   &#39;uid&#39;: &#39;ntesla2&#39;,
   &#39;password&#39;: &#39;modelx...&#39;,
@@ -677,13 +670,6 @@ Records exist uid &lt;property object at 0x7fa2a0be7630&gt;, or error.
   &#39;destination&#39;: &#39;Hooters&#39;,
   &#39;budget&#39;: &#39;$50&#39;,
   &#39;date of birth&#39;: &#39;12-21-2006&#39;},
- {&#39;id&#39;: 6,
-  &#39;name&#39;: &#39;Alexander Graham Bell&#39;,
-  &#39;uid&#39;: &#39;grahambalex&#39;,
-  &#39;password&#39;: &#39;123bells...&#39;,
-  &#39;destination&#39;: &#39;Santee Lakes&#39;,
-  &#39;budget&#39;: &#39;$1200&#39;,
-  &#39;date of birth&#39;: &#39;07-18-1778&#39;},
  {&#39;id&#39;: 7,
   &#39;name&#39;: &#39;Eli Whitney&#39;,
   &#39;uid&#39;: &#39;eliwhi&#39;,
@@ -704,7 +690,14 @@ Records exist uid &lt;property object at 0x7fa2a0be7630&gt;, or error.
   &#39;password&#39;: &#39;ilovetopla...&#39;,
   &#39;destination&#39;: &#39;Coronado Dog Beach&#39;,
   &#39;budget&#39;: &#39;none&#39;,
-  &#39;date of birth&#39;: &#39;04-15-2013&#39;}]</pre>
+  &#39;date of birth&#39;: &#39;04-15-2013&#39;},
+ {&#39;id&#39;: 10,
+  &#39;name&#39;: &#39;Derryck Anda&#39;,
+  &#39;uid&#39;: &#39;derrycka&#39;,
+  &#39;password&#39;: &#39;f@mily1...&#39;,
+  &#39;destination&#39;: &#39;Philippines&#39;,
+  &#39;budget&#39;: &#39;$25&#39;,
+  &#39;date of birth&#39;: &#39;11-11-1998&#39;}]</pre>
 </div>
 
 </div>
@@ -825,9 +818,9 @@ Updated
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Found
- {&#39;id&#39;: 3, &#39;name&#39;: &#39;Indiana Jones&#39;, &#39;uid&#39;: &#39;indijj&#39;, &#39;password&#39;: &#39;adventurou...&#39;, &#39;destination&#39;: &#39;San Diego Zoo&#39;, &#39;budget&#39;: &#39;none&#39;, &#39;date of birth&#39;: &#39;10-21-1920&#39;}
+ {&#39;id&#39;: 1, &#39;name&#39;: &#39;Thomas Edison&#39;, &#39;uid&#39;: &#39;tommye&#39;, &#39;password&#39;: &#39;lightbulb...&#39;, &#39;destination&#39;: &#39;SeaWorld&#39;, &#39;budget&#39;: &#39;$150000&#39;, &#39;date of birth&#39;: &#39;02-11-1847&#39;}
 Deleted
- indijj
+ tommye
 </pre>
 </div>
 </div>
