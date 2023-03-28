@@ -383,7 +383,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Execute a SELECT statement to retrieve data from a table</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM users'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM Trips'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -409,10 +409,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 'Thomas Edison', 'tommye', 'lightbulb', 'SeaWorld', '$150000', '1847-02-11')
-(2, 'Nikola Tesla', 'ntesla2', 'modelx', 'La Jolla Cove', '$50000', '2023-03-14')
+<pre>(2, 'Nikola Tesla', 'ntesla2', 'modelx', 'La Jolla Cove', '$50000', '2023-03-14')
 (4, 'Marion Ravenwood', 'ravenrion', 'blackmagic', 'Air and Space Museum', '$725000', '1921-10-21')
-(5, 'Joselyn Anda', 'jesa06', '123EllynaOak', 'Hooters', '$50', '2006-12-21')
 (7, 'Eli Whitney', 'eliwhi', 'Greenbay4', 'Bahia Resort', '$30750', '2002-06-23')
 (8, 'Elly Anda', 'ellyaa', 'ilovefood', 'Home', 'none', '2012-01-19')
 (9, 'Athyna', 'athyna7', 'ilovetoplay', 'Coronado Dog Beach', 'none', '2013-04-15')
@@ -600,7 +598,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The row with user id derrycka the password has been successfully updated
+<pre>The row with user id jesa06 the password has been successfully updated
 </pre>
 </div>
 </div>
@@ -683,7 +681,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The row with uid grahambalex was successfully deleted
+<pre>The row with uid jesa06 was successfully deleted
 </pre>
 </div>
 </div>
@@ -838,14 +836,13 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 'Thomas Edison', 'tommye', 'lightbulb', 'SeaWorld', '$150000', '1847-02-11')
-(2, 'Nikola Tesla', 'ntesla2', 'modelx', 'La Jolla Cove', '$50000', '2023-03-14')
+<pre>(2, 'Nikola Tesla', 'ntesla2', 'modelx', 'La Jolla Cove', '$50000', '2023-03-14')
 (4, 'Marion Ravenwood', 'ravenrion', 'blackmagic', 'Air and Space Museum', '$725000', '1921-10-21')
-(5, 'Joselyn Anda', 'jesa06', '123EllynaOak', 'Hooters', '$50', '2006-12-21')
 (7, 'Eli Whitney', 'eliwhi', 'Greenbay4', 'Bahia Resort', '$30750', '2002-06-23')
 (8, 'Elly Anda', 'ellyaa', 'ilovefood', 'Home', 'none', '2012-01-19')
 (9, 'Athyna', 'athyna7', 'ilovetoplay', 'Coronado Dog Beach', 'none', '2013-04-15')
 (10, 'Derryck Anda', 'derrycka', 'f@mily1', 'Philippines', '$25', '1998-11-11')
+(11, '', '', '', '', '', '')
 </pre>
 </div>
 </div>
