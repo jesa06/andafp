@@ -118,3 +118,7 @@ description: Goals on Final CPT Project for AP Collegeboard submission
 ## Stipend: 
 > a fixed regular sum paid as a salary or allowance.
 
+![Proof of Lesson]({{site.baseurl}}/images/extracredit.jpeg)
+
+![Toothbrush]({{site.baseurl}}/images/toothbrush.jpeg)
+
