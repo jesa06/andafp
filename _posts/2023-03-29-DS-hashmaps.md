@@ -495,6 +495,19 @@ producer: [&#39;Taylor Swift&#39;, &#39;Jack Antonoff&#39;, &#39;Joel Little&#39
         <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;jealousy, jealousy&quot;</span><span class="p">,</span>
         <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;favorite crime&quot;</span><span class="p">,</span>
         <span class="mi">11</span><span class="p">:</span> <span class="s2">&quot;hope ur ok&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;2:23&quot;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;3:49&quot;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;4:02&quot;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;2:43&quot;</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;3:35&quot;</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;2:58&quot;</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">&quot;3:22&quot;</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">&quot;2:55&quot;</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;2:53&quot;</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;2:32&quot;</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">&quot;3:29&quot;</span><span class="p">,</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -511,7 +524,7 @@ producer: [&#39;Taylor Swift&#39;, &#39;Jack Antonoff&#39;, &#39;Joel Little&#39
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;title&#39;: &#39;SOUR&#39;, &#39;artist&#39;: &#39;Olivia Rodrigo&#39;, &#39;year&#39;: 2021, &#39;genre&#39;: [&#39;Pop&#39;, &#39;Alternative-indie&#39;], &#39;tracks&#39;: {1: &#39;brutal&#39;, 2: &#39;traitor&#39;, 3: &#39;drivers license&#39;, 4: &#39;1 step forward, 3 steps back&#39;, 5: &#39;deja vu&#39;, 6: &#39;good 4 u&#39;, 7: &#39;enough for you&#39;, 8: &#39;happier&#39;, 9: &#39;jealousy, jealousy&#39;, 10: &#39;favorite crime&#39;, 11: &#39;hope ur ok&#39;}}
+<pre>{&#39;title&#39;: &#39;SOUR&#39;, &#39;artist&#39;: &#39;Olivia Rodrigo&#39;, &#39;year&#39;: 2021, &#39;genre&#39;: [&#39;Pop&#39;, &#39;Alternative-indie&#39;], &#39;tracks&#39;: {1: &#39;brutal&#39;, 2: &#39;traitor&#39;, 3: &#39;drivers license&#39;, 4: &#39;1 step forward, 3 steps back&#39;, 5: &#39;deja vu&#39;, 6: &#39;good 4 u&#39;, 7: &#39;enough for you&#39;, 8: &#39;happier&#39;, 9: &#39;jealousy, jealousy&#39;, 10: &#39;favorite crime&#39;, 11: &#39;hope ur ok&#39;}, &#39;duration&#39;: {1: &#39;2:23&#39;, 2: &#39;3:49&#39;, 3: &#39;4:02&#39;, 4: &#39;2:43&#39;, 5: &#39;3:35&#39;, 6: &#39;2:58&#39;, 7: &#39;3:22&#39;, 8: &#39;2:55&#39;, 9: &#39;2:53&#39;, 10: &#39;2:32&#39;, 11: &#39;3:29&#39;}}
 </pre>
 </div>
 </div>
@@ -529,18 +542,49 @@ producer: [&#39;Taylor Swift&#39;, &#39;Jack Antonoff&#39;, &#39;Joel Little&#39
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
 
-<span class="c1"># Connect to the SQLite database</span>
 <span class="n">tablename</span> <span class="o">=</span> <span class="s2">&quot;SOUR&quot;</span>
+<span class="n">table</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;SOUR&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Olivia Rodrigo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+    <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Pop&quot;</span><span class="p">,</span> <span class="s2">&quot;Alternative-indie&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;brutal&quot;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;traitor&quot;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;drivers license&quot;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;1 step forward, 3 steps back&quot;</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;deja vu&quot;</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;good 4 u&quot;</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">&quot;enough for you&quot;</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">&quot;happier&quot;</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;jealousy, jealousy&quot;</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;favorite crime&quot;</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">&quot;hope ur ok&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;2:23&quot;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;3:49&quot;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;4:02&quot;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;2:43&quot;</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;3:35&quot;</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;2:58&quot;</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">&quot;3:22&quot;</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">&quot;2:55&quot;</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;2:53&quot;</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;2:32&quot;</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">&quot;3:29&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 <span class="c1"># Select all rows from the &quot;Trips&quot; table</span>
-<span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Song #&quot;</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;Artist&quot;</span><span class="p">,</span> <span class="s2">&quot;Duration&quot;</span><span class="p">]</span>
+<span class="c1"># headers = [&quot;Song #&quot;, &quot;title&quot;, &quot;Artist&quot;, &quot;Duration&quot;]</span>
 
 <span class="c1"># Use tabulate to format the rows as a table</span>
 
 <span class="c1"># Print the table</span>
 <span class="c1"># print(tabulate(SOUR_album.items(), headers = headers))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">table</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -556,23 +600,43 @@ producer: [&#39;Taylor Swift&#39;, &#39;Jack Antonoff&#39;, &#39;Joel Little&#39
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 18</span> in <span class="ansi-cyan-fg">&lt;cell line: 13&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span> headers= [&#34;Song #&#34;, &#34;title&#34;, &#34;Artist&#34;, &#34;Duration&#34;]
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> # Use tabulate to format the rows as a table
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span> 
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span> # Print the table
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=11&#39;&gt;12&lt;/a&gt;</span>  # print(tabulate(SOUR_album.items(), headers = headers))
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=12&#39;&gt;13&lt;/a&gt;</span> print(tabulate([(k,) + v for k,v in SOUR_album.items()], headers = headers))
+<span class="ansi-green-intense-fg ansi-bold">/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 18</span> in <span class="ansi-cyan-fg">&lt;cell line: 43&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span> table = {
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span>     &#34;title&#34;: &#34;SOUR&#34;,
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     &#34;artist&#34;: &#34;Olivia Rodrigo&#34;,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=33&#39;&gt;34&lt;/a&gt;</span>     }
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=34&#39;&gt;35&lt;/a&gt;</span> }
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=35&#39;&gt;36&lt;/a&gt;</span> # Select all rows from the &#34;Trips&#34; table
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=36&#39;&gt;37&lt;/a&gt;</span> # headers = [&#34;Song #&#34;, &#34;title&#34;, &#34;Artist&#34;, &#34;Duration&#34;]
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=37&#39;&gt;38&lt;/a&gt;</span> 
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=40&#39;&gt;41&lt;/a&gt;</span> # Print the table
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=41&#39;&gt;42&lt;/a&gt;</span> # print(tabulate(SOUR_album.items(), headers = headers))
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sZmlsZQ%3D%3D?line=42&#39;&gt;43&lt;/a&gt;</span> print(tabulate(table))
 
-<span class="ansi-green-intense-fg ansi-bold">/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 18</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span> headers= [&#34;Song #&#34;, &#34;title&#34;, &#34;Artist&#34;, &#34;Duration&#34;]
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> # Use tabulate to format the rows as a table
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span> 
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span> # Print the table
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=11&#39;&gt;12&lt;/a&gt;</span>  # print(tabulate(SOUR_album.items(), headers = headers))
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/jesa_1/vscode/andafp-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X25sZmlsZQ%3D%3D?line=12&#39;&gt;13&lt;/a&gt;</span> print(tabulate([(k,) + v for k,v in SOUR_album.items()], headers = headers))
+File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/tabulate.py:1528</span>, in <span class="ansi-cyan-fg">tabulate</span><span class="ansi-blue-fg">(tabular_data, headers, tablefmt, floatfmt, numalign, stralign, missingval, showindex, disable_numparse, colalign)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1526</span> if tabular_data is None:
+<span class="ansi-green-intense-fg ansi-bold">   1527</span>     tabular_data = []
+<span class="ansi-green-fg">-&gt; 1528</span> list_of_lists, headers = _normalize_tabular_data(
+<span class="ansi-green-intense-fg ansi-bold">   1529</span>     tabular_data, headers, showindex=showindex
+<span class="ansi-green-intense-fg ansi-bold">   1530</span> )
+<span class="ansi-green-intense-fg ansi-bold">   1532</span> # empty values in the first column of RST tables should be escaped (issue #82)
+<span class="ansi-green-intense-fg ansi-bold">   1533</span> # &#34;&#34; should be escaped as &#34;\\ &#34; or &#34;..&#34;
+<span class="ansi-green-intense-fg ansi-bold">   1534</span> if tablefmt == &#34;rst&#34;:
 
-<span class="ansi-red-fg">TypeError</span>: can only concatenate tuple (not &#34;str&#34;) to tuple</pre>
+File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/tabulate.py:1089</span>, in <span class="ansi-cyan-fg">_normalize_tabular_data</span><span class="ansi-blue-fg">(tabular_data, headers, showindex)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1085</span> if hasattr(tabular_data.values, &#34;__call__&#34;):
+<span class="ansi-green-intense-fg ansi-bold">   1086</span>     # likely a conventional dict
+<span class="ansi-green-intense-fg ansi-bold">   1087</span>     keys = tabular_data.keys()
+<span class="ansi-green-intense-fg ansi-bold">   1088</span>     rows = list(
+<span class="ansi-green-fg">-&gt; 1089</span>         izip_longest(*tabular_data.values())
+<span class="ansi-green-intense-fg ansi-bold">   1090</span>     )  # columns have to be transposed
+<span class="ansi-green-intense-fg ansi-bold">   1091</span> elif hasattr(tabular_data, &#34;index&#34;):
+<span class="ansi-green-intense-fg ansi-bold">   1092</span>     # values is a property, has .index =&gt; it&#39;s likely a pandas.DataFrame (pandas 0.11.0)
+<span class="ansi-green-intense-fg ansi-bold">   1093</span>     keys = list(tabular_data)
+
+<span class="ansi-red-fg">TypeError</span>: &#39;int&#39; object is not iterable</pre>
 </div>
 </div>
 
