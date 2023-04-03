@@ -820,12 +820,6 @@ Printing out in JSON</p>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">SOUR_album</span><span class="p">[</span><span class="s2">&quot;genre&quot;</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">SOUR_album</span><span class="p">[</span><span class="s1">&#39;tracks&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">SOUR_album</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter track 1-11&quot;</span><span class="p">)</span>
-<span class="n">i</span> <span class="o">=</span> <span class="nb">input</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">is</span> <span class="n">k</span> <span class="ow">in</span> <span class="s1">&#39;tracks&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">SOUR_album</span><span class="p">[</span><span class="s1">&#39;tracks&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">SOUR_album</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
 </pre></div>
 
     </div>
