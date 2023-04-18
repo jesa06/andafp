@@ -25,18 +25,17 @@ List specification of your Computer, or Computers if working as Pair/Trio
 
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
-- Input devices
-- Output devices
+- Input devices: Hard drives, microphones, mouse, keyboards
+- Output devices: Monitors, headphones, speakers, printers
 - Program File
 - Program Code
 - Processes
 - Ports
 - Data File
-- Inspect Running Code ![Inspect chrome page]({{site.baseurl}}/images/inspect.png)
-
+- Inspect Running Code 
 - Inspect Variables 
-[Inspect chrome page]({{site.baseurl}}/images/variablesvscode.png)
-[Inspect chrome page]({{site.baseurl}}/images/variableschrome.png)
+
+![Canva Computer Usage]({{site.baseurl}}/images/computerusage.png)
 
 ---
 
@@ -57,16 +56,23 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - Bandwidth is usually measured in bits per second
 
 - Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use `traceroute` and `ping` commands from Linux Terminal.  
-    - Path 
-    - Route
-    - Computer System
-    - Computer Device
-    - Bandwidth
-    - Computer Network
+    - Path, a
+    - Route, e
+    - Computer System, b
+    - Computer Device, c
+    - Bandwidth, d
+    - Computer Network, f
 
 > Watch/review College Board Daily Video 4.1.2
 
 - Complete True of False Questions
+1. **True** Open standards and protocols enable different manufacturers and developers to build hardware and software than can communicate with hardware and software on the rest of the internet. 
+2. **False** IETF is a task force used to enforce laws to keep manufacturers out of the internet. --> it sets protocols and layers, open to everyone
+3. **False** Routes are determined in advanced and are not flexible. --> help push things along, flexible
+4. **True** A protocol is an agreed-upon set of rules that specify the behavior of a system. 
+5. **F** UDP guarantees transfers and is faster. --> faster but not guaranteed
+6. **F** The World Wide Web is the Internet. 
+7. **T** HTTP is a protocol used by the World Wide Web.
 
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (non-proprierary) communication protocols.
@@ -84,9 +90,12 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - HTTP is a protocol used by the world wide web
     - The world wide web uses the internet
 
-- Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas
+- Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highlight vocabulary by illustration. The below illustration have some ideas
 
 ![Full Stack]({{site.baseurl}}/images/fullstack.png)
+
+![Internet Stack]({{site.baseurl}}/images/internetstack.gif)
+![Internet Layers]({{site.baseurl}}/images/internetlayers.png)
 
 
 - Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following ...
@@ -117,17 +126,27 @@ The "network" layer is responsible for ***routing data packets between networks*
 - the **p** stands for protocol, that is how each layer communicates
 - the data is stored and transferred to the user in packets 
 
-
 ### Fault Tolerance
 > Watch both Daily videos for 4.2
 
 - Complete the network activity, summarize your understanding of fault tolerance.
 - Networks become separate and cannot communicate with certain networks
 
+### 4.2: Daily Video 1
+1. Yes it is fault tolerant, because each system has more than one path so they will be able to communicate even if one path goes down.
+2. No this is not fault tolerant because there is only one path to F, so if one wire goes down, F will be totally shut down from the network.
+3. No this is not fault tolerant because there is only one wire connecting systems A and G. 
+### 4.2: Daily Video 2
+1. NOT a benefit from fault-tolerant network: C, Data will only take 1 route from 1 device to another, no matter how many routes available.
+![Fault Tolerant]({{site.baseurl}}/images/faulttolerant.png)
+2. This will become fault tolerant if A had more than one connection, so adding a connection from A to B. 
+3. Fault tolerant system is good based on redundancy and having multiple paths for data to travel, making the networks and connections stronger.
+
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily video 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
 - What is naturally Distributed in Frontend/Backend architecture?  
+> The backend is naturally distributed as it is made up of multiple servers, that each play a role in certain tasks. By distributing the backend, the application can handle a large number of requests, improve performance and reliability, and provide fault tolerance and high availability. The frontend is typically executed on a single client device, web browser or mobile app, and is responsible for displaying the user interface and interacting with the user.
 
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
 
