@@ -111,9 +111,12 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h3"><a href="#how-a-computer-works">How a Computer Works</a></li>
 <li class="toc-entry toc-h3"><a href="#the-internet">The Internet</a></li>
-<li class="toc-entry toc-h3"><a href="#fault-tolerance">Fault Tolerance</a></li>
-<li class="toc-entry toc-h3"><a href="#42-daily-video-1">4.2: Daily Video 1</a></li>
-<li class="toc-entry toc-h3"><a href="#42-daily-video-2">4.2: Daily Video 2</a></li>
+<li class="toc-entry toc-h3"><a href="#fault-tolerance">Fault Tolerance</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#42-daily-video-1">4.2: Daily Video 1</a></li>
+<li class="toc-entry toc-h4"><a href="#42-daily-video-2">4.2: Daily Video 2</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h3"><a href="#parallel-and-distributed-computing">Parallel and Distributed Computing</a></li>
 </ul>
 </li>
@@ -153,8 +156,6 @@ window.onload = wrap_img;
 <p><img src="/andafp/images/computerusage.png" alt="Canva Computer Usage"></p>
 
 <hr>
-
-<p><img src="/andafp/images/cpu.jpeg" alt="Computer Hardware"></p>
 
 <h3 id="the-internet">
 <a class="anchor" href="#the-internet" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Internet</h3>
@@ -203,11 +204,11 @@ window.onload = wrap_img;
       <li>
 <strong>True</strong> A protocol is an agreed-upon set of rules that specify the behavior of a system.</li>
       <li>
-<strong>F</strong> UDP guarantees transfers and is faster. –&gt; faster but not guaranteed</li>
+<strong>False</strong> UDP guarantees transfers and is faster. –&gt; faster but not guaranteed</li>
       <li>
-<strong>F</strong> The World Wide Web is the Internet.</li>
+<strong>False</strong> The World Wide Web is the Internet.</li>
       <li>
-<strong>T</strong> HTTP is a protocol used by the World Wide Web.</li>
+<strong>True</strong> HTTP is a protocol used by the World Wide Web.</li>
     </ol>
   </li>
   <li>Essential Knowledge
@@ -265,6 +266,7 @@ window.onload = wrap_img;
   <li>the data is stored and transferred to the user in packets</li>
 </ul>
 
+<hr>
 <h3 id="fault-tolerance">
 <a class="anchor" href="#fault-tolerance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fault Tolerance</h3>
 <blockquote>
@@ -276,15 +278,17 @@ window.onload = wrap_img;
   <li>Networks become separate and cannot communicate with certain networks</li>
 </ul>
 
-<h3 id="42-daily-video-1">
-<a class="anchor" href="#42-daily-video-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2: Daily Video 1</h3>
+<h4 id="42-daily-video-1">
+<a class="anchor" href="#42-daily-video-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2: Daily Video 1</h4>
 <ol>
   <li>Yes it is fault tolerant, because each system has more than one path so they will be able to communicate even if one path goes down.</li>
   <li>No this is not fault tolerant because there is only one path to F, so if one wire goes down, F will be totally shut down from the network.</li>
-  <li>No this is not fault tolerant because there is only one wire connecting systems A and G.
-    <h3 id="42-daily-video-2">
-<a class="anchor" href="#42-daily-video-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2: Daily Video 2</h3>
-  </li>
+  <li>No this is not fault tolerant because there is only one wire connecting systems A and G.</li>
+</ol>
+
+<h4 id="42-daily-video-2">
+<a class="anchor" href="#42-daily-video-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2: Daily Video 2</h4>
+<ol>
   <li>NOT a benefit from fault-tolerant network: C, Data will only take 1 route from 1 device to another, no matter how many routes available.
 <img src="/andafp/images/faulttolerant.png" alt="Fault Tolerant">
 </li>
@@ -292,6 +296,7 @@ window.onload = wrap_img;
   <li>Fault tolerant system is good based on redundancy and having multiple paths for data to travel, making the networks and connections stronger.</li>
 </ol>
 
+<hr>
 <h3 id="parallel-and-distributed-computing">
 <a class="anchor" href="#parallel-and-distributed-computing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parallel and Distributed Computing</h3>
 <blockquote>
