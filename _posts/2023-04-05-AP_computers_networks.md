@@ -92,7 +92,6 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 - Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highlight vocabulary by illustration. The below illustration have some ideas
 
-![Full Stack]({{site.baseurl}}/images/fullstack.png)
 
 ![Internet Stack]({{site.baseurl}}/images/internetstack.gif)
 ![Internet Layers]({{site.baseurl}}/images/internetlayers.png)
