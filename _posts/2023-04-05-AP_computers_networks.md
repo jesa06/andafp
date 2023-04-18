@@ -39,7 +39,6 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 ---
 
-![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
 
 
 ### The Internet
@@ -70,9 +69,9 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 2. **False** IETF is a task force used to enforce laws to keep manufacturers out of the internet. --> it sets protocols and layers, open to everyone
 3. **False** Routes are determined in advanced and are not flexible. --> help push things along, flexible
 4. **True** A protocol is an agreed-upon set of rules that specify the behavior of a system. 
-5. **F** UDP guarantees transfers and is faster. --> faster but not guaranteed
-6. **F** The World Wide Web is the Internet. 
-7. **T** HTTP is a protocol used by the World Wide Web.
+5. **False** UDP guarantees transfers and is faster. --> faster but not guaranteed
+6. **False** The World Wide Web is the Internet. 
+7. **True** HTTP is a protocol used by the World Wide Web.
 
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (non-proprierary) communication protocols.
@@ -125,22 +124,26 @@ The "network" layer is responsible for ***routing data packets between networks*
 - the **p** stands for protocol, that is how each layer communicates
 - the data is stored and transferred to the user in packets 
 
+---
 ### Fault Tolerance
 > Watch both Daily videos for 4.2
 
 - Complete the network activity, summarize your understanding of fault tolerance.
 - Networks become separate and cannot communicate with certain networks
 
-### 4.2: Daily Video 1
+#### 4.2: Daily Video 1
 1. Yes it is fault tolerant, because each system has more than one path so they will be able to communicate even if one path goes down.
 2. No this is not fault tolerant because there is only one path to F, so if one wire goes down, F will be totally shut down from the network.
 3. No this is not fault tolerant because there is only one wire connecting systems A and G. 
-### 4.2: Daily Video 2
+
+
+#### 4.2: Daily Video 2
 1. NOT a benefit from fault-tolerant network: C, Data will only take 1 route from 1 device to another, no matter how many routes available.
 ![Fault Tolerant]({{site.baseurl}}/images/faulttolerant.png)
 2. This will become fault tolerant if A had more than one connection, so adding a connection from A to B. 
 3. Fault tolerant system is good based on redundancy and having multiple paths for data to travel, making the networks and connections stronger.
 
+---
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily video 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
