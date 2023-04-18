@@ -97,7 +97,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -112,6 +112,8 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#how-a-computer-works">How a Computer Works</a></li>
 <li class="toc-entry toc-h3"><a href="#the-internet">The Internet</a></li>
 <li class="toc-entry toc-h3"><a href="#fault-tolerance">Fault Tolerance</a></li>
+<li class="toc-entry toc-h3"><a href="#42-daily-video-1">4.2: Daily Video 1</a></li>
+<li class="toc-entry toc-h3"><a href="#42-daily-video-2">4.2: Daily Video 2</a></li>
 <li class="toc-entry toc-h3"><a href="#parallel-and-distributed-computing">Parallel and Distributed Computing</a></li>
 </ul>
 </li>
@@ -137,21 +139,18 @@ window.onload = wrap_img;
 
 <p>Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.</p>
 <ul>
-  <li>Input devices</li>
-  <li>Output devices</li>
+  <li>Input devices: Hard drives, microphones, mouse, keyboards</li>
+  <li>Output devices: Monitors, headphones, speakers, printers</li>
   <li>Program File</li>
   <li>Program Code</li>
   <li>Processes</li>
   <li>Ports</li>
   <li>Data File</li>
-  <li>
-    <p>Inspect Running Code <img src="/andafp/images/inspect.png" alt="Inspect chrome page"></p>
-  </li>
-  <li>Inspect Variables 
-<a href="/andafp/images/variablesvscode.png">Inspect chrome page</a>
-<a href="/andafp/images/variableschrome.png">Inspect chrome page</a>
-</li>
+  <li>Inspect Running Code</li>
+  <li>Inspect Variables</li>
 </ul>
+
+<p><img src="/andafp/images/computerusage.png" alt="Canva Computer Usage"></p>
 
 <hr>
 
@@ -178,12 +177,12 @@ window.onload = wrap_img;
   </li>
   <li>Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use <code class="language-plaintext highlighter-rouge">traceroute</code> and <code class="language-plaintext highlighter-rouge">ping</code> commands from Linux Terminal.
     <ul>
-      <li>Path</li>
-      <li>Route</li>
-      <li>Computer System</li>
-      <li>Computer Device</li>
-      <li>Bandwidth</li>
-      <li>Computer Network</li>
+      <li>Path, a</li>
+      <li>Route, e</li>
+      <li>Computer System, b</li>
+      <li>Computer Device, c</li>
+      <li>Bandwidth, d</li>
+      <li>Computer Network, f</li>
     </ul>
   </li>
 </ul>
@@ -193,8 +192,23 @@ window.onload = wrap_img;
 </blockquote>
 
 <ul>
-  <li>
-    <p>Complete True of False Questions</p>
+  <li>Complete True of False Questions
+    <ol>
+      <li>
+<strong>True</strong> Open standards and protocols enable different manufacturers and developers to build hardware and software than can communicate with hardware and software on the rest of the internet.</li>
+      <li>
+<strong>False</strong> IETF is a task force used to enforce laws to keep manufacturers out of the internet. –&gt; it sets protocols and layers, open to everyone</li>
+      <li>
+<strong>False</strong> Routes are determined in advanced and are not flexible. –&gt; help push things along, flexible</li>
+      <li>
+<strong>True</strong> A protocol is an agreed-upon set of rules that specify the behavior of a system.</li>
+      <li>
+<strong>F</strong> UDP guarantees transfers and is faster. –&gt; faster but not guaranteed</li>
+      <li>
+<strong>F</strong> The World Wide Web is the Internet.</li>
+      <li>
+<strong>T</strong> HTTP is a protocol used by the World Wide Web.</li>
+    </ol>
   </li>
   <li>Essential Knowledge
     <ul>
@@ -214,10 +228,13 @@ window.onload = wrap_img;
       <li>The world wide web uses the internet</li>
     </ul>
   </li>
-  <li>Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas</li>
+  <li>Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highlight vocabulary by illustration. The below illustration have some ideas</li>
 </ul>
 
 <p><img src="/andafp/images/fullstack.png" alt="Full Stack"></p>
+
+<p><img src="/andafp/images/internetstack.gif" alt="Internet Stack">
+<img src="/andafp/images/internetlayers.png" alt="Internet Layers"></p>
 
 <ul>
   <li>Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following …</li>
@@ -261,6 +278,22 @@ window.onload = wrap_img;
   <li>Networks become separate and cannot communicate with certain networks</li>
 </ul>
 
+<h3 id="42-daily-video-1">
+<a class="anchor" href="#42-daily-video-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2: Daily Video 1</h3>
+<ol>
+  <li>Yes it is fault tolerant, because each system has more than one path so they will be able to communicate even if one path goes down.</li>
+  <li>No this is not fault tolerant because there is only one path to F, so if one wire goes down, F will be totally shut down from the network.</li>
+  <li>No this is not fault tolerant because there is only one wire connecting systems A and G.
+    <h3 id="42-daily-video-2">
+<a class="anchor" href="#42-daily-video-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2: Daily Video 2</h3>
+  </li>
+  <li>NOT a benefit from fault-tolerant network: C, Data will only take 1 route from 1 device to another, no matter how many routes available.
+<img src="/andafp/images/faulttolerant.png" alt="Fault Tolerant">
+</li>
+  <li>This will become fault tolerant if A had more than one connection, so adding a connection from A to B.</li>
+  <li>Fault tolerant system is good based on redundancy and having multiple paths for data to travel, making the networks and connections stronger.</li>
+</ol>
+
 <h3 id="parallel-and-distributed-computing">
 <a class="anchor" href="#parallel-and-distributed-computing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parallel and Distributed Computing</h3>
 <blockquote>
@@ -268,12 +301,13 @@ window.onload = wrap_img;
 </blockquote>
 
 <ul>
-  <li>
-    <p>What is naturally Distributed in Frontend/Backend architecture?</p>
+  <li>What is naturally Distributed in Frontend/Backend architecture?
+    <blockquote>
+      <p>The backend is naturally distributed as it is made up of multiple servers, that each play a role in certain tasks. By distributing the backend, the application can handle a large number of requests, improve performance and reliability, and provide fault tolerance and high availability. The frontend is typically executed on a single client device, web browser or mobile app, and is responsible for displaying the user interface and interacting with the user.</p>
+    </blockquote>
   </li>
-  <li>
-    <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a></p>
-  </li>
+  <li>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>
+</li>
 </ul>
 
 <blockquote>
