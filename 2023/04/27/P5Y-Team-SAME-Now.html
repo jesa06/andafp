@@ -1139,7 +1139,7 @@ Henry&#39;s record has been updated.
         <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;instance/Dogs.db&#39;</span><span class="p">)</span>
         <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
-        <span class="c1"># Fetch all records from the professors table</span>
+        <span class="c1"># Fetch all records from the dog table</span>
         <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM Dogs&quot;</span><span class="p">)</span>
         <span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
@@ -1214,14 +1214,14 @@ Age: 3
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># Get the professor&#39;s name to update</span>
+        <span class="c1"># Get the dog&#39;s name to update</span>
         <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name of the dog to update: &quot;</span><span class="p">)</span>
         
         <span class="c1"># Retrieve the current record from the database</span>
         <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM Dogs WHERE name=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,))</span>
         <span class="n">record</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
         
-        <span class="c1"># If the professor is found, update the record</span>
+        <span class="c1"># If the dog is found, update the record</span>
         <span class="k">if</span> <span class="n">record</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the new information for the dog:&quot;</span><span class="p">)</span>
             <span class="n">breed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current breed: </span><span class="si">{</span><span class="n">record</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">New breed: &quot;</span><span class="p">)</span>
@@ -1233,7 +1233,7 @@ Age: 3
             
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s record has been updated.&quot;</span><span class="p">)</span>
         
-        <span class="c1"># If the professor is not found, notify the user</span>
+        <span class="c1"># If the dog is not found, notify the user</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No record found for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
     
@@ -1283,10 +1283,10 @@ Elly&#39;s record has been updated.
     <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;instance/Dogs.db&#39;</span><span class="p">)</span>
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
-    <span class="c1"># Prompt the user for the name of the professor to delete</span>
+    <span class="c1"># Prompt the user for the name of the dog to delete</span>
     <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name of the dog you want to delete: &quot;</span><span class="p">)</span>
 
-    <span class="c1"># Use a SQL query to find the professor with the given name</span>
+    <span class="c1"># Use a SQL query to find the dog with the given name</span>
     <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM Dogs WHERE name=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,))</span>
     <span class="n">row</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
 
