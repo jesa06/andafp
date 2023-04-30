@@ -1630,6 +1630,11 @@ The difference between the value and the index is 200.
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Weather conditions for day"</span><span class="p">,</span> <span class="n">day</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">city</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="s2">"temperature:"</span><span class="p">,</span> <span class="n">city</span><span class="p">[</span><span class="s2">"temperature"</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">city</span><span class="p">[</span><span class="s2">"temperature"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"It is sunny, wear light clothing"</span><span class="p">),</span>
+        <span class="k">if</span> <span class="n">city</span><span class="p">[</span><span class="s2">"temperature"</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">60</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"It is cold, wear a jacket and layer your clothing"</span><span class="p">),</span>
+
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 
