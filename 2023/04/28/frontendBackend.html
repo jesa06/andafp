@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      16 min read
     
 </span></p>
 
@@ -150,6 +150,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Write-notes-below">Write notes below </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
+<li class="toc-entry toc-h2"><a href="#Takeaways/Notes">Takeaways/Notes </a></li>
 </ul>
 </li>
 </ul><!--
@@ -189,7 +190,7 @@ window.onload = wrap_img;
 <p>C: The 'C' stands for create, meaning to create a new entry in a database. In this case, creating a new entry about a certain movie or TV show.</p>
 </li>
 <li>
-<p>R: Read, or to retrieve data from the database. In this case it is selecting the movie/TV shwo that you choose to display.</p>
+<p>R: Read, or to retrieve data from the database. In this case it is selecting the movie/TV show that you choose to display.</p>
 </li>
 <li>
 <p>U: Update, or changing an existing entry in the database. In this case it is selecting the preexisting movie/TV show and changing the values to match what you want.</p>
@@ -204,7 +205,7 @@ window.onload = wrap_img;
 <p>This API is intended to be used as a list of movies and TV shows that a person has watched. It includes attributes for the Film name(key), the year released, the language, the number of episodes, A list of the number of episodes(using pickletype), and a youtube url for the trailer. The CRUD works as follows:
 Create: Enter the above mentioned attributes
 Read: Returns all of the films and their attributes
-Update: Takes in new episodes watched, and a list of their names, and adds them to their respective attibutes
+Update: Takes in new episodes watched, and a list of their names, and adds them to their respective attributes
 Delete: Option for deleting every film, also takes in a name to delete that film if it exists</p>
 
 </div>
@@ -293,7 +294,7 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Better Call Saul has been added to the list of movies.
+<pre>Never Have I Ever has been added to the list of movies.
 </pre>
 </div>
 </div>
@@ -346,7 +347,7 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1. Breaking Bad, 1594, 3, English, https://ricekrispies.com, Snap, Crackle, Pop
+<pre>1. Never Have I Ever, 2021, 40, English, link, Davi/Ben
 </pre>
 </div>
 </div>
@@ -587,9 +588,15 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 <span class="c1"># Convert the list of dictionaries into a DataFrame</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Old dataframe: "</span><span class="p">,</span>  <span class="n">df</span><span class="p">)</span>
 
+<span class="n">ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">4.5</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mf">8.2</span><span class="p">]</span>
 
+<span class="c1"># Add the ratings list as a new column to the DataFrame</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'rating'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ratings</span>
+
+<span class="c1"># Print the updated DataFrame</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dataframe with new column: "</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
 
 <span class="c1"># ADD YOUR OWN COLUMN TO THE DATAFRAME</span>
 </pre></div>
@@ -604,7 +611,7 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>          id                                    title  release_year
+<pre>Old dataframe:            id                                    title  release_year
 0  tt0001922                That Winsome Winnie Smile          1911
 1  tt0001539                             Caïn et Abel          1911
 2  tt0001636                                  Galileo          1911
@@ -615,6 +622,17 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 7  tt0000543                 Christian IXS bisættelse          1906
 8  tt0002089                                   Carmen          1912
 9  tt0000548                       Fiskerliv i Norden          1906
+Dataframe with new column:            id                                    title  release_year  rating
+0  tt0001922                That Winsome Winnie Smile          1911     4.5
+1  tt0001539                             Caïn et Abel          1911     3.8
+2  tt0001636                                  Galileo          1911     2.5
+3  tt0002148                   The Drummer's Vacation          1912     4.2
+4  tt0001702               The Indian Maiden's Lesson          1911     3.7
+5  tt0001856             The Revenue Man and the Girl          1911     2.9
+6  tt0001790  Les misérables - Époque 1: Jean Valjean          1913    10.0
+7  tt0000543                 Christian IXS bisættelse          1906     7.6
+8  tt0002089                                   Carmen          1912     5.5
+9  tt0000548                       Fiskerliv i Norden          1906     8.2
 </pre>
 </div>
 </div>
@@ -657,6 +675,32 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 <h2 id="Hacks">
 <a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
 </h2>
+<p>CRUD:</p>
+
+<pre><code>- Create, Read, Update, Delete 
+- Functions in the database where we can manage an object class
+- You can use cursor connect ot connect to the database and run SQL commands in code or terminal
+- Uses user input to modify the backend
+</code></pre>
+<p>Frontend Development:</p>
+
+<pre><code>- User interface, where the user can interact and give input that reaches backend using HTML, CSS, and JavaScript
+- Makes sure that the frontend (website/app) is user friendly and visually appealing 
+
+</code></pre>
+<p>Backend Development:</p>
+
+<pre><code>- Server-side programming using languages like Python, Ruby, Java, or PHP
+- Handling data processing, database management, and server-side functions
+- Ensuring scalability, security, and data management
+
+</code></pre>
+<p>Fetching:</p>
+
+<pre><code>- Retrieving data from a server using AJAX, Fetch API, or third-party libraries like Axios
+- Specific methods for certain requests 
+    - POST, PUT (update), GET...</code></pre>
+
 </div>
 </div>
 </div>
@@ -666,12 +710,446 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 <ol>
 <li>Create a completely unique API with all 4 CRUD features (Create, Read, Update, Delete)</li>
 <li>Create a Fetch API request for your corresponding API</li>
-<li>Attempt a complete website on GitHub Pages including HTML</li>
+<li>Attempt a complete website on GitHub Pages including HTML (optional)</li>
 </ol>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Takeaways/Notes">
+<a class="anchor" href="#Takeaways/Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Takeaways/Notes<a class="anchor-link" href="#Takeaways/Notes"> </a>
+</h2>
+<ul>
+<li>Frontend is the interface that the user interacts with </li>
+<li>Backend is all of the behind the scenes part </li>
+<li>Use CRUD functions to connect the frontend and backend</li>
+<li>data cleaning:<ul>
+<li>input youtube link and change to embed link</li>
+<li>ensure inputs are correct data type: integer for year...</li>
+</ul>
+</li>
+<li>Fetching<ul>
+<li>request to server using url to receive data (usually in JSON) --&gt; can manipulate it into arrays/lists/dataframes (pandas)</li>
+<li>apparent in API's </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">def</span> <span class="nf">create_database</span><span class="p">():</span>
+    <span class="c1"># Connect to the database (will create it if it doesn't exist)</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'instance/Dogs.db'</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+    <span class="c1"># Create the professors table if it doesn't already exist</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'''CREATE TABLE IF NOT EXISTS Dogs (</span>
+<span class="s1">                    name TEXT,</span>
+<span class="s1">                    breed TEXT,</span>
+<span class="s1">                    age INTEGER</span>
+<span class="s1">                )'''</span><span class="p">)</span>
+
+    <span class="c1"># Commit changes and close the connection</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Call the function to create the database</span>
+<span class="n">create_database</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="c1"># Create a Flask application</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># Connect to the SQLite database using SQLite3</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'instance/Dogs.db'</span><span class="p">)</span>
+
+<span class="c1"># Create a cursor object to execute SQL commands</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># Create a table in the database using SQL commands</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'''CREATE TABLE Dogs</span>
+<span class="s1">                 (id INTEGER PRIMARY KEY, name TEXT, breed TEXT, age INTEGER)'''</span><span class="p">)</span>
+
+<span class="c1"># Commit the changes to the database</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="c1"># Close the connection</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
+   <span class="n">database</span> <span class="o">=</span> <span class="s1">'instance/Dogs.db'</span>
+   <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the dog's name: "</span><span class="p">)</span>
+   <span class="n">breed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the dog's breed: "</span><span class="p">)</span>
+   <span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the dog's age (in human years): "</span><span class="p">)</span>
+
+
+   <span class="c1"># Connect to the database and create a cursor to execute SQL commands</span>
+   <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+   <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+
+   <span class="k">try</span><span class="p">:</span>
+       <span class="c1"># Execute SQL to insert record into db</span>
+       <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO Dogs (name, breed, age) VALUES (?, ?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">breed</span><span class="p">,</span> <span class="n">age</span><span class="p">))</span>
+       <span class="c1"># Commit the changes</span>
+       <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+       <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> has been added to the list of dogs."</span><span class="p">)</span>
+              
+   <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while inserting record"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+
+
+   <span class="c1"># Close cursor and connection</span>
+   <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+   <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">create</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Polly has been added to the list of dogs.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Open a connection to the database and create a cursor</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'instance/Dogs.db'</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+        <span class="c1"># Fetch all records from the dog table</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM Dogs"</span><span class="p">)</span>
+        <span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+        <span class="c1"># If there are any records, print them</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"List of dogs :"</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Name: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">Breed: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">Age: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"There are no dogs in the list."</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while connecting to the database:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="c1"># Close the cursor and the connection to the database</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>List of dogs :
+Name: Elly
+Breed: Rottweiler
+Age: 10
+
+Name: Athyna
+Breed: Pitbull
+Age: 9
+
+Name: Oakley
+Breed: Mixed
+Age: 0
+
+Name: Pippy
+Breed: Mixed GS/Boxer
+Age: 2
+
+Name: Polly
+Breed: Blue Herder dog
+Age: 4
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="n">database</span> <span class="o">=</span> <span class="s1">'instance/Dogs.db'</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Get the dog's name to update</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the name of the dog to update: "</span><span class="p">)</span>
+        
+        <span class="c1"># Retrieve the current record from the database</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM Dogs WHERE name=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,))</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+        
+        <span class="c1"># If the dog is found, update the record</span>
+        <span class="k">if</span> <span class="n">record</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Enter the new information for the dog:"</span><span class="p">)</span>
+            <span class="n">breed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Current breed: </span><span class="si">{</span><span class="n">record</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">New breed: "</span><span class="p">)</span>
+            <span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Current age: </span><span class="si">{</span><span class="n">record</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">New age: "</span><span class="p">)</span>
+            
+            <span class="c1"># Execute SQL to update the record</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE Dogs SET breed=?, age=? WHERE name=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">breed</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">'s record has been updated."</span><span class="p">)</span>
+        
+        <span class="c1"># If the dog is not found, notify the user</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No record found for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+    
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while updating record"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+    
+    <span class="c1"># Close cursor and connection</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">update</span> <span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter the new information for the dog:
+Pippy's record has been updated.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+
+<span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
+    <span class="c1"># Connect to the database and create a cursor</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'instance/Dogs.db'</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+    <span class="c1"># Prompt the user for the name of the dog to delete</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the name of the dog you want to delete: "</span><span class="p">)</span>
+
+    <span class="c1"># Use a SQL query to find the dog with the given name</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM Dogs WHERE name=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,))</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+
+    <span class="c1"># If the professor exists, confirm deletion and delete the record</span>
+    <span class="k">if</span> <span class="n">row</span><span class="p">:</span>
+        <span class="n">confirm</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Are you sure you want to delete </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">? (y/n): "</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">confirm</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'y'</span><span class="p">:</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM Dogs WHERE name=?"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,))</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> has been deleted from the list of dogs."</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> not found in the list of dogs."</span><span class="p">)</span>
+
+    <span class="c1"># Close the cursor and the connection to the database</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">delete</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Polly has been deleted from the list of dogs.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"http://localhost:8731/api/users/"</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">attributes</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"age"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"age"</span><span class="p">],</span>
+        <span class="s2">"cities"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"cities"</span><span class="p">],</span>
+        <span class="s2">"dob"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"dob"</span><span class="p">],</span>
+        <span class="s2">"email"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"email"</span><span class="p">],</span>
+        <span class="s2">"name"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span>
+        <span class="s2">"id"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"id"</span><span class="p">],</span>
+        <span class="s2">"phone"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"phone"</span><span class="p">],</span>
+
+    <span class="p">}</span>
+    <span class="n">attributes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   age               cities         dob                  email           name  \
+0   17  Escondido, Carlsbad  01-15-2006     joseanda@gmail.com  Joselyn Anda2   
+1   16          Los Angeles  10-03-2006      linaaaa@gmail.com     Lina Awad2   
+2   15            Encinitas  10-05-2007       najaAF@gmail.com  Naja Fonseca2   
+3   17                Poway  10-21-1959  amithaaaaas@gmail.com  Amitha Sanka2   
+4   48                 None  12-09-1975        danda@gmail.com  Derryck Anda    
+
+   id       phone  
+0   1  8586197777  
+1   2  8886665555  
+2   3  8587360021  
+3   4  8584320098  
+4   5  8583490000  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
