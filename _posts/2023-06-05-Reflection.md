@@ -4,16 +4,30 @@ layout: post
 description: Overall reflection of AP Computer Science Principles
 ---
 1. Skills I have obtained:
-    - <mark>Team work/collaboration</mark>...Throughout my life in school as a student, I have always taken the lead in group projects and collaboration. In this class it was the complete opposite, I was usually one of the followers in groups for project based learning. I was probably one of the least experienced in computer science, and I took longer to understand ideas in this class. I experienced not being a leader, but being a team player not in charge. It was really different but I realized that you cannot be leader all the time, and it was actually super helpful to learn in a not leader aspect. 
-    - <mark>Working to find a solution</mark>...
-    - <mark>Basic code</mark>
-    - <mark>Complex logical thinking</mark>
-    - <mark>Basic knowledge of how computers function</mark>
+    <details closed>
+    - <summary><mark>Team work/collaboration</mark></summary>Throughout my life in school as a student, I have always taken the lead in group projects and collaboration. In this class it was the complete opposite, I was usually one of the followers in groups for project based learning. I was probably one of the least experienced in computer science, and I took longer to understand ideas in this class. I experienced not being a leader, but being a team player not in charge. It was really different but I realized that you cannot be leader all the time, and it was actually super helpful to learn in a not leader aspect. 
+    </details>
+    <details closed>
+    - <summary><mark>Working to find a solution</mark></summary>In this class I ran into countless roadblocks, simple and complex. Many problems were obvious but very overlooked. When I first did not know my problem I would just ask the teacher right away. Later onto trimester 2 I tried to collaborate and compare, or extreme program with my classmates to see if they found my mistake. This trimester I learned how to Debug or inspect my page and have breakpoints, or use console log to help identify different aspects of my code. It helped me find misspellings or referencing the wrong functions, or even missing a semicolon. Aside from code solutions, if our team had problems, we tried to talk it out and find a common solution that satisfied us all. In my original group of trimester 3, our focus, communication, and collaboration was not there. I had a lot of problems and the solution was for the team to break off into different groups...it was better for us all in the end but even though it was a tough choice that was our solution. 
+    </details>
+    <details closed>
+    - <summary><mark>Basic code</mark></summary>Especially recently, I have worked a lot more with Javascript than Python. In connecting my frontend and backend I found it was much easier to write my code in Javascript. Usually I just wrote my code in an html/md file in a script tag, and in my frontend part I referred to my functions to take in user input and connect it to my backend. In defining a function in Javascript you write "function" and then the function name with parameters, the further code is written in curly brackets. 
+    </details>
+    <details closed>
+    - <summary><mark>Complex logical thinking</mark></summary>So much logical thinking was applied in Computer Science ideas and the AP exam. Many conditional statements or flowcharts used logical thinking to figure out how to work through the algorithm/code. The robot moving problems used logic of patterns, turning certain ways and moving certain amount of stops. Many questions required us to be able to read charts and identify/analyze the data or statistics. A lot of that then related to probability, which is a huge part of logical thinking. These countless practices helped my develop my complex logical thinking.
+    </details>
+    <details closed>
+    - <summary><mark>Basic knowledge of how computers function</mark></summary>After watching many AP Collegeboard videos, I learned that computers function on a binary system which is composed of 0's and 1's. The way these 0's and 1's aer put together can create different words, numbers, or return different values. When data is being sent, it is broken down into packets and sent from one computer to another and then rebuilt and rearranged again based on the order the packets were received. Data can be deteriorated based on file types, or there are lossy and lossless compressions. Also when transmitting data from one computer to another, there are many different routes possible that it could take. There are networks of computers which rely on each other to function and pass data through. It is important to have multiple computers to ensure that it is fault tolerant. 
+    </details>
 
 2. Highs and lows from year:
-    - <mark>Highs</mark>:
-    - <mark>lows</mark>:
+    - <mark>Highs</mark>: Trimester 3 project. With my final group I understood so much more than I did before. I actually understood basic code and what it does. With the new group we were all able to collaborate well, divide work, and conquer the project. My new group teammates were really kind and understanding about my situation and they taught me a lot of things. I really liked the Taylor Swift project, it was fun to make and just an easier project with better teammates. 
+    - <mark>Lows</mark>: The low from this year was also from trimester 3, before I switched groups. It was a really stressful time in general and everything just stacked more stress on top of each other. I was stressing about the Collegeboard submission, the new project introduced, and the lesson for each group to teach. Since my team was not able to communicate and collaborate well, everything was much harder. This was probably the most stressed I have ever been for AP Comp Sci class, so it was definitely my low of this class.  
 
-3. Future plans with CompSci
-4. Future plans in Education/Career
-5. Overall experience
+3. <mark>Future plans with CompSci:</mark>
+- In CompSci, I might be interested in taking outside of school classes but probably more focused in on one language or one aspect of coding. Mr. Mort was talking to me before about my college plans, and I told him how I want to major in music. He started telling me that I do need a major or career that would bring a good and steady income, and told me that I could just minor in Music and major in Computer Science. So that I can support my music career with enough money, which would come from a computer science job.
+- Some of my underclassmen friends are taking APCSP next year so I will be keeping coding refreshed in my brain because I will probably help them out a lot. It won't only refresh my brain but also deepen my understanding in basic code.
+4. <mark>Future plans in Education/Career:</mark>
+- I aim to go to a really good college, I'm not sure where. I do not want to go too far from here because this is where my family is at and my other interests. I want to major in music, or at least minor in it. I am also interested in language or linguistics. Another thing that I am interested in is woodwork and construction. Even though IKEA is very basic in it, I enjoy putting together things like furniture and working with my hands, like my grandpas.
+5. <mark>Overall experience:</mark>
+- Overall I would say that I had a decent experience with Computer Science. Instead of getting in groups that you are comfortable with, I recommend that you mix up your groups with different skill levels and abilities. It is more beneficial because some people get experience as acting as a leader and teaching to others, and others get experience as a follower or learner. I was definitely a learner in this course which was a change of pace from normal. It was probably the most challenging course I have ever taken but i am glad that I did. I needed a challenge and wanted to experience something new. 
